@@ -64,31 +64,7 @@
                 echo "<p class='nperror2'>stmtfogoFailed (Go < back)</p>";
             }
             else if ($_GET["error"] == "fogonone") {
-                // echo "<p class='nperror3'>Your Email has been sent, Contact the Admin for more, Thank you.</p>";
-                echo "
-                    <div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-                        <div class='modal-dialog' role='document'>
-                            <div class='modal-content'>
-                                <div class='modal-header'>
-                                    <h5 class='modal-title' id='exampleModalLabel'>Modal title</h5>
-                                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-                                        <span aria-hidden='true'>&times;</span>
-                                    </button>
-                                </div>
-                                <div class='modal-body'>
-                                    ...
-                                </div>
-                                <div class='modal-footer'>
-                                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-                                    <button type='button' class='btn btn-primary'>Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>";
-                echo "<script>
-                    jQuery.noConflict();
-                    $('#exampleModal').modal('show')
-                </script>";
+                echo "<p class='nperror3'>Your Email has been sent, Contact the Admin for more, Thank you.</p>";
             }
             else if ($_GET["error"] == "invalidCompEmail") {
                 echo "<p class='nperror2'>Invalid Email Address (Go < back)</p>";
@@ -136,9 +112,9 @@
             else if ($_GET["error"] == "stmtFailed") {
                 echo "<p class='nperror2'>Something went wrong, try again! (Go < back)</p>";
             }
-            else if ($_GET["error"] == "none") {
-                echo "<p class='nperror3'>Your New Account has been made, You will recieve an email confirming account verification!</p>";
-            }
+            // else if ($_GET["error"] == "none") {
+            //     echo "<p class='nperror3'>Your New Account has been made, You will recieve an email confirming account verification!</p>";
+            // }
         }
     ?>
     <div class="fogo_holder">

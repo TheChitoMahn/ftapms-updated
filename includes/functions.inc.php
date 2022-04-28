@@ -83,7 +83,7 @@ function createUser($conn, $fullname, $companyemail, $department, $password) {
     mysqli_stmt_bind_param($stmt, "ssss", $fullname, $companyemail, $department, $hashedPassword);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../index.php?error=none");
+    header("location: ../php/sp-success.php");
     exit();
 }
 
