@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+.ssl-lock {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+.login_content{
+    height: 310px;
+    width: 43%;
+    background: white;
+    color: black;
+    padding: 20px 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+    border-radius: 5px;
+}
+.login_content .error2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background: red;
+    color: white;
+    text-align: center;
+}
+.login_content p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+.fogo_holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.fogo_password{
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+    width: 43%;
+    border-radius: 5px;
+    justify-content: center;
+}
+.fogo_password .error{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background: red;
+    color: white;
+    text-align: center;
+}
+.fogo_password .error3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background: blue;
+    color: white;
+    text-align: center;
+}
+.btn_fogo_password{
+    width: 100%;
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    text-align: left;
+}
+.active, .btn_fogo_password:hover{
+    background: #ccc;
+}
+.btn_fogo_password:after{
+    content: '\02795';
+    font-size: 14px;
+    float: right;
+    margin-left: 5px;
+}
+.active:after{
+    content: '\2796';
+}
+.fogo_password_content{
+    padding: 20px 20px;
+    overflow: hidden;
+    max-height: 0;
+    display: none;
+    transition: max-height 0.5s ease-out;
+}
+.fogo_password_content p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+.g-recaptcha {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

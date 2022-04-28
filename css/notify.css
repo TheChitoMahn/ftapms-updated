@@ -1,0 +1,43 @@
+.notification {
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: none;
+    padding: 1px 4px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+.notification2 {
+    background: none;
+    border: none;
+    color: red;
+    text-decoration: none;
+    padding: 1px 4px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+.notification:hover, .notification:focus {
+    color: red;
+}
+.notification2:hover, .notification2:focus {
+    color: green;
+}
+.notification .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    padding: 2px 4px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+}
+.badge:hover{
+    background-color: black;
+}
+.mkisii{
+    padding: 5px 5px 5px 5px;
+    /* margin:auto; */
+    font-size: 13px;
+}
