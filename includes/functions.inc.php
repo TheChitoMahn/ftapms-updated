@@ -69,7 +69,7 @@ function companyEmailExists($companyemail, $conn) {
 
     mysqli_stmt_close($stmt);
 }
-
+// HASH ENC7BIT Hash encyption
 function createUser($conn, $fullname, $companyemail, $department, $password) {
     $sql = "INSERT INTO users (fullname, companyemail, department, password) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
