@@ -79,26 +79,34 @@
                 <img src="../images/FTA.PNG" alt="FTA Logo">
             </div>
         </div>
-        <div class="partners_title">
-            <a>Partners</a>
-        </div>
         <div class="sidebar_content">
             <ul>
                 <li>
                     <i class="las la-home fa-lg"></i>
-                    <a href="../php/home-dashboard.php">Home</a>
+                    <a href="../php/home-dashboard.php">Dashboard</a>
                 </li>
-                <?php
-                    if (isset($_SESSION["department"])) {
-                        if ($_SESSION["department"] == "admin") {
-                            echo "<li><i class='las la-plus-circle fa-lg'></i><a href='../php/newpartner.php'>New Partner</a></li>";
-                            echo "<li><i class='las la-pen fa-lg'></i><a href='../php/editpartner.php'>Edit Partner</a></li>";
-                        }
-                    }
-                ?>
+            </ul>
+        </div>
+        <div class="partners_title">
+            <a>Partner Assesment</a>
+        </div>
+        <div class="sidebar_content">
+            <ul>
                 <li>
-                    <i class="las la-list fa-lg"></i>
-                    <a href="../php/listpartner.php">List of Partners</a>
+                    <i class="las la-passport fa-lg"></i>
+                    <a href="">FTA PA Scoresheet</a>
+                </li>
+                <li>
+                    <i class="las la-poll-h fa-lg"></i>
+                    <a href="">Due diligence Checklist</a>
+                </li>
+                <li>
+                    <i class="las la-id-badge fa-lg"></i>
+                    <a href="">Prioritization Score card</a>
+                </li>
+                <li>
+                    <i class="las la-server fa-lg"></i>
+                    <a href="">List of Assesments</a>
                 </li>
             </ul>
         </div>
@@ -109,14 +117,53 @@
             <ul>
                 <li>
                     <i class="las la-cogs fa-lg"></i>
-                    <a href="">Agreement Generator WIP</a>
+                    <a href="./AgreementGenDash.php">Agreement Generator</a>
                 </li>
                 <li>
                     <i class="las la-folder-plus fa-lg"></i>
                     <a href="../php/agreementSCHD.php">Agreement Scheduler</a>
                 </li>
+                <li>
+                    <i class="las la-server fa-lg"></i>
+                    <a href="../php/lsitMOU.php">List of MOUs</a>
+                </li>
+                <li>
+                    <i class="las la-server fa-lg"></i>
+                    <a href="../php/listNDA.php">List of NDAs</a>
+                </li>
             </ul>
         </div>
+        <div class="partners_title">
+            <a>Action Plan</a>
+        </div>
+        <div class="sidebar_content">
+            <ul>
+                <li>
+                    <i class="las la-thumbs-up fa-lg"></i>
+                    <a href="">Action Plan</a>
+                </li>
+            </ul>
+        </div>
+        <div class="partners_title">
+            <a>Partners</a>
+        </div>
+        <div class="sidebar_content">
+            <ul>
+                <?php
+                    if (isset($_SESSION["department"])) {
+                        if ($_SESSION["department"] == "admin") {
+                            echo "<li><i class='las la-plus-circle fa-lg'></i><a href='../php/newpartner.php'>New Partner</a></li>";
+                            echo "<li><i class='las la-pen fa-lg'></i><a href='../php/editpartner.php'>Edit Partner</a></li>";
+                        }
+                    }
+                ?>
+                <li>
+                    <i class="las la-server fa-lg"></i>
+                    <a href="../php/listpartner.php">List of Partners</a>
+                </li>
+            </ul>
+        </div>
+
         <?php
             if (isset($_SESSION["department"])) {
                 if ($_SESSION["department"] == "admin") {

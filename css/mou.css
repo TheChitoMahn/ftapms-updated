@@ -1,0 +1,73 @@
+.partnercontent{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+.twopics{
+    /* border-style: solid;
+    border-color: red; */
+    height: 200px;
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.insertpic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    margin: 10px;
+    float: left;
+}
+.ftalogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    margin: 10px;
+    float: right;
+}
+.mousection1{
+    display: flex;
+    padding: 5px;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.moutitle{
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+}
+.moutitle p{
+    font-weight: bolder;
+    font-size: 24px;
+}
+.mousection2{
+    /* border-style: solid;
+    border-color: #000; */
+    width: 100%;
+    padding: 20px;
+}
+.mousection2 a{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.mousection2 .buttons a{
+    font-size: 14px;
+}

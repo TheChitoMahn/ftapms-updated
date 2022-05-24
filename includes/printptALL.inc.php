@@ -1,6 +1,8 @@
 <?php
     include '../includes/listpartner.inc.php';
 ?>
+<title>All Reports Summarized</title>
+<link rel="icon" type="image/gif" href="../images/FTA no cap.PNG" />
 <link rel="stylesheet" href="../css/dashboard.css">
 <link rel="stylesheet" href="../css/newpartner.css">
 <link rel="stylesheet" href="../css/index.css">

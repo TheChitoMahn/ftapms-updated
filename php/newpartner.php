@@ -3,7 +3,7 @@
 ?>
         <link rel="stylesheet" href="../css/dashboard.css">
         <link rel="stylesheet" href="../css/newpartner.css">
-        <link rel="stylesheet" href="../css/index.css"> -->
+        <link rel="stylesheet" href="../css/index.css">
         
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -40,75 +40,75 @@
                             <a>Type of Partner</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="TypeofPartner" placeholder="Type of Partner" required>
+                            <input type="text" class="txtfields2" name="TypeofPartner" placeholder="Type of Partner" required>
                         </div> 
                         <div class="lbl_name">
                             <a>Organaization Name</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="OrganaizatoinName" placeholder="Organaizatoin Name" required>
+                            <input type="text" class="txtfields2" name="OrganaizatoinName" placeholder="Organaizatoin Name" required>
                         </div> 
                         <div class="lbl_name">
                             <a>Region</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="location" placeholder="Region" required>
+                            <input type="text" class="txtfields2" name="location" placeholder="Region" required>
                         </div>
                         <div class="lbl_name">
                             <a>Country</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="cc" placeholder="Country" required>
+                            <input type="text" class="txtfields2" name="cc" placeholder="Country" required>
                         </div>  
                         <div class="lbl_name">
                             <a>Address</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="Address" placeholder="Address" required>
+                            <input type="text" class="txtfields2" name="Address" placeholder="Address" required>
                         </div>
                         <div class="lbl_name">
                             <a>Focal FTA Staff</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="focalftastaff" placeholder="Focal FTA Staff" required>
+                            <input type="text" class="txtfields2" name="focalftastaff" placeholder="Focal FTA Staff" required>
                         </div> 
                         <div class="lbl_name">
                             <a>Principal Name</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="PrincipalName" placeholder="Principal Name" required>
+                            <input type="text" class="txtfields2" name="PrincipalName" placeholder="Principal Name" required>
                         </div> 
                         <div class="lbl_name">
                             <a>Telephone</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="Telephone" placeholder="+254 000 000000" required>
+                            <input type="text" class="txtfields2" name="Telephone" placeholder="+254 000 000000" required>
                         </div> 
                         <div class="lbl_name">
                             <a>Email</a>
                             <a class="errormsg"> e.g. 123@example.com </a>
                         </div>
                         <div class="input">
-                            <input type="Email" class="txtfields" name="npEmail" placeholder="Email" required>
+                            <input type="Email" class="txtfields2" name="npEmail" placeholder="Email" required>
                         </div>
                         <div class="lbl_name">
                             <a>Alternate Email</a>
                         </div>
                         <div class="input">
-                            <input type="Email" class="txtfields" name="npAltEmail" placeholder="Alternate Email" required>
+                            <input type="Email" class="txtfields2" name="npAltEmail" placeholder="Alternate Email" required>
                         </div>
                         <div class="lbl_name">
                             <a>Partnership Agreement in place?</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="pap" placeholder="(Yes/No)" required>
+                            <input type="text" class="txtfields2" name="pap" placeholder="(Yes/No)" required>
                         </div>
                         <div class="lbl_name">
                             <a>Partner Agrement Available? <br></a>
                             <!-- <a class="errormsg">(If Yes then upload the file at the end of this form to avoid errors!)</a> -->
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="pav" placeholder="(Yes/No)" required>
+                            <input type="text" class="txtfields2" name="pav" placeholder="(Yes/No)" required>
                         </div>
                         
 
@@ -149,7 +149,7 @@
                             <a>TOTAL Progress Quota</a>
                         </div>
                         <div class="input">
-                            <input type="number" class="txtfields" name="progress" placeholder="%">
+                            <input type="number" class="txtfields2" name="progress" placeholder="%">
                         </div>
                         <div class="lbl_name">
                             <a>List key challenges, if any (related to this partnership):</a>
@@ -163,13 +163,13 @@
                             <a>Partnership status</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="Partnershipstatus" placeholder="(Active/Inactive)">
+                            <input type="text" class="txtfields2" name="Partnershipstatus" placeholder="(Active/Inactive)">
                         </div>
                         <div class="lbl_name">
                             <a>Indicate Activity Implementation period</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="implementationperiod" placeholder="From Period - to Period">
+                            <input type="text" class="txtfields2" name="implementationperiod" placeholder="From Period - to Period">
                         </div>
                         <div class="lbl_name">
                             <a>Agreement<br></a>

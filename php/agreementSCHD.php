@@ -40,13 +40,13 @@
                         <a>Organaization Name</a>
                     </div>
                     <div class="input">
-                        <input type="text" class="txtfields" name="OrganaizatoinName" placeholder="Organaization Name" required>
+                        <input type="text" class="txtfields2" name="OrganaizatoinName" placeholder="Organaization Name" required>
                     </div> 
                     <div class="lbl_name">
                         <a>Set (Deadline) End Date</a>
                     </div>
                     <div class="input">
-                        <input type="datetime-local" class="txtfields" name="endDate" required>
+                        <input type="datetime-local" class="txtfields2" name="endDate" required>
                     </div>
                     <br>
                     <div class="buttons">

@@ -22,6 +22,8 @@
         }
     }
 ?>
+<title><?=$row['orgname']?></title>
+<link rel="icon" type="image/gif" href="../images/FTA no cap.PNG" />
 <link rel="stylesheet" href="../css/printALL.css">
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
@@ -91,5 +93,5 @@
 </div>
 <div id="piechart" style="width: 900px; height: 500px;"></div>
 <div class="print">
-            <a onclick="window.print()"><i class="las la-print fa-lg"></i></a>
+    <a onclick="window.print()"><i class="las la-print fa-lg"></i></a>
 </div>

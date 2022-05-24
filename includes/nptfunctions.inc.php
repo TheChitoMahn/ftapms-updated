@@ -123,3 +123,33 @@ function updatenpt($conn, $typeofpartner, $orgname, $location, $country, $Addres
     //header("location: ../php/editpartner.php?error=successupdate");
     exit();
 }
+
+function createnda($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_address, $fta_name){
+    $sql = "INSERT INTO nda (date, name, partner, proposal, delivery, termination, country, time, timelimit, goals, w_name, w_address, fta_name) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../php/NDA.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "sssssssssssss", $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_address, $fta_name);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../php/NDA.php?error=successnewnda");
+    exit();
+}
+
+function createmou($conn, $logo, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign) {
+    $sql = "INSERT INTO mou (logo, orgname, moudate, preamble, whereas, whereas2, article1, article2, article3, article31, article32, article4, article5, article6, article7, article8, contacts, article9, article10, article11, article12, article13, article14, signup) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../php/MOU.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssssss", $logo, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../php/MOU.php?error=successnewnda");
+    exit();
+}

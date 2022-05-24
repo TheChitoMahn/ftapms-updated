@@ -1,0 +1,11 @@
+.main2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+}
+.main2 .card-body {
+    padding: 1.3rem 1rem;
+    display: flex;
+    align-items: center;
+}

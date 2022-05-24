@@ -34,78 +34,78 @@
 
                 <form class="partnercontent" action="../includes/update.inc.php" method="POST" enctype="multipart/form-data">
                     <div class="section1">
-                        <input type="text" class="txtfields" name="id" value="<?=$row['id']?>" hidden>
+                        <input type="text" class="txtfields2" name="id" value="<?=$row['id']?>" hidden>
                         <div class="lbl_name">
                             <a>Type of Partner</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="TypeofPartner" value="<?=$row['typeofpartner']?>">
+                            <input type="text" class="txtfields2" name="TypeofPartner" value="<?=$row['typeofpartner']?>">
                         </div> 
                         <div class="lbl_name">
                             <a>Organaization Name</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="OrganaizatoinName" value="<?=$row['orgname']?>">
+                            <input type="text" class="txtfields2" name="OrganaizatoinName" value="<?=$row['orgname']?>">
                         </div> 
                         <div class="lbl_name">
                             <a>Region</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="location" value="<?=$row['location']?>">
+                            <input type="text" class="txtfields2" name="location" value="<?=$row['location']?>">
                         </div>
                         <div class="lbl_name">
                             <a>Country</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="cc" value="<?=$row['country']?>">
+                            <input type="text" class="txtfields2" name="cc" value="<?=$row['country']?>">
                         </div> 
                         <div class="lbl_name">
                             <a>Address</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="Address" value="<?=$row['Address']?>">
+                            <input type="text" class="txtfields2" name="Address" value="<?=$row['Address']?>">
                         </div>
                         <div class="lbl_name">
                             <a>Focal FTA Staff</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="focalftastaff" value="<?=$row['focalftastaff']?>">
+                            <input type="text" class="txtfields2" name="focalftastaff" value="<?=$row['focalftastaff']?>">
                         </div> 
                         <div class="lbl_name">
                             <a>Principal Name</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="PrincipalName" value="<?=$row['principalname']?>">
+                            <input type="text" class="txtfields2" name="PrincipalName" value="<?=$row['principalname']?>">
                         </div> 
                         <div class="lbl_name">
                             <a>Telephone</a>
                         </div>
                         <div class="input">
-                            <input type="number" class="txtfields" name="Telephone" value="<?=$row['Telephone']?>">
+                            <input type="number" class="txtfields2" name="Telephone" value="<?=$row['Telephone']?>">
                         </div> 
                         <div class="lbl_name">
                             <a>Email</a>
                         </div>
                         <div class="input">
-                            <input type="Email" class="txtfields" name="npEmail" value="<?=$row['Email']?>">
+                            <input type="Email" class="txtfields2" name="npEmail" value="<?=$row['Email']?>">
                         </div>
                         <div class="lbl_name">
                             <a>Alternate Email</a>
                         </div>
                         <div class="input">
-                            <input type="Email" class="txtfields" name="npAltEmail" value="<?=$row['altemail']?>">
+                            <input type="Email" class="txtfields2" name="npAltEmail" value="<?=$row['altemail']?>">
                         </div>
                         <div class="lbl_name">
                             <a>Partnership Agreement in place?</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="pap"  value="<?=$row['partnershipAgreement']?>">
+                            <input type="text" class="txtfields2" name="pap"  value="<?=$row['partnershipAgreement']?>">
                         </div>
                         <div class="lbl_name">
                             <a>Partner Agrement Available? <br></a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="pav" value="<?=$row['agreementavailable']?>">
+                            <input type="text" class="txtfields2" name="pav" value="<?=$row['agreementavailable']?>">
                         </div>
                         
 
@@ -146,7 +146,7 @@
                             <a>TOTAL Progress Quota</a>
                         </div>
                         <div class="input">
-                            <input type="number" class="txtfields" name="progress" value="<?=$row['progress']?>">
+                            <input type="number" class="txtfields2" name="progress" value="<?=$row['progress']?>">
                         </div>
                         <div class="lbl_name">
                             <a>List key challenges, if any (related to this partnership):</a>
@@ -160,13 +160,13 @@
                             <a>Partnership status</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="Partnershipstatus" value="<?=$row['ps']?>">
+                            <input type="text" class="txtfields2" name="Partnershipstatus" value="<?=$row['ps']?>">
                         </div>
                         <div class="lbl_name">
                             <a>Indicate Activity Implementation period</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields" name="implementationperiod" value="<?=$row['Implementationdate']?>">
+                            <input type="text" class="txtfields2" name="implementationperiod" value="<?=$row['Implementationdate']?>">
                         </div>
                         <!-- <div class="lbl_name">
                             <a>Agreement<br></a>

@@ -94,3 +94,11 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
+.card-body {
+    padding: 1.3rem 1rem;
+    display: flex;
+    align-items: center;
+}
+.agreement_Dashboard {
+   display: flex;
+}
