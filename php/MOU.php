@@ -14,8 +14,20 @@
     <div class="main">
         <h3>Memorandum of Understanding</h3>
         NOTE: Create an MOU Agreement
-
-        <form class="partnercontent" action="" method="POST" enctype="multipart/form-data">
+        <?php
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "stmtfailed") {
+                    echo "<p class='nperror2'>stmtFailed</p>";
+                }
+                else if ($_GET["error"] == "successnewmou") {
+                    echo "<p class='nperror3'>New MOU successfully created!</p>";
+                }
+                else if ($_GET["error"] == "posterror") {
+                    echo "<p class='nperror2'>Something went wrong whikle posting</p>";
+                }
+            }
+        ?>
+        <form class="partnercontent" action="../includes/MOU.inc.php" method="POST" enctype="multipart/form-data">
 
             <div class="twopics">
                 <div class="insertpic">

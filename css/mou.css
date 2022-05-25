@@ -39,6 +39,16 @@
     margin: 10px;
     float: right;
 }
+.ftalogoprint{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    margin: 10px;
+    float: right;
+}
 .mousection1{
     display: flex;
     padding: 5px;

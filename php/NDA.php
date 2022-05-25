@@ -96,7 +96,7 @@
                     <a>Patners:</a>
                 </div>
                 <div class="input">
-                    <input type="text" class="txtfields2" name="witnessname" placeholder="Name" required>
+                    <input type="text" class="txtfields2" name="witnessname" placeholder="Signup Name" required>
                 </div>
                 <div class="input">
                     <input type="text" class="txtfields2" name="witnessdesignation" placeholder="Designation" required>
@@ -108,7 +108,7 @@
                     <a>Fairtrade Africa Name:</a>
                 </div>
                 <div class="input">
-                    <input type="text" class="txtfields2" name="ftaname" placeholder="Name" required>
+                    <input type="text" class="txtfields2" name="ftaname" placeholder="Signup Name" required>
                 </div>
                 <div class="buttons">
                     <button type="button" class="ingia_btn"><a href="./listNDA.php">View All NDAs'</a></button>

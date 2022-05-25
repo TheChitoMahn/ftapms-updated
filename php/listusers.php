@@ -31,7 +31,7 @@
             <?php
                 if (mysqli_num_rows($result)) { ?>
             <div class="table-holder">
-                <table class="table table-striped">
+                <table class="table table-striped table-bordered mogotio">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">No.</th>

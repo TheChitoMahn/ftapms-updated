@@ -33,19 +33,19 @@
         <?php
             if (mysqli_num_rows($result)) { ?>
         <div class="table-holder">
-            <table class="table table-striped">
+            <table class="table table-striped table-bordered mogotio">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">No.</th>
                         <th scope="col">Date</th>
-                        <th scope="col">Subcontractors Name</th>
-                        <th scope="col">Hereinafter called</th>
-                        <th scope="col">Proposal/Project Name</th>
+                        <th scope="col">SubCon Name</th>
+                        <th scope="col">Hereinafter</th>
+                        <th scope="col">Proposal/Project</th>
                         <th scope="col">Time of delivery</th>
                         <th scope="col">Day of Termination</th>
                         <th scope="col">Country</th>
                         <th scope="col">Time</th>
-                        <th scope="col">Written notice Time limit</th>
+                        <th scope="col">Written notice in</th>
                         <th scope="col">Goals</th>
                         <th scope="col">Patners Name</th>
                         <th scope="col">Patners Address</th>
@@ -87,3 +87,7 @@
 
     </div>
 </section>
+
+<?php
+    include_once 'footer.php';
+?>
