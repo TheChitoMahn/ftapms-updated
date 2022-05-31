@@ -2,6 +2,7 @@
     include_once 'sidebar.php';
     include '../includes/userEdit.inc.php';
 ?>
+
 <link rel="stylesheet" href="../css/dashboard.css">
 <link rel="stylesheet" href="../css/newpartner.css">
 <link rel="stylesheet" href="../css/index.css">
@@ -16,6 +17,9 @@
                     echo "<p class='nperror2'>stmtFailed</p>";
                 }
                 else if ($_GET["error"] == "goneBack2") {
+                    echo "<p class='nperror2'>Unexpected Error, check sql query!!</p>";
+                }
+                else if ($_GET["error"] == "goneBack1") {
                     echo "<p class='nperror2'>Unexpected Error, check sql query!!</p>";
                 }
                 else if ($_GET["error"] == "emptyInput") {

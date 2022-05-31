@@ -74,3 +74,35 @@ function updateUser($conn, $fullname, $companyemail, $department, $password, $id
     header("location: ../php/listusers.php?error=successUserUpdate");
     exit();
 }
+
+function updateNDA($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $id) {
+    $sql = "UPDATE nda SET date=?, name=?, partner=?, proposal=?, delivery=?, termination=?, country=?, time=?, timelimit=?, goals=?, w_name=?, w_designation=?, w_address=?, fta_name=?
+            WHERE id=? ";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../php/NDAedit.php?error=stmtFailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "sssssssssssssss", $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $id);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../php/listNDA.php?error=successNDAedit");
+    exit();
+}
+
+function updateMOU($conn, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $id){
+    $sql = "UPDATE mou SET orgname=?, moudate=?, preamble=?, whereas=?, whereas2=?, article1=?, article2=?, article3=?, article31=?, article32=?, article4=?, article5=?, article6=?, article7=?, article8=?, contacts=?, article9=?, article10=?, article11=?, article12=?, article13=?, article14=?, sign=?
+            WHERE id=? ";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../php/MOUedit.php?error=stmtFailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssssss", $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $id);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../php/listMOU.php?error=successMOUupdated");
+    exit();
+}

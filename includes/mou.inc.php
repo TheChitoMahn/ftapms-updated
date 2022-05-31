@@ -11,8 +11,8 @@ if(isset($_POST["mou-submit"])) {
     $article1 = trim($_POST["article1"]);
     $article2 = trim($_POST["article2"]);
     $article3 = trim($_POST["article3"]);
-    $article31 = trim($_POST["article3.1"]);
-    $article32 = trim($_POST["article3.2"]);
+    $article31 = trim($_POST["article31"]);
+    $article32 = trim($_POST["article32"]);
     $article4 = trim($_POST["article4"]);
     $article5 = trim($_POST["article5"]);
     $article6 = trim($_POST["article6"]);

@@ -23,8 +23,8 @@
                 else if ($_GET["error"] == "successDelete") {
                     echo "<p class='nperror3'>A record has been Succesfully Deleted</p>";
                 }
-                else if ($_GET["error"] == "successUserUpdate") {
-                    echo "<p class='nperror3'>A User has been Succesfully Updated</p>";
+                else if ($_GET["error"] == "successMOUupdated") {
+                    echo "<p class='nperror3'> MOU Succesfully Updated</p>";
                 }
             }
         ?>
@@ -56,9 +56,8 @@
                         <td>(Work In Progress)</td>
                         <td height="50"><?=$rows['orgname']?></td>
                         <td><?=$rows['moudate']?></td>
-                        <td><a href="" class="btn btn-warning"><i class="las la-edit"></i></a>
+                        <td><a href="./MOUedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a>
                             <a href="../php/mouDelete.php?id=<?=$rows['id']?>" class="btn btn-danger"><i class="las la-trash"></i></a>
-                            <a href="" class="btn btn-primary">+.</a>
                             <a target="blank" href="../includes/print_MOU_single.inc.php?id=<?=$rows['id']?>" class="btn btn-primary"><i class="las la-print"></i></a>
                         </td>
                     </tr>

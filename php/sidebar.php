@@ -125,7 +125,7 @@
                 </li>
                 <li>
                     <i class="las la-server fa-lg"></i>
-                    <a href="../php/lsitMOU.php">List of MOUs</a>
+                    <a href="../php/listMOU.php">List of MOUs</a>
                 </li>
                 <li>
                     <i class="las la-server fa-lg"></i>

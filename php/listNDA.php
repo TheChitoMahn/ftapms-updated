@@ -21,8 +21,8 @@
                 else if ($_GET["error"] == "successDelete") {
                     echo "<p class='nperror3'>A record has been Succesfully Deleted</p>";
                 }
-                else if ($_GET["error"] == "successUserUpdate") {
-                    echo "<p class='nperror3'>A User has been Succesfully Updated</p>";
+                else if ($_GET["error"] == "successNDAedit") {
+                    echo "<p class='nperror3'>Update of NDA Successfull!</p>";
                 }
             }
         ?>
@@ -41,12 +41,6 @@
                         <th scope="col">SubCon Name</th>
                         <th scope="col">Hereinafter</th>
                         <th scope="col">Proposal/Project</th>
-                        <th scope="col">Time of delivery</th>
-                        <th scope="col">Day of Termination</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">Time</th>
-                        <th scope="col">Written notice in</th>
-                        <th scope="col">Goals</th>
                         <th scope="col">Patners Name</th>
                         <th scope="col">Patners Address</th>
                         <th scope="col">Fairtrade Africa Name</th>
@@ -65,16 +59,10 @@
                         <td><?=$rows['name']?></td>
                         <td><?=$rows['partner']?></td>
                         <td><?=$rows['proposal']?></td>
-                        <td><?=$rows['delivery']?></td>
-                        <td><?=$rows['termination']?></td>
-                        <td><?=$rows['country']?></td>
-                        <td><?=$rows['time']?></td>
-                        <td><?=$rows['timelimit']?></td>
-                        <td><?=$rows['goals']?></td>
                         <td><?=$rows['w_name']?></td>
                         <td><?=$rows['w_address']?></td>
                         <td><?=$rows['fta_name']?></td>
-                        <td><a href="" class="btn btn-warning"><i class="las la-edit"></i></a>
+                        <td><a href="./NDAedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a>
                             <a href="../php/ndaDelete.php?id=<?=$rows['id']?>" class="btn btn-danger"><i class="las la-trash"></i></a>
                             <a target="blank" href="../includes/print_NDA_single.inc.php?id=<?=$rows['id']?>" class="btn btn-primary"><i class="las la-print"></i></a>
                         </td>

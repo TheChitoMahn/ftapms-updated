@@ -90,7 +90,7 @@
         <p><?=$row['article31']?></p>
 
         <h4>3.2 ROLE OF <?=$row['orgname']?></h4>
-        <p><?=$row['article31']?></p>
+        <p><?=$row['article32']?></p>
 
         <h4>ARTICLE 4</h4>
         <h4>FUNDING AND RESOURCE MOBILIZATION ACTIVITIES</h4>
