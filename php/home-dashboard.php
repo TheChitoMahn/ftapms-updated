@@ -267,6 +267,7 @@
                     </tbody>
                 </table>
                 <?php } ?>
+                <br>
                 <div class="print">
                     <a href="../php/agreementSCHD.php" class="ingia_btn">View All</a>
                 </div>
