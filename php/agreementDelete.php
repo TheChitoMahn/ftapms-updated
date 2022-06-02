@@ -30,15 +30,6 @@ if (isset($_GET['id'])) {
     successIDs($conn,$RLname, $action, $id);
     exit();
 
-    // $result = mysqli_query($conn, $sql);
-
-    // if ($result) {
-    //     successnotify($conn, $RLname, $action);
-    //     header("Location: ../php/agreementSCHD.php?error=successDelete");
-    // }else {
-    //     header("Location: ../php/listpartner.php?error=goneBack1");
-    // }
-
 }else {
     header("Location: ../php/listpartner.php?error=goneBack2");
 }

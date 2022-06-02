@@ -134,17 +134,17 @@
                             <textarea class="txtfields2" name="biginput3" rows="5" cols="50" required></textarea>
                         </div>
                         <div class="lbl_name">
-                            <a>Specify areas of activity implementation:<br><b>DONE</b></a>
+                            <a>Specify areas of activity implementation:<br><b>(Upload Action Plan file here!))</b></a>
                         </div>
                         <div class="input">
-                            <textarea class="txtfields2" name="biginput4" rows="5" cols="50" required></textarea>
+                            <input type="file" name="biginput4">
                         </div>
-                        <div class="lbl_name">
+                        <!-- <div class="lbl_name">
                             <b><a>NOT DONE</a></b>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput6" rows="5" cols="50" required></textarea>
-                        </div>
+                        </div> -->
                         <div class="lbl_name">
                             <a>TOTAL Progress Quota</a>
                         </div>
@@ -173,7 +173,7 @@
                         </div>
                         <div class="lbl_name">
                             <a>Agreement<br></a>
-                            <a class="errormsg">(Upload agreement file here!)</a>
+                            <a class="errormsg"><b>(Upload agreement file here!)<b></a>
                         </div>
                         <?php
                             if (isset($_GET["filerror"])) {

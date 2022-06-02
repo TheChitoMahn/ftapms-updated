@@ -131,17 +131,16 @@
                             <textarea class="txtfields2" name="biginput3" rows="5" cols="50"><?=$row['IndicatePartnership']?></textarea>
                         </div>
                         <div class="lbl_name">
-                            <a>Specify areas of activity implementation:<br>DONE</a>
+                            <a>Specify areas of activity implementation:<br>Current file:</a>
                         </div>
-                        <div class="input">
-                            <textarea class="txtfields2" name="biginput4" rows="5" cols="50"><?=$row['specify']?></textarea>
-                        </div>
-                        <div class="lbl_name">
+                        <a target="_blank" href='view.php?id="<?=$row['id']?>"'><?=$row['ac_filename']?></a>
+                        <br>
+                        <!-- <div class="lbl_name">
                             <a>NOT DONE</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput6" rows="5" cols="50"><?=$row['specify2']?></textarea>
-                        </div>
+                        </div> -->
                         <div class="lbl_name">
                             <a>TOTAL Progress Quota</a>
                         </div>

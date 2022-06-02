@@ -1,5 +1,5 @@
 <?php
-
+require_once 'nptfunctions.inc.php';
 function emptyInputSignup($fullname, $companyemail, $department, $password, $confirmpassword) {
     $result = null;
     if (empty($fullname) || empty($companyemail) || empty($department) || empty($password) || empty($confirmpassword)) {
@@ -75,7 +75,7 @@ function updateUser($conn, $fullname, $companyemail, $department, $password, $id
     exit();
 }
 
-function updateNDA($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $id) {
+function updateNDA($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $id, $RLname, $action) {
     $sql = "UPDATE nda SET date=?, name=?, partner=?, proposal=?, delivery=?, termination=?, country=?, time=?, timelimit=?, goals=?, w_name=?, w_designation=?, w_address=?, fta_name=?
             WHERE id=? ";
     $stmt = mysqli_stmt_init($conn);
@@ -87,11 +87,12 @@ function updateNDA($conn, $date, $name, $partner, $proposal, $delivery, $termina
     mysqli_stmt_bind_param($stmt, "sssssssssssssss", $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $id);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../php/listNDA.php?error=successNDAedit");
+    successIDs($conn, $RLname, $action, $id);
+    // header("location: ../php/listNDA.php?error=successNDAedit");
     exit();
 }
 
-function updateMOU($conn, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $id){
+function updateMOU($conn, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $id, $RLname, $action){
     $sql = "UPDATE mou SET orgname=?, moudate=?, preamble=?, whereas=?, whereas2=?, article1=?, article2=?, article3=?, article31=?, article32=?, article4=?, article5=?, article6=?, article7=?, article8=?, contacts=?, article9=?, article10=?, article11=?, article12=?, article13=?, article14=?, sign=?
             WHERE id=? ";
     $stmt = mysqli_stmt_init($conn);
@@ -103,6 +104,7 @@ function updateMOU($conn, $orgname, $moudate, $preamble, $whereas, $whereas2, $a
     mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssssss", $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $id);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../php/listMOU.php?error=successMOUupdated");
+    successIDs($conn, $RLname, $action, $id);
+    // header("location: ../php/listMOU.php?error=successMOUupdated");
     exit();
 }

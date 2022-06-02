@@ -80,69 +80,78 @@
                     </div>
                 </div>
 
-                <div class="card-single">
-                    <div class="card-body">
-                        <div>
-                            <i class="las la-users fa-2x"></i>
-                            <h5>All Users</h5>
-                            <h4>
-                                <?php
-                                    include '../includes/dbh.inc.php';
-                                    $sql = "SELECT * FROM users_approved";
-                                    $result = mysqli_query($conn, $sql);
-                                    $rows = mysqli_num_rows($result);
-                                    echo $rows;
-                                ?>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="../php/listusers.php">View all</a>
-                    </div>    
-                </div>
+                <?php
+                    if (isset($_SESSION["department"])) {
+                        if ($_SESSION["department"] == "admin") {
+                            echo "     
+                                <div class='card-single'>
+                                    <div class='card-body'>
+                                        <div>
+                                            <i class='las la-users fa-2x'></i>
+                                            <h5>All Users</h5>
+                                            <h4> ";
+                                                // <?php
+                                                    include '../includes/dbh.inc.php';
+                                                    $sql = 'SELECT * FROM users_approved';
+                                                    $result = mysqli_query($conn, $sql);
+                                                    $rows = mysqli_num_rows($result);
+                                                    echo $rows;
+                                                
+                                                echo "
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class='card-footer'>
+                                        <a href='../php/listusers.php'>View all</a>
+                                    </div>    
+                                </div>
 
-                <div class="card-single">
-                    <div class="card-body">
-                        <div>
-                            <i class="las la-user fa-2x"></i>
-                            <h5>Users with Issues</h5>
-                            <h4>
-                                <?php
-                                    include '../includes/dbh.inc.php';
-                                    $sql = "SELECT * FROM fogo";
-                                    $result = mysqli_query($conn, $sql);
-                                    $rows = mysqli_num_rows($result);
-                                    echo $rows;
-                                ?>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="../php/fogopass.php">View all</a>
-                    </div>    
-                </div>
+                                <div class='card-single'>
+                                    <div class='card-body'>
+                                        <div>
+                                            <i class='las la-user fa-2x'></i>
+                                            <h5>Users with Issues</h5>
+                                            <h4> ";
+                                                // <?php
+                                                    include '../includes/dbh.inc.php';
+                                                    $sql = 'SELECT * FROM fogo';
+                                                    $result = mysqli_query($conn, $sql);
+                                                    $rows = mysqli_num_rows($result);
+                                                    echo $rows;
+                                                echo "
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class='card-footer'>
+                                        <a href='../php/fogopass.php'>View all</a>
+                                    </div>    
+                                </div>
 
-                <div class="card-single">
-                    <div class="card-body">
-                        <div>
-                            <i class="las la-user-clock fa-2x"></i>
-                            <h5>New Users</h5>
-                            <h4>
-                                <?php
-                                    include '../includes/dbh.inc.php';
-                                    $sql = "SELECT * FROM users";
-                                    $result = mysqli_query($conn, $sql);
-                                    $rows = mysqli_num_rows($result);
-                                    echo $rows;
-                                ?>
-                            </h4>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="../php/listusers.php">View all</a>
-                    </div>    
-                </div>
-
+                                <div class='card-single'>
+                                    <div class='card-body'>
+                                        <div>
+                                            <i class='las la-user-clock fa-2x'></i>
+                                            <h5>New Users</h5>
+                                            <h4> ";
+                                                // <?php
+                                                    include '../includes/dbh.inc.php';
+                                                    $sql = 'SELECT * FROM users';
+                                                    $result = mysqli_query($conn, $sql);
+                                                    $rows = mysqli_num_rows($result);
+                                                    echo $rows;
+                                                echo "
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class='card-footer'>
+                                        <a href='../php/listusers.php'>View all</a>
+                                    </div>    
+                                </div>
+                            ";
+                        }
+                    }
+                ?>
+<!-- -------------------------------------------------------------------------------------------------------------- -->
                 <div class="card-single">
                     <div class="card-body">
                         <div>
@@ -163,6 +172,28 @@
                         <a href="../php/listNDA.php">View all</a>
                     </div>    
                 </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <div>
+                            <i class="las la-server fa-2x"></i>
+                            <h5>List of MOUs'</h5>
+                            <h4>
+                                <?php
+                                    include '../includes/dbh.inc.php';
+                                    $sql = "SELECT * FROM mou";
+                                    $result = mysqli_query($conn, $sql);
+                                    $rows = mysqli_num_rows($result);
+                                    echo $rows;
+                                ?>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../php/listMOU.php">View all</a>
+                    </div>    
+                </div>
+                
             </div>
             <br>
 

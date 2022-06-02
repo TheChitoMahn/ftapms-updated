@@ -121,7 +121,7 @@
                 </li>
                 <li>
                     <i class="las la-folder-plus fa-lg"></i>
-                    <a href="../php/agreementSCHD.php">Agreement Scheduler</a>
+                    <a href="../php/agreementSCHD.php">PA Scheduler</a>
                 </li>
                 <li>
                     <i class="las la-server fa-lg"></i>

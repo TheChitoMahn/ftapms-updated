@@ -22,13 +22,12 @@
         }
     }
 ?>
+<title>MOU:<?=$row['orgname']?></title>
+<link rel="icon" type="image/gif" href="../images/FTA no cap.PNG" />
 <link rel="stylesheet" href="../css/newpartner.css">
 <link rel="stylesheet" href="../css/dashboard.css">
 <link rel="stylesheet" href="../css/index.css">
 <link rel="stylesheet" href="../css/mou.css">
-<title>MOU:<?=$row['orgname']?></title>
-<link rel="icon" type="image/gif" href="../images/FTA no cap.PNG" />
-
 <link rel="stylesheet" href="../css/printALL.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
@@ -37,8 +36,8 @@
 <div class="partnercontent">
 
     <div class="twopics">
-        <div class="insertpic">
-            Partner company logo will be here..
+        <div class="insertpic2">
+            <img src="../ppp/<?=$row['logo']?>" alt="Company Logo">
         </div>
         <div class="ftalogoprint">
             <img src="../images/FTA.PNG" alt="FTA Logo">   

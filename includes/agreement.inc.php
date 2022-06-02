@@ -6,7 +6,7 @@ if (isset($_POST["agreement-submit"])) {
     $orgname = $_POST["OrganaizatoinName"];
     $endate = $_POST["endDate"];
     $RLname = $_SESSION["fullname"];
-    $action = "added an Agreement at ";
+    $action = "Scheduled a Partner Agreement at ";
 
     require_once 'dbh.inc.php';
     require_once 'nptfunctions.inc.php';

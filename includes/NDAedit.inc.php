@@ -23,6 +23,7 @@ if (isset($_GET['id'])) {
     }
 
 }else if (isset($_POST["btn-NDAedit"])) {
+    require_once '../php/sidebar.php';
 
     $id = $_POST["id"];
     $date = $_POST["date"];
@@ -39,11 +40,13 @@ if (isset($_GET['id'])) {
     $w_designation = $_POST["witnessdesignation"];
     $w_address = $_POST["witnessaddress"];
     $fta_name = $_POST["ftaname"];
+    $RLname = $_SESSION["fullname"];
+    $action = "updated an NDA Agreement at ";
 
     require_once 'dbh.inc.php';
     require_once 'UEfunctions.inc.php';
 
-    updateNDA($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $id);
+    updateNDA($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $id, $RLname, $action);
 
 }else {
     echo '<meta http-equiv="Location" content="5.01; url=../php/NDAEdit.php?id=$id&error=goneBack2">';

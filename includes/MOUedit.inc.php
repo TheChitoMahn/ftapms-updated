@@ -23,6 +23,7 @@ if (isset($_GET['id'])) {
     }
 
 }else if (isset($_POST["btn-MOUedit"])) {
+    require_once '../php/sidebar.php';
 
     $id = $_POST["id"];
     $orgname = $_POST["orgname"];
@@ -48,11 +49,13 @@ if (isset($_GET['id'])) {
     $article13 = trim($_POST["article13"]);
     $article14 = trim($_POST["article14"]);
     $sign = trim($_POST["sign"]);
+    $RLname = $_SESSION["fullname"];
+    $action = "updated an MOU Agreement at ";
 
     require_once 'dbh.inc.php';
     require_once 'UEfunctions.inc.php';
 
-    updateMOU($conn, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $id);
+    updateMOU($conn, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $id, $RLname, $action);
 
 }else {
     echo '<meta http-equiv="Location" content="5.01; url=../php/MOUEdit.php?id=$id&error=goneBack2">';

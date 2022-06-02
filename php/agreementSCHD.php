@@ -21,7 +21,7 @@
                                 echo "<p class='nperror'>Could not access the record from the Database, check sql query!!</p>";
                             }
                             else if ($_GET["error"] == "successAdded") {
-                                echo "<p class='nperror3' name='added'>An Agreement has been added Succesfully</p>";
+                                echo "<p class='nperror3' name='added'>An Partner Agreement has been Scheduled Succesfully</p>";
                             }
                             else if ($_GET["error"] == "successDelete") {
                                 echo "<p class='nperror3'>An Agreement has been Deleted Succesfully</p>";
@@ -33,7 +33,7 @@
                         //$url = $_SERVER['REQUEST_URI'];
                         //echo $url;
                     ?>
-                    <h3>Agreement Scheduler</h3>
+                    <h3>Partner Agreement Scheduler</h3>
                     Set the ending date of a desired partnership agreement and start the countdown timer to keep track of the record
                     <br>
                     <div class="lbl_name">
@@ -54,7 +54,7 @@
                     </div>
                 </form>
 
-                <h3>List of All Agreements</h3>
+                <h3>List of All Partner Agreements</h3>
                 NOTE: This is where you can manage Agreements. NB: This page will be empty if there no Agreements on the database!
                 <?php
                     if (mysqli_num_rows($result4)) { ?>

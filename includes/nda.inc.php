@@ -1,6 +1,7 @@
 <?php
 
 if(isset($_POST["nda-submit"])) {
+    require_once '../php/sidebar.php';
 
     $date = $_POST["date"];
     $name = $_POST["name"];
@@ -16,11 +17,13 @@ if(isset($_POST["nda-submit"])) {
     $w_designation = $_POST["witnessdesignation"];
     $w_address = $_POST["witnessaddress"];
     $fta_name = $_POST["ftaname"];
+    $RLname = $_SESSION["fullname"];
+    $action = "added an NDA Agreement at ";
 
     require_once 'dbh.inc.php';
     require_once 'nptfunctions.inc.php';
 
-    createnda($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name);
+    createnda($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $RLname, $action);
 
 }else {
     header("location: ../php/NDA.php?error=posterror");

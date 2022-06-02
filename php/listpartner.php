@@ -41,7 +41,7 @@
                                 <th hidden scope="col">Indicated Opportunities</th>
                                 <th hidden scope="col">Indicated Partnership</th>
                                 <th hidden scope="col">AOA Done</th>
-                                <th hidden scope="col">Not Done</th>
+                                <th scope="col">Action Plan</th>
                                 <th scope="col">Progress<br>(Overall)</th>
                                 <th hidden scope="col">Key Challenges</th>
                                 <th scope="col">PS</th>
@@ -73,8 +73,8 @@
                                 <td hidden><?=$rows['Interests']?></td>
                                 <td hidden><?=$rows['IndicateOrpotunities']?></td>
                                 <td hidden><?=$rows['IndicatePartnership']?></td>
-                                <td hidden><?=$rows['specify']?></td>
-                                <td hidden><?=$rows['specify2']?></td>
+                                <!-- <td hidden><?=$rows['specify']?></td> -->
+                                <td><a target="_blank" href='view.php?id="<?=$rows['id']?>"'><?=$rows['ac_filename']?></td>
                                 <td><?=$rows['progress']?>%</td>
                                 <td hidden><?=$rows['listkeychallenges']?></td>
                                 <td><?=$rows['ps']?></td>

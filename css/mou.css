@@ -39,7 +39,20 @@
     margin: 10px;
     float: right;
 }
+.insertpic2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 2px;
+    text-align: center;
+    width: 20%;
+    height: 100%;
+    margin: 10px;
+    float: left;
+}
 .ftalogoprint{
+    /* border-style: solid;
+    border-color: #000; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +61,11 @@
     height: 100%;
     margin: 10px;
     float: right;
+}
+img{
+    margin: 5px;
+    width: 160px;
+    height: 160px;
 }
 .mousection1{
     display: flex;
