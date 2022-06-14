@@ -67,6 +67,7 @@ body{
     border: none;
     background-color: green;
     outline: none;
+    text-decoration: none;
 }
 .ingia_btn:hover{
     cursor: pointer;

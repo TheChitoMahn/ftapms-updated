@@ -1,3 +1,4 @@
+<script src="../js/multistep.js"></script>
 <script src="../js/drop-down-menu.js"></script>
 <script src="../js/drop-down-bell.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

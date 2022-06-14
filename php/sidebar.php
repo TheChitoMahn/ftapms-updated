@@ -27,10 +27,10 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="mkisii">
+                <div class="mkisii" aria-hidden="true">
                     <?php
                         if (mysqli_num_rows($result2)) { ?>
-                    <div class="table-holder">
+                    <div class="table-holder" aria-hidden="true">
                         <table class="table table-striped">
                             <thead class="thead-dark">
                                 <tr>
@@ -56,9 +56,8 @@
                             </tbody>
                         </table>
                         <?php }?>
-
                     </div>
-                    <form class="print" action="../includes/notifyCLEARALL.inc.php" method="POST">
+                    <form class="print" action="../includes/notifyCLEARALL.inc.php" method="POST" aria-hidden="true">
                         <button type="submit" class="ingia_btn" name="clearall">Clear All</button>
                     </form>
                 </div>
@@ -94,15 +93,15 @@
             <ul>
                 <li>
                     <i class="las la-passport fa-lg"></i>
-                    <a href="">FTA PA Scoresheet</a>
+                    <a href="../php/ftapascoresheet.php">FTA PA Scoresheet</a>
                 </li>
                 <li>
                     <i class="las la-poll-h fa-lg"></i>
-                    <a href="">Due diligence Checklist</a>
+                    <a href="../php/ddchecklist.php">Due diligence Checklist</a>
                 </li>
                 <li>
                     <i class="las la-id-badge fa-lg"></i>
-                    <a href="">Prioritization Score card</a>
+                    <a href="../php/ftaprzscorecard.php">Prioritization Score card</a>
                 </li>
                 <li>
                     <i class="las la-server fa-lg"></i>
@@ -130,17 +129,6 @@
                 <li>
                     <i class="las la-server fa-lg"></i>
                     <a href="../php/listNDA.php">List of NDAs</a>
-                </li>
-            </ul>
-        </div>
-        <div class="partners_title">
-            <a>Action Plan</a>
-        </div>
-        <div class="sidebar_content">
-            <ul>
-                <li>
-                    <i class="las la-thumbs-up fa-lg"></i>
-                    <a href="">Action Plan</a>
                 </li>
             </ul>
         </div>

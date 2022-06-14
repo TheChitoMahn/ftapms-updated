@@ -1,0 +1,126 @@
+:root {
+    --primary-color: green;
+}
+
+/* Global */
+.text-center{
+    text-align: center;
+}
+u {
+    text-decoration: underline;
+}
+.greenbg {
+    background: rgb(40, 211, 68);
+}
+.amberbg {
+    background: yellow;
+}
+.redbg {
+    background: red;
+}
+.greybg {
+    background: rgb(170, 167, 167);
+}
+
+/* Form */
+.ftapascore-content{
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 1.5rem;
+}
+.form-step{
+    display: none;
+    transform-origin: top;
+    animation: animate 1.5%;
+}
+.form-step-active{
+    display: block;
+}
+.progressbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 1rem 0 4rem;
+}
+.progressbar::before, 
+.progress{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+}
+.progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+}
+.progress-step{
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+}
+.progress-step::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 0.85rem;
+    color: #666;
+}
+.progress-step-active{
+    background-color: green;
+    color: #f3f3f3;
+}
+@keyframes animate{
+    from{
+        transform: scale(1, 0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+/* Buttons */
+.ingia_btn_prev{
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: green;
+    outline: none;
+    text-decoration: none;
+}
+.ingia_btn_next{
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: green;
+    outline: none;
+    text-decoration: none;
+}
