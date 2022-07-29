@@ -43,6 +43,22 @@
             <img src="../images/FTA.PNG" alt="FTA Logo">   
         </div> 
     </div>
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
 
     <div class="mousection1">
         <div class="moutitle">
@@ -59,6 +75,30 @@
     </div>
 
 </div>
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
 
 <div class="rpbody">
     <div class="box1">
@@ -142,6 +182,9 @@
 
     </div>
 </div>
-<div class="print">
-    <a onclick="window.print()"><i class="las la-print fa-lg"></i></a>
-</div>
+<form action="../includes/upload.inc.php" method="POST">
+    <input type="text"name="id" value="<?=$row['id']?>" hidden>
+    <div class="print">
+        <button onclick="window.print()" type="submit" name="mou-print"><i class="las la-print fa-lg"></i></button>
+    </div>
+</form>

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../css/index.css">
 <link rel="stylesheet" href="../css/drop-down-menu.css">
 <link rel="stylesheet" href="../css/moutable.css">
+<link rel="stylesheet" href="../css/listMOU.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
 
@@ -39,9 +40,11 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">No.</th>
-                        <th scope="col">logo</th>
                         <th scope="col">Partner Name</th>
                         <th scope="col">Date</th>
+                        <th scope="col">Progress</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Signed MOU</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -53,12 +56,28 @@
                     ?>
                     <tr height="50px">
                         <th scope="row"><?=$i?></th>
-                        <td>(Work In Progress)</td>
                         <td height="50"><?=$rows['orgname']?></td>
                         <td><?=$rows['moudate']?></td>
-                        <td><a href="./MOUedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a>
+                        <td><?=$rows['progress']?>/3</td>
+                        <td>
+                            <?php
+                                if ($rows['progress'] === "1") {
+                                    echo "<p class = 'nperror2'>Incomplete <br> Not SIGNED, PRINTED or UPLOADED!</p>";
+                                } elseif ($rows['progress'] === "2") {
+                                    echo "<p class = 'nperror1'>PRINTED! <br> Not SIGNED or UPLOADED!</p>";
+                                } elseif ($rows['progress'] === "3") {
+                                    echo "<p class = 'nperror3'>Complete <br> PRINTED, SIGNED & UPLOADED!</p>";
+                                }
+                            ?>
+                        </td>
+                        <td><a target="_blank" href='view.php?id="<?=$rows['id']?>"'><?=$rows['name']?></a></td>
+                        <td>
+                            <a href="./MOUedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a>
+                            <!-- <a href="./MOUedit.php?id=<?=$rows['id']?>" class="btn btn-warning">Edit & Update</i></a> <br> -->
                             <a href="../php/mouDelete.php?id=<?=$rows['id']?>" class="btn btn-danger"><i class="las la-trash"></i></a>
+                            <!-- <a href="../php/mouDelete.php?id=<?=$rows['id']?>" class="btn btn-danger">Delete</i></a> <br> -->
                             <a target="blank" href="../includes/print_MOU_single.inc.php?id=<?=$rows['id']?>" class="btn btn-primary"><i class="las la-print"></i></a>
+                            <!-- <a target="blank" href="../includes/print_MOU_single.inc.php?id=<?=$rows['id']?>" class="btn btn-primary">View & Print</i></a> -->
                         </td>
                     </tr>
                     <?php } ?>

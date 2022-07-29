@@ -7,13 +7,14 @@ if (isset($_POST["signup-submit"]) && $_POST['g-recaptcha-response'] != "") {
     $responseData = json_decode($verifyResponse);
     if ($responseData->success) {
 
-        $fullname = $_POST["fullname"];
-        $companyemail = $_POST["companyemail"];
-        $department = $_POST["department"];
-        $password = $_POST["password"];
-        $confirmpassword = $_POST["confirmpassword"];
-    
         require_once 'dbh.inc.php';
+
+        $fullname = sanitize_input($_POST["fullname"]);
+        $companyemail = $_POST["companyemail"];
+        $department = sanitize_input($_POST["department"]);
+        $password = sanitize_input($_POST["password"]);
+        $confirmpassword = sanitize_input($_POST["confirmpassword"]);
+    
         require_once 'functions.inc.php';
     
         if (emptyInputSignup($fullname, $companyemail, $department, $password, $confirmpassword) !== false) {

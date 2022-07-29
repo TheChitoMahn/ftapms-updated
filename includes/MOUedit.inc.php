@@ -4,14 +4,14 @@ if (isset($_GET['id'])) {
 
     include "dbh.inc.php";
 
-    function validate($data){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+    // function validate($data){
+    //     $data = trim($data);
+    //     $data = stripslashes($data);
+    //     $data = htmlspecialchars($data);
+    //     return $data;
+    // }
 
-    $id = validate($_GET['id']);
+    $id = sanitize_input($_GET['id']);
 
     $sql = "SELECT * FROM mou WHERE id = $id";
     $result = mysqli_query($conn, $sql);

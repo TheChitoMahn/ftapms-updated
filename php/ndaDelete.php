@@ -4,14 +4,14 @@ if (isset($_GET['id'])) {
     require_once 'sidebar.php';
     include "../includes/dbh.inc.php";
 
-    function validate($data){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+    // function validate($data){
+    //     $data = trim($data);
+    //     $data = stripslashes($data);
+    //     $data = htmlspecialchars($data);
+    //     return $data;
+    // }
 
-    $id = validate($_GET['id']);
+    $id = sanitize_input($_GET['id']);
     $RLname = $_SESSION["fullname"];
     $action = "deleted an NDA Agreement at ";
 

@@ -44,6 +44,8 @@
                         <th scope="col">Patners Name</th>
                         <th scope="col">Patners Address</th>
                         <th scope="col">Fairtrade Africa Name</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Progress</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -62,6 +64,18 @@
                         <td><?=$rows['w_name']?></td>
                         <td><?=$rows['w_address']?></td>
                         <td><?=$rows['fta_name']?></td>
+                        <td>1/3</td>
+                        <td>
+                            <!-- <?php
+                                if ($rows['progress'] === "1") {
+                                    echo "<p class = 'nperror2'>Incomplete</p>";
+                                } elseif ($rows['progress'] === "2") {
+                                    echo "<p class = 'nperror2'>In-progress</p>";
+                                } elseif ($rows['progress'] === "3") {
+                                    echo "<p class = 'nperror3'>Complete</p>";
+                                }
+                            ?> -->
+                        </td>
                         <td><a href="./NDAedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a>
                             <a href="../php/ndaDelete.php?id=<?=$rows['id']?>" class="btn btn-danger"><i class="las la-trash"></i></a>
                             <a target="blank" href="../includes/print_NDA_single.inc.php?id=<?=$rows['id']?>" class="btn btn-primary"><i class="las la-print"></i></a>

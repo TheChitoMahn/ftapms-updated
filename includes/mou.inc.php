@@ -28,6 +28,7 @@ if(isset($_POST["mou-submit"])) {
     $article13 = trim($_POST["article13"]);
     $article14 = trim($_POST["article14"]);
     $sign = trim($_POST["sign"]);
+    $progress = "1";
     $RLname = $_SESSION["fullname"];
     $action = "added an MOU Agreement at ";
 
@@ -40,7 +41,7 @@ if(isset($_POST["mou-submit"])) {
     //     $msg = "There was a problem uploading the Image";
     // }
 
-    createmou($conn, $target, $logo, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $RLname, $action);
+    createmou($conn, $target, $logo, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $progress, $RLname, $action);
 
 }else {
     header("location: ../php/MOU.php?error=posterror");

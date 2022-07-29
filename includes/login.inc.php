@@ -1,12 +1,12 @@
 <?php
 
 if (isset($_POST["login-submit"])) {
-    
-    $logincompanyemail = $_POST["lgcompanyemail"];
-    $loginpassword = $_POST["lgpassword"];
 
     require_once 'dbh.inc.php';
     require_once 'functions.inc.php';
+    
+    $logincompanyemail = sanitize_input($_POST["lgcompanyemail"]);
+    $loginpassword = sanitize_input($_POST["lgpassword"]);
 
     if (emptyInputLogin($logincompanyemail, $loginpassword) !== false) {
         header("location: ../index.php?error=emptyInput");

@@ -1,10 +1,10 @@
 <?php
 
 if (isset($_POST["fogo-submit"])) {
+    
+    require_once 'dbh.inc.php';
 
     $compemail = $_POST["compemail"];
-
-    require_once 'dbh.inc.php';
 
     function invalidcompemail($compemail){
         $result = null;

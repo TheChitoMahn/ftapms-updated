@@ -32,7 +32,7 @@
 
             <div class="twopics">
                 <div class="insertpic">
-                    (Work in Progress..) 
+                    <img src="../ppp/<?=$row['logo']?>" alt="Company Logo"> 
                 </div>
                 <div class="ftalogo">
                     <img src="../images/FTA.PNG" alt="FTA Logo">   

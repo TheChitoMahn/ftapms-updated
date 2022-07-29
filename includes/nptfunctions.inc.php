@@ -152,15 +152,15 @@ function createnda($conn, $date, $name, $partner, $proposal, $delivery, $termina
     exit();
 }
 
-function createmou($conn, $target, $logo, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $RLname, $action) {
-    $sql = "INSERT INTO mou (logo, orgname, moudate, preamble, whereas, whereas2, article1, article2, article3, article31, article32, article4, article5, article6, article7, article8, contacts, article9, article10, article11, article12, article13, article14, sign) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+function createmou($conn, $target, $logo, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $progress, $RLname, $action) {
+    $sql = "INSERT INTO mou (logo, orgname, moudate, preamble, whereas, whereas2, article1, article2, article3, article31, article32, article4, article5, article6, article7, article8, contacts, article9, article10, article11, article12, article13, article14, sign, progress) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../php/MOU.php?error=stmtfailed");
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssssssssssssssssssssssss", $logo, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign);
+    mysqli_stmt_bind_param($stmt, "sssssssssssssssssssssssss", $logo, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $progress);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     move_uploaded_file($_FILES['logo']['tmp_name'], $target);

@@ -105,7 +105,7 @@
                 </li>
                 <li>
                     <i class="las la-server fa-lg"></i>
-                    <a href="">List of Assesments</a>
+                    <a href="#">List of Assesments</a>
                 </li>
             </ul>
         </div>
@@ -129,6 +129,10 @@
                 <li>
                     <i class="las la-server fa-lg"></i>
                     <a href="../php/listNDA.php">List of NDAs</a>
+                </li>
+                <li>
+                    <i class="las la-file fa-lg"></i>
+                    <a href="../php/upload.php">Upload</a>
                 </li>
             </ul>
         </div>

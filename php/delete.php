@@ -5,14 +5,14 @@ if (isset($_GET['id'])) {
     include "../includes/dbh.inc.php";
     require_once '../php/sidebar.php';
 
-    function validate($data){
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+    // function validate($data){
+    //     $data = trim($data);
+    //     $data = stripslashes($data);
+    //     $data = htmlspecialchars($data);
+    //     return $data;
+    // }
 
-    $id = validate($_GET['id']);
+    $id = sanitize_input($_GET['id']);
     $RLname = $_SESSION["fullname"];
     $action = "deleted a Partner at ";
 

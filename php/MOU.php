@@ -23,7 +23,7 @@
                     echo "<p class='nperror3'>New MOU successfully created!</p>";
                 }
                 else if ($_GET["error"] == "posterror") {
-                    echo "<p class='nperror2'>Something went wrong whikle posting</p>";
+                    echo "<p class='nperror2'>Something went wrong while posting</p>";
                 }
             }
         ?>
@@ -188,17 +188,24 @@
                 </div>
                 <div class="input">
                     <textarea class="txtfields2" name="article13" rows="5" cols="50" required></textarea>
-                </div>                <div class="lbl_name">
+                </div>                
+                <div class="lbl_name">
                     <a>ARTICLE 14</a> <br>
                     <a>FORCE MAJEURE</a>
                 </div>
                 <div class="input">
                     <textarea class="txtfields2" name="article14" rows="5" cols="50" required></textarea>
                 </div>
-                <a>IN WITNESS WHEREOF</a>, the Parties duly authorized have agreed and executed this MOU on the date of the last signature hereunder.
+                <a>IN WITNESS WHEREOF</a>, the Parties duty authorized have agreed and executed this MOU on the date of the last signature hereunder.
                 <br>
                 <div class="input">
-                    <textarea class="txtfields2" name="sign" rows="20" cols="50" required></textarea>
+                    <textarea class="txtfields2" name="sign" rows="10" cols="50" required></textarea>
+                </div>
+                <div class="lbl_name">
+                    <a>ADDITIONAL ARTICLE</a>
+                </div>
+                <div class="input">
+                    <textarea class="txtfields2" name="article15" rows="10" cols="50"></textarea>
                 </div>
                 <div class="buttons">
                     <button type="button" class="ingia_btn"><a href="./lsitMOU.php">View all MOUs'</a></button>
