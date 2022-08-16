@@ -27,7 +27,7 @@
             }
         ?>
         <h3>List of All NDAs'</h3>
-        NOTE: This is where you can manage NDA Agreements.
+        NOTE: This is where you can manage NDA Agreements. <br> <p class="nperror2">(Under development)</p>
         <br>
         <br>
         <?php

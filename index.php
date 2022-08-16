@@ -153,7 +153,7 @@
                 <div class="input">
                     <input type="password" class="txtfields2" name="confirmpassword" placeholder="Confirm Password" required>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LcbRakfAAAAAGwFte8SYsb2QXYg-330o5YMTDFx" aria-required="true"></div>
+                <!-- <div class="g-recaptcha" data-sitekey="6LcbRakfAAAAAGwFte8SYsb2QXYg-330o5YMTDFx" aria-required="true"></div> -->
                 <div class="input">
                     <input type="checkbox" name="remember" required> By creating an account you agree to our Terms & Privacy.
                 </div>

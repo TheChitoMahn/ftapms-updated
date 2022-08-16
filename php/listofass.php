@@ -31,7 +31,7 @@
             }
         ?>
         <h3>List of All Partner Assessements</h3>
-        NOTE: This is where you can manage All Partner Assessments Records.
+        NOTE: This is where you can manage All Partner Assessments Records. <br> <span class="nperror2">(Under Development)</span>
         <br>
         <br>
         <div class="fogo_holder">

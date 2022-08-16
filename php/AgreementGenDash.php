@@ -36,6 +36,7 @@
                     <img class="card-img-top" src="../images/service.png" alt="Card image cap">
                     <div class="card-body">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#assessment">Service Agreement</button>
+                        <p class="nperror2">(Under development)</p>
                     </div>
                 </div>
             </div>
@@ -85,7 +86,7 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <a href="./NDA.php" class="btn btn-warning">NDA</a>
                         <a href="./MOU.php" class="btn btn-warning">MOU</a>
-                        <a href="./MOU.php" class="btn btn-warning">Service</a>
+                        <a href="#" class="btn btn-warning">Service</a>
                     </div>
                 </div>
             </div>

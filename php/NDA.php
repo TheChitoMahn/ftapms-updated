@@ -12,7 +12,7 @@
 <section class="newpartners">
     <div class="main">
         <h3>Non-Disclosure Agreement</h3>
-        NOTE: Create an NDA Agreement
+        NOTE: Create an NDA Agreement 
         <?php
             if (isset($_GET["error"])) {
                 if ($_GET["error"] == "stmtfailed") {
