@@ -112,9 +112,9 @@
             else if ($_GET["error"] == "stmtFailed") {
                 echo "<p class='nperror2'>Something went wrong, try again! (Go < back)</p>";
             }
-            // else if ($_GET["error"] == "none") {
-            //     echo "<p class='nperror3'>Your New Account has been made, You will recieve an email confirming account verification!</p>";
-            // }
+            else if ($_GET["error"] == "recap") {
+                echo "<p class='nperror2'>re-Captcha error, check site domain Key!</p>";
+            }
         }
     ?>
     <div class="fogo_holder">
@@ -153,7 +153,7 @@
                 <div class="input">
                     <input type="password" class="txtfields2" name="confirmpassword" placeholder="Confirm Password" required>
                 </div>
-                <!-- <div class="g-recaptcha" data-sitekey="6LcbRakfAAAAAGwFte8SYsb2QXYg-330o5YMTDFx" aria-required="true"></div> -->
+                <div class="g-recaptcha" data-sitekey="6LcbRakfAAAAAGwFte8SYsb2QXYg-330o5YMTDFx" aria-required="true"></div>
                 <div class="input">
                     <input type="checkbox" name="remember" required> By creating an account you agree to our Terms & Privacy.
                 </div>

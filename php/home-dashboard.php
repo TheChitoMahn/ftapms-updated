@@ -156,7 +156,7 @@
                     <div class="card-body">
                         <div>
                             <i class="las la-server fa-2x"></i>
-                            <h5>List of Non-Disclosure Agreements</h5> <p class="nperror2">(Under development)</p>
+                            <h5>List of Non-Disclosure Agreements</h5>
                             <h4>
                                 <?php
                                     include '../includes/dbh.inc.php';
@@ -198,7 +198,7 @@
                     <div class="card-body">
                         <div>
                             <i class="las la-server fa-2x"></i>
-                            <h5>List of Service Agreements</h5> <p class="nperror2">(Under development)</p>
+                            <h5>List of Service Agreements</h5>
                             <h4>
                                 <?php
                                     include '../includes/dbh.inc.php';

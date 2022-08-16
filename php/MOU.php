@@ -208,7 +208,7 @@
                     <textarea class="txtfields2" name="article15" rows="10" cols="50"></textarea>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="ingia_btn"><a href="./lsitMOU.php">View all MOUs'</a></button>
+                    <button type="button" class="ingia_btn"><a href="../php/listMOU.php">View all MOUs'</a></button>
                 </div>
                 <div class="buttons">
                     <button type="submit" class="ingia_btn" name="mou-submit">Save</button>

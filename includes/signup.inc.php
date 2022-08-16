@@ -42,6 +42,6 @@ if (isset($_POST["signup-submit"]) && $_POST['g-recaptcha-response'] != "") {
     }
 
 }else {
-    header("location: ../index.php");
+    header("location: ../index.php?error=recap");
     exit();
 }
