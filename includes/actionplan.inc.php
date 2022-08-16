@@ -13,6 +13,7 @@ if (isset($_POST["ap-submit"])) {
     require_once 'nptfunctions.inc.php';
 
     $sql = "INSERT INTO actionplan (orgname, activity, date) VALUES (?, ?, ?);";
+    $sql2 ="UPDATE actionplan INNER JOIN newpartner ON actionplan.orgname = newpartner.id SET actionplan.org_id = newpartner.orgname";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../php/actionplan.php?error=goneBack2");
@@ -22,9 +23,10 @@ if (isset($_POST["ap-submit"])) {
     mysqli_stmt_bind_param($stmt, "sss", $orgname, $activity, $endate);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+    mysqli_query($conn, $sql2);
     successnotify($conn, $RLname, $action);
     exit();
-
+    
 }else {
     header("location: ../php/actionplan.php?error=goneBack1");
     exit();
