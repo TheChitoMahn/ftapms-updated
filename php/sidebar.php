@@ -105,7 +105,7 @@
                 </li>
                 <li>
                     <i class="las la-server fa-lg"></i>
-                    <a href="#">List of Assesments</a>
+                    <a href="../php/listofass.php">List of Assesments</a>
                 </li>
             </ul>
         </div>

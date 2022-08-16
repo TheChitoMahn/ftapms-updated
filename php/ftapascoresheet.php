@@ -146,145 +146,148 @@
                 <b>Enter Scores for Strategic Fit Criteria</b>
                 <br>
                 <div class="table-holder">
-                    <table class="table table-striped" id="strategic_fit">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>Criteria Number</th>
-                                <th>Criteria Description</th>
-                                <th>Criteria Score</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1.01</td>
-                                <td>
-                                    The organization fits at least one of 
-                                    the categories of partners outlined in Fairtrade's 
-                                    Partnership Strategy.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-1" placeholder="%">
-                                </td>
-                            </tr>
+                    <form method="POST">
+                        <table class="table table-striped" id="strategic_fit">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Criteria Number</th>
+                                    <th>Criteria Description</th>
+                                    <th>Criteria Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.01</td>
+                                    <td>
+                                        The organization fits at least one of 
+                                        the categories of partners outlined in Fairtrade's 
+                                        Partnership Strategy.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-1" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.02</td>
-                                <td>
-                                    The organization have a record of reliability and
-                                    performance within their sector.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-2" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.02</td>
+                                    <td>
+                                        The organization have a record of reliability and
+                                        performance within their sector.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-2" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.03</td>
-                                <td>
-                                    The organization's vision is compatible with Fairtrade's vision
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-3" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.03</td>
+                                    <td>
+                                        The organization's vision is compatible with Fairtrade's vision
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-3" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.04</td>
-                                <td>
-                                    The organization is committed to one or more of our 
-                                    Fairtrade's Vision.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-4" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.04</td>
+                                    <td>
+                                        The organization is committed to one or more of our 
+                                        Fairtrade's Vision.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-4" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.05</td>
-                                <td>
-                                    A partnership with this organization will provide access to the services 
-                                    or resources we need to achieve our Producer Impact Goals.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-5" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.05</td>
+                                    <td>
+                                        A partnership with this organization will provide access to the services 
+                                        or resources we need to achieve our Producer Impact Goals.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-5" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.06</td>
-                                <td>
-                                    A partnership with this organization will provide access to the 
-                                    services or resources we need to ahcieve our Producer Impact Goals.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-6" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.06</td>
+                                    <td>
+                                        A partnership with this organization will provide access to the 
+                                        services or resources we need to ahcieve our Producer Impact Goals.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-6" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.07</td>
-                                <td>
-                                    A partnership with this organization is the best way to access the services or
-                                    resources er need to achieve our Producer Impact Goals.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-7" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.07</td>
+                                    <td>
+                                        A partnership with this organization is the best way to access the services or
+                                        resources er need to achieve our Producer Impact Goals.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-7" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.08</td>
-                                <td>
-                                    The organization has strongly intergrated ethics, public responsibilty,
-                                    environmental protection, and safety into its business practices.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-8" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.08</td>
+                                    <td>
+                                        The organization has strongly intergrated ethics, public responsibilty,
+                                        environmental protection, and safety into its business practices.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-8" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.09</td>
-                                <td>
-                                    A partnership with this organization will follow an approach that is 
-                                    consistent with Fairtrades's way of working.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-9" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.09</td>
+                                    <td>
+                                        A partnership with this organization will follow an approach that is 
+                                        consistent with Fairtrades's way of working.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-9" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td>1.10</td>
-                                <td>
-                                    The organaization considerd a leading corporate citizen.
-                                </td>
-                                <td>
-                                    <input type="number" class="txtfields2" name="sf-10" placeholder="%">
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>1.10</td>
+                                    <td>
+                                        The organaization considerd a leading corporate citizen.
+                                    </td>
+                                    <td>
+                                        <input type="number" class="txtfields2" name="sf-10" placeholder="%">
+                                    </td>
+                                </tr>
 
-                            <tr>
-                                <td></td>
-                                <td><b>Average%</b></td>
-                                <td>
-                                    <b>AVG#DIV000</b>
-                                    <span id="val"></span>
-                                    <script>
-                                        var table = document.getElementById("strategic_fit"), sumVal = 0;
-            
-                                        for(var i = 1; i < table.row.length; i++)
-                                        {
-                                            sumVal = sumVal + parseInt(table.column[i].cells[9].innerHTML);
-                                        }
-                                        
-                                        document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
-                                        console.log(sumVal);
-                                    </script>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                <tr>
+                                    <td></td>
+                                    <td><b>Average%</b></td>
+                                    <td>
+                                        <button type="submit" class="btn btn-primary" name="avg">Calc</button>
+                                        <span id="val"><b>AVG#DIV000</b></span>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <?php
+
+                    if(isset($_POST["avg"])){
+                        require_once '../php/sidebar.php';
+
+                        $n1 = $_POST['sf-1'];
+                        $n2 = $_POST['sf-2'];
+                        $sum = $n1 + $n2;
+                        echo "The Average is: " + $sum;
+                        print $sum;
+                    }
+
+                    ?>
                 </div>
                 <br>
                 <div class="buttons">
@@ -422,6 +425,7 @@
                                 <td></td>
                                 <td><b>Average%</b></td>
                                 <td>
+                                    <button type="submit" class="btn btn-primary" >Calc</button>
                                     <b>AVG#DIV000</b>
                                     <script></script>
                                 </td>
@@ -540,6 +544,7 @@
                                 <td></td>
                                 <td><b>Average%</b></td>
                                 <td>
+                                    <button type="submit" class="btn btn-primary" >Calc</button>
                                     <b>AVG#DIV000</b>
                                     <script></script>
                                 </td>
@@ -579,7 +584,10 @@
                             </tr>
                             <tr>
                                 <td><b><i>Total</i></b></td>
-                                <td><b>SUM#DIV000</b></td>
+                                <td>
+                                    <button type="submit" class="btn btn-primary" >Calc</button>
+                                    <b>SUM#DIV000</b>
+                                </td>
                             </tr>
                         </thead>
                     </table>
