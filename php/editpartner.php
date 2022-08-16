@@ -39,8 +39,6 @@
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Principal Name</th>
-                        <th scope="col">Key Challenges</th>
-                        <th scope="col">Partnership Support Required</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -55,8 +53,6 @@
                         <td><?=$rows['orgname']?></td>
                         <td><?php echo $rows['Email']?></td>
                         <td><?=$rows['principalname']?></td>
-                        <td><?=$rows['listkeychallenges']?></td>
-                        <td><?=$rows['IndicatePartnership']?></td>
                         <td><a href="../php/update.php?id=<?=$rows['id']?>" class="btn btn-success">Update</a>
                             <a href="../php/delete.php?id=<?=$rows['id']?>" class="btn btn-danger">Delete</a>
                         </td>

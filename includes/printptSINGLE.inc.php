@@ -39,8 +39,8 @@
 
     var data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['Not Done',     100 - <?=$row['progress']?>],
-        ['[Done]Overall Progress',      <?=$row['progress']?>],
+        ['[Done] Overall Progress',     <?=$row['progress']?>],
+        ['Not Done',      100 - <?=$row['progress']?>],
     ]);
 
     var options = {
@@ -82,12 +82,12 @@
         <p class="title"><?=$row['Interests']?></p>
         <label><b>Indicate Orpotunities:</b></label>
         <p class="title"><?=$row['IndicateOrpotunities']?></p>
-        <p class="title"><b>Indicate Partnership:</b> <?=$row['IndicatePartnership']?></p>
+        <!-- <p class="title"><b>Indicate Partnership:</b> <?=$row['IndicatePartnership']?></p> -->
         <label><b>AREA OF ACTIVITIES</b></label>
-        <p class="title"><b>DONE:</b> <?=$row['specify']?></p>
-        <p class="title"><b>NOT DONE:</b> <?=$row['specify2']?></p>
+        <!-- <p class="title"><b>DONE:</b> <?=$row['specify']?></p>
+        <p class="title"><b>NOT DONE:</b> <?=$row['specify2']?></p> -->
         <p id="ps" class="title"><b>Overall Progress:</b> <?=$row['progress']?>%</p>
-        <p class="title"><b>Key Challenges:</b> <?=$row['listkeychallenges']?></p>
+        <!-- <p class="title"><b>Key Challenges:</b> <?=$row['listkeychallenges']?></p> -->
         <p class="title"><b>Implementation Date:</b> <?=$row['Implementationdate']?></p>
     </div>
 </div>

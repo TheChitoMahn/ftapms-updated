@@ -110,35 +110,33 @@
                         <div class="input">
                             <input type="text" class="txtfields2" name="pav" placeholder="(Yes/No)" required>
                         </div>
-                        
+                    </div>
 
+                    <div class="section2">
                         <div class="lbl_name">
-                            <a>Interests between FTA and partner organization:</a>
+                            <a>Shared Value:</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput1" rows="5" cols="50" required></textarea>
                         </div>
                         <div class="lbl_name">
-                            <a>Indicate opportunities for FTA leverage:</a>
+                            <a>Oportunities for everage:</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput2" rows="5" cols="50" required></textarea>
                         </div>
-                    </div>
-
-                    <div class="section2">
-                        <div class="lbl_name">
+                        <!-- <div class="lbl_name">
                             <a>Indicate partnership support required:</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput3" rows="5" cols="50" required></textarea>
-                        </div>
+                        </div> -->
                         <div class="lbl_name">
-                            <a>Specify areas of activity implementation:<br><b>(Upload Action Plan file here!))</b></a>
+                            <a>Areas of activity implementation.<br></a>
                         </div>
-                        <div class="input">
+                        <!-- <div class="input">
                             <input type="file" name="biginput4">
-                        </div>
+                        </div> -->
                         <!-- <div class="lbl_name">
                             <b><a>NOT DONE</a></b>
                         </div>
@@ -146,17 +144,17 @@
                             <textarea class="txtfields2" name="biginput6" rows="5" cols="50" required></textarea>
                         </div> -->
                         <div class="lbl_name">
-                            <a>TOTAL Progress Quota</a>
+                            <a><b>TOTAL Progress Quota</b></a>
                         </div>
                         <div class="input">
                             <input type="number" class="txtfields2" name="progress" placeholder="%">
                         </div>
-                        <div class="lbl_name">
+                        <!-- <div class="lbl_name">
                             <a>List key challenges, if any (related to this partnership):</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput5" rows="5" cols="50" required></textarea>
-                        </div>
+                        </div> -->
 
                         
                         <div class="lbl_name">

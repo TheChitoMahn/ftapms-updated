@@ -40,11 +40,11 @@ if (isset($_GET['id'])) {
     $agreementavailable = $_POST["pav"];
     $Interests = trim($_POST["biginput1"]);
     $IndicateOrpotunities = trim($_POST["biginput2"]);
-    $IndicatePartnership = trim($_POST["biginput3"]);
+    // $IndicatePartnership = trim($_POST["biginput3"]);
     // $specify = file_get_contents($_FILES["biginput4"]["tmp_name"]);
     // $specify2 = $_FILES["biginput4"]["name"];
     $progress = $_POST["progress"];
-    $listkeychallenges = trim($_POST["biginput5"]);
+    // $listkeychallenges = trim($_POST["biginput5"]);
     $ps = $_POST["Partnershipstatus"];
     $Implementationdate = $_POST["implementationperiod"];
     $RLname = $_SESSION["fullname"];
@@ -57,7 +57,7 @@ if (isset($_GET['id'])) {
     require_once 'dbh.inc.php';
     require_once 'nptfunctions.inc.php';
 
-    if (emptyInputnewpartner($typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $progress, $listkeychallenges) !== false) {
+    if (emptyInputnewpartner($typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress) !== false) {
         header("location: ../php/update.php?id=$id&error=emptyInput");
         exit();
     }
@@ -70,7 +70,7 @@ if (isset($_GET['id'])) {
         exit();
     }
 
-    updatenpt($conn, $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $progress, $listkeychallenges, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $id, $RLname, $action);
+    updatenpt($conn, $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $id, $RLname, $action);
 
 }else {
     header("Location: ../php/editpartner.php?error=goneBack2");

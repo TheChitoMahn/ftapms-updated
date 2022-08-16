@@ -146,7 +146,7 @@
                 <b>Enter Scores for Strategic Fit Criteria</b>
                 <br>
                 <div class="table-holder">
-                    <table class="table table-striped">
+                    <table class="table table-striped" id="strategic_fit">
                         <thead class="thead-dark">
                             <tr>
                                 <th>Criteria Number</th>
@@ -269,7 +269,18 @@
                                 <td><b>Average%</b></td>
                                 <td>
                                     <b>AVG#DIV000</b>
-                                    <script></script>
+                                    <span id="val"></span>
+                                    <script>
+                                        var table = document.getElementById("strategic_fit"), sumVal = 0;
+            
+                                        for(var i = 1; i < table.row.length; i++)
+                                        {
+                                            sumVal = sumVal + parseInt(table.column[i].cells[9].innerHTML);
+                                        }
+                                        
+                                        document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
+                                        console.log(sumVal);
+                                    </script>
                                 </td>
                             </tr>
                         </tbody>
@@ -574,6 +585,12 @@
                     </table>
                 </div>
                 <br>
+                <label class="nperror2" name="assID">Assesment ID: <span>
+                    <?php
+                        $randomnumber = rand(0,1000);
+                        print_r($randomnumber);
+                    ?>
+                </label></p>
                 <br>
                 <b>Color Scoring</b>
                 <p>

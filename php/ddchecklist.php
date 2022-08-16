@@ -156,6 +156,9 @@
                         </thead>
                     </table>
                 </div>
+                <p>
+                    Decision status as of Date: <span class="redbg">Decline</span>/<span class="amberbg">Continue to Pursue</span>/<span class="greenbg">Go Ahead</span>/<span class="greybg">Insufficient Information</span>
+                </p>
                 <div class="buttons">
                     <a href="#" class="ingia_btn_next">More Info.</a>
                     <button type="button" class="ingia_btn" name="scoresheet-submit">Save</button>

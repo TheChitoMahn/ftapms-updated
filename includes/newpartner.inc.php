@@ -23,11 +23,11 @@ if (isset($_POST["newpartner-submit"])) {
     $agreementavailable = $_POST["pav"];
     $Interests = trim($_POST["biginput1"]);
     $IndicateOrpotunities = trim($_POST["biginput2"]);
-    $IndicatePartnership = trim($_POST["biginput3"]);
-    $specify = file_get_contents($_FILES["biginput4"]["tmp_name"]);
-    $specify2 = $_FILES["biginput4"]["name"];
+    // $IndicatePartnership = trim($_POST["biginput3"]);
+    // $specify = file_get_contents($_FILES["biginput4"]["tmp_name"]);
+    // $specify2 = $_FILES["biginput4"]["name"];
     $progress = $_POST["progress"];
-    $listkeychallenges = trim($_POST["biginput5"]);
+    // $listkeychallenges = trim($_POST["biginput5"]);
     $ps = $_POST["Partnershipstatus"];
     $Implementationdate = $_POST["implementationperiod"];
     $data = file_get_contents($_FILES["Agreement"]["tmp_name"]);
@@ -38,7 +38,7 @@ if (isset($_POST["newpartner-submit"])) {
     require_once 'dbh.inc.php';
     require_once 'nptfunctions.inc.php';
     
-    if (emptyInputnewpartner($typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $specify, $specify2, $progress, $listkeychallenges) !== false) {
+    if (emptyInputnewpartner($typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress) !== false) {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/newpartner.php?error=emptyInput">';
         // header("location: ../php/newpartner.php?error=emptyInput");
         exit();
@@ -60,7 +60,7 @@ if (isset($_POST["newpartner-submit"])) {
         exit();
     }
     
-    createnpt($conn, $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $specify, $specify2, $progress, $listkeychallenges, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $data, $name, $RLname, $action);
+    createnpt($conn, $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $data, $name, $RLname, $action);
 
 }else {
     header("location: ../php/newpartner.php");

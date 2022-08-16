@@ -107,34 +107,30 @@
                         <div class="input">
                             <input type="text" class="txtfields2" name="pav" value="<?=$row['agreementavailable']?>">
                         </div>
-                        
+                    </div>
 
+                    <div class="section2">
                         <div class="lbl_name">
-                            <a>Interests between FTA and partner organization:</a>
+                            <a>Shared Value:</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput1" rows="5" cols="50"><?=$row['Interests']?></textarea>
                         </div>
                         <div class="lbl_name">
-                            <a>Indicate opportunities for FTA leverage:</a>
+                            <a>Opportunities for leverage:</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput2" rows="5" cols="50"><?=$row['IndicateOrpotunities']?></textarea>
                         </div>
-                    </div>
-
-                    <div class="section2">
-                        <div class="lbl_name">
+                        <!-- <div class="lbl_name">
                             <a>Indicate partnership support required:</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput3" rows="5" cols="50"><?=$row['IndicatePartnership']?></textarea>
-                        </div>
+                        </div> -->
                         <div class="lbl_name">
-                            <a>Specify areas of activity implementation:<br>Current file:</a>
+                            <a>Areas of activity implementation.</a>
                         </div>
-                        <a target="_blank" href='view.php?id="<?=$row['id']?>"'><?=$row['ac_filename']?></a>
-                        <br>
                         <!-- <div class="lbl_name">
                             <a>NOT DONE</a>
                         </div>
@@ -142,17 +138,17 @@
                             <textarea class="txtfields2" name="biginput6" rows="5" cols="50"><?=$row['specify2']?></textarea>
                         </div> -->
                         <div class="lbl_name">
-                            <a>TOTAL Progress Quota</a>
+                            <a><b>Total Progress Quota</b></a>
                         </div>
                         <div class="input">
                             <input type="number" class="txtfields2" name="progress" value="<?=$row['progress']?>">
                         </div>
-                        <div class="lbl_name">
+                        <!-- <div class="lbl_name">
                             <a>List key challenges, if any (related to this partnership):</a>
                         </div>
                         <div class="input">
                             <textarea class="txtfields2" name="biginput5" rows="5" cols="50"><?=$row['listkeychallenges']?></textarea>
-                        </div>
+                        </div> -->
 
                         
                         <div class="lbl_name">

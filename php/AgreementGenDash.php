@@ -31,6 +31,23 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-6">
+                <div class="card" style="width: 28rem;">
+                    <img class="card-img-top" src="../images/service.png" alt="Card image cap">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#assessment">Service Agreement</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card" style="width: 28rem;">
+                    <img class="card-img-top" src="../images/other.png" alt="Card image cap">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadmodal">Other Agreement</button>
+                        <!-- <a href="./upload.php" class="btn btn-primary">Other Agreement</a> -->
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Assessment Confirmation Modal -->
@@ -68,6 +85,35 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <a href="./NDA.php" class="btn btn-warning">NDA</a>
                         <a href="./MOU.php" class="btn btn-warning">MOU</a>
+                        <a href="./MOU.php" class="btn btn-warning">Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Agreement Upload Modal -->
+        <div class="modal fade" id="uploadmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Partner Assessment Check</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        For Other Agreements you can upload directly the signed copy to the inteded Partner Record <br> <br>
+                        <form class="partnercontent" action="" method="POST">
+                            <div class="section1">
+                                Upload Signed Agreement pdf file here:
+                                <div class="input">
+                                    <input type="file" class="txtfields2">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="./MOU.php" class="btn btn-primary">Upload</a>
                     </div>
                 </div>
             </div>

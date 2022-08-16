@@ -115,7 +115,7 @@
                                 <tr>
                                     <td></td>
                                     <td><b>Total Score</b></td>
-                                    <td><b>#totalscore</b></td>
+                                    <td><b>Average</b></td>
                                 </tr>
                             </tbody>
                         </thead>

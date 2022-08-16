@@ -8,6 +8,9 @@ $mouresult = mysqli_query($conn, $mousql);
 $ndasql = "SELECT * FROM nda";
 $ndaresult = mysqli_query($conn, $ndasql);
 
+$ptnsql = "SELECT * FROM newpartner";
+$ptnresult = mysqli_query($conn, $ptnsql);
+
 if(isset($_POST["s-mou-submit"])) {
     $data = file_get_contents($_FILES["signedMOU"]["tmp_name"]);
     $name = $_FILES["signedMOU"]["name"];

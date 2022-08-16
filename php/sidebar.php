@@ -131,11 +131,20 @@
                     <a href="../php/listNDA.php">List of NDAs</a>
                 </li>
                 <li>
+                    <i class="las la-server fa-lg"></i>
+                    <a href="#">List of Service Agreements</a>
+                </li>
+                <li>
+                    <i class="las la-server fa-lg"></i>
+                    <a href="#">List of Other Agreements</a>
+                </li>
+                <li>
                     <i class="las la-file fa-lg"></i>
                     <a href="../php/upload.php">Upload</a>
                 </li>
             </ul>
         </div>
+
         <div class="partners_title">
             <a>Partners</a>
         </div>
@@ -145,6 +154,7 @@
                     if (isset($_SESSION["department"])) {
                         if ($_SESSION["department"] == "admin") {
                             echo "<li><i class='las la-plus-circle fa-lg'></i><a href='../php/newpartner.php'>New Partner</a></li>";
+                            echo "<li><i class='las la-tasks fa-lg'></i><a href='../php/actionplan.php'>Create Action Plan</a></li>";
                             echo "<li><i class='las la-pen fa-lg'></i><a href='../php/editpartner.php'>Edit Partner</a></li>";
                         }
                     }

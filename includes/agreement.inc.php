@@ -2,13 +2,13 @@
 
 if (isset($_POST["agreement-submit"])) {
     require_once '../php/sidebar.php';
+    require_once 'dbh.inc.php';
     
     $orgname = $_POST["OrganaizatoinName"];
     $endate = $_POST["endDate"];
     $RLname = $_SESSION["fullname"];
     $action = "Scheduled a Partner Agreement at ";
 
-    require_once 'dbh.inc.php';
     require_once 'nptfunctions.inc.php';
 
     $sql = "INSERT INTO alert (orgname, date) VALUES (?, ?);";
@@ -29,4 +29,3 @@ if (isset($_POST["agreement-submit"])) {
     exit();
 }
 ?>
-<meta>

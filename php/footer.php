@@ -46,13 +46,9 @@
             document.getElementById('agreementavailable').innerHTML = data[11];
             document.getElementById('Interests').innerHTML = data[12];
             document.getElementById('IndicateOrpotunities').innerHTML = data[13];
-            document.getElementById('IndicatePartnership').innerHTML = data[14];
-            document.getElementById('specify').innerHTML = data[15];
-            document.getElementById('specify2').innerHTML = data[16];
-            document.getElementById('progress').innerHTML = data[17];
-            document.getElementById('listkeychallenges').innerHTML = data[18];
-            document.getElementById('ps').innerHTML = data[19];
-            document.getElementById('Implementationdate').innerHTML = data[20];
+            document.getElementById('progress').innerHTML = data[14];
+            document.getElementById('ps').innerHTML = data[15];
+            document.getElementById('Implementationdate').innerHTML = data[16];
         });
     });
 </script>

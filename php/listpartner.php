@@ -31,7 +31,7 @@
                                 <th scope="col">Country</th>
                                 <th hidden scope="col">Address</th>
                                 <th scope="col">Focal FTA Staff</th>
-                                <th scope="col">Principal Name</th>
+                                <th scope="col">Activity</th>
                                 <th scope="col">Telephone</th>
                                 <th hidden scope="col">Email</th>
                                 <th hidden scope="col">Alt Email</th>
@@ -39,11 +39,7 @@
                                 <th hidden scope="col">Agreement Available</th>
                                 <th hidden scope="col">Interests</th>
                                 <th hidden scope="col">Indicated Opportunities</th>
-                                <th hidden scope="col">Indicated Partnership</th>
-                                <th hidden scope="col">AOA Done</th>
-                                <th scope="col">Action Plan</th>
                                 <th scope="col">Progress<br>(Overall)</th>
-                                <th hidden scope="col">Key Challenges</th>
                                 <th scope="col">PS</th>
                                 <th hidden scope="col">Implimentation Date</th>
                                 <th scope="col">Agreement</th>
@@ -53,8 +49,8 @@
                         <tbody>
                             <?php
                                 $i = 0;
-                                    while($rows = mysqli_fetch_assoc($result)){
-                                        $i++;
+                                while($rows = mysqli_fetch_assoc($result)){
+                                    $i++;
                             ?>
                             <tr>
                                 <th scope="row"><?=$i?></th>
@@ -64,7 +60,11 @@
                                 <td><?=$rows['country']?></td>
                                 <td hidden><?=$rows['Address']?></td>
                                 <td><?=$rows['focalftastaff']?></td>
-                                <td><?=$rows['principalname']?></td>
+                                <td>
+                                    <?php
+                                        
+                                    ?>
+                                </td>
                                 <td><?=$rows['Telephone']?></td>
                                 <td hidden><?=$rows['Email']?></td>
                                 <td hidden><?=$rows['altemail']?></td>
@@ -72,11 +72,7 @@
                                 <td hidden><?=$rows['agreementavailable']?></td>
                                 <td hidden><?=$rows['Interests']?></td>
                                 <td hidden><?=$rows['IndicateOrpotunities']?></td>
-                                <td hidden><?=$rows['IndicatePartnership']?></td>
-                                <!-- <td hidden><?=$rows['specify']?></td> -->
-                                <td><a target="_blank" href='view.php?id="<?=$rows['id']?>"'><?=$rows['ac_filename']?></td>
                                 <td><?=$rows['progress']?>%</td>
-                                <td hidden><?=$rows['listkeychallenges']?></td>
                                 <td><?=$rows['ps']?></td>
                                 <td hidden><?=$rows['Implementationdate']?></td>
                                 <td><a target="_blank" href='view.php?id="<?=$rows['id']?>"'><?=$rows['filename']?></a></td>
@@ -151,24 +147,8 @@
                                                         <label id="IndicateOrpotunities">error</label>
                                                     </div>
                                                     <div class="rowhodler">
-                                                    <b><label>Indicated Partnership: </label></b>
-                                                        <label id="IndicatePartnership">error</label>
-                                                    </div>
-                                                    <div class="rowhodler">
-                                                    <b><label>Implimentation Progress <br>Done: </label></b>
-                                                        <label id="specify">error</label>
-                                                    </div>
-                                                    <div class="rowhodler">
-                                                    <b><label>Not Done: </label></b>
-                                                        <label id="specify2">error</label>
-                                                    </div>
-                                                    <div class="rowhodler">
                                                     <b><label>Progress: </label></b>
                                                         <label id="progress">error</label>
-                                                    </div>
-                                                    <div class="rowhodler">
-                                                    <b><label>Key Challenges: </label></b>
-                                                        <label id="listkeychallenges">error</label>
                                                     </div>
                                                     <div class="rowhodler">
                                                     <b><label>Partnership Status: </label></b>

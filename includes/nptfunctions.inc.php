@@ -1,8 +1,8 @@
 <?php
 
-function emptyInputnewpartner($typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $progress, $listkeychallenges) {
+function emptyInputnewpartner($typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress) {
     $result = null;
-    if (empty($typeofpartner) || empty($orgname) || empty($location) || empty($country) || empty($Address) || empty($focalftastaff) || empty($principalname) || empty($Telephone) || empty($Email) || empty($altEmail) ||empty($Interests) || empty($IndicateOrpotunities) || empty($IndicatePartnership) || empty($progress) || empty($listkeychallenges)) {
+    if (empty($typeofpartner) || empty($orgname) || empty($location) || empty($country) || empty($Address) || empty($focalftastaff) || empty($principalname) || empty($Telephone) || empty($Email) || empty($altEmail) ||empty($Interests) || empty($IndicateOrpotunities) || empty($progress)) {
         $result = true;
     } else {
         $result = false;
@@ -71,6 +71,8 @@ function successnotify($conn, $RLname, $action) {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/NDA.php?error=successnewnda">';
     }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/MOU.inc.php') {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/MOU.php?error=successnewmou">';
+    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/actionplan.inc.php') {
+        echo '<meta http-equiv="Refresh" content="0.01; url=../php/actionplan.php?error=NewapAdded">';
     }
     exit();
 }
@@ -99,19 +101,21 @@ function successIDs($conn, $RLname, $action, $id) {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listNDA.php?error=successDelete">';
     }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/mouDelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listMOU.php?error=successDelete">';
+    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/actionplandelete.php?id={$id}") {
+        echo '<meta http-equiv="Refresh" content="0.0; url=../php/actionplan.php?error=successDelete">';
     }
     exit();
 }
 
-function createnpt($conn, $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $specify, $specify2, $progress, $listkeychallenges, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $data, $name, $RLname, $action){
-    $sql = "INSERT INTO newpartner (typeofpartner, orgname, location, country, Address, focalftastaff, principalname, Telephone, Email, altemail, Interests, IndicateOrpotunities, IndicatePartnership, action_plan, ac_filename, progress, listkeychallenges, partnershipAgreement, Implementationdate, agreementavailable, ps, data, filename) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+function createnpt($conn, $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $data, $name, $RLname, $action){
+    $sql = "INSERT INTO newpartner (typeofpartner, orgname, location, country, Address, focalftastaff, principalname, Telephone, Email, altemail, Interests, IndicateOrpotunities, progress, partnershipAgreement, Implementationdate, agreementavailable, ps, data, filename) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../php/newpartner.php?error=stmtFailed");
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "sssssssssssssssssssssss", $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $specify, $specify2, $progress, $listkeychallenges, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $data, $name);
+    mysqli_stmt_bind_param($stmt, "sssssssssssssssssss", $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $data, $name);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     successnotify($conn, $RLname, $action);
@@ -119,8 +123,8 @@ function createnpt($conn, $typeofpartner, $orgname, $location, $country, $Addres
     exit();
 }
 
-function updatenpt($conn, $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $progress, $listkeychallenges, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $id, $RLname, $action){
-    $sql = "UPDATE newpartner SET typeofpartner=?, orgname=?, location=?, country=?, Address=?, focalftastaff=?, principalname=?, Telephone=?, Email=?, altemail=?, Interests=?, IndicateOrpotunities=?, IndicatePartnership=?, progress=?, listkeychallenges=?, partnershipAgreement=?, Implementationdate=?, agreementavailable=?, ps=?  
+function updatenpt($conn, $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $id, $RLname, $action){
+    $sql = "UPDATE newpartner SET typeofpartner=?, orgname=?, location=?, country=?, Address=?, focalftastaff=?, principalname=?, Telephone=?, Email=?, altemail=?, Interests=?, IndicateOrpotunities=?, progress=?, partnershipAgreement=?, Implementationdate=?, agreementavailable=?, ps=?  
             WHERE id=? ";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -128,7 +132,7 @@ function updatenpt($conn, $typeofpartner, $orgname, $location, $country, $Addres
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssssssssssssssssssss", $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $IndicatePartnership, $progress, $listkeychallenges, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $id);
+    mysqli_stmt_bind_param($stmt, "ssssssssssssssssss", $typeofpartner, $orgname, $location, $country, $Address, $focalftastaff, $principalname, $Telephone, $Email, $altEmail, $Interests, $IndicateOrpotunities, $progress, $partnershipAgreement, $Implementationdate, $agreementavailable, $ps, $id);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     successIDs($conn, $RLname, $action, $id);

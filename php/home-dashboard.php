@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <div>
                             <i class="las la-archive fa-2x"></i>
-                            <h5>No. of All Partners</h5>
+                            <h5>Total Numbers of Partners</h5>
                             <h4>
                                 <?php
                                     include '../includes/dbh.inc.php';
@@ -156,7 +156,7 @@
                     <div class="card-body">
                         <div>
                             <i class="las la-server fa-2x"></i>
-                            <h5>List of NDAs'</h5>
+                            <h5>List of Non-Disclosure Aggrements'</h5>
                             <h4>
                                 <?php
                                     include '../includes/dbh.inc.php';
@@ -177,7 +177,7 @@
                     <div class="card-body">
                         <div>
                             <i class="las la-server fa-2x"></i>
-                            <h5>List of MOUs'</h5>
+                            <h5>List of Memorandum of Understanding</h5>
                             <h4>
                                 <?php
                                     include '../includes/dbh.inc.php';
@@ -191,6 +191,48 @@
                     </div>
                     <div class="card-footer">
                         <a href="../php/listMOU.php">View all</a>
+                    </div>    
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <div>
+                            <i class="las la-server fa-2x"></i>
+                            <h5>List of Service Aggrements</h5>
+                            <h4>
+                                <?php
+                                    include '../includes/dbh.inc.php';
+                                    $sql = "SELECT * FROM mou";
+                                    $result = mysqli_query($conn, $sql);
+                                    $rows = mysqli_num_rows($result);
+                                    echo $rows;
+                                ?>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">View all</a>
+                    </div>    
+                </div>
+
+                <div class="card-single">
+                    <div class="card-body">
+                        <div>
+                            <i class="las la-server fa-2x"></i>
+                            <h5>List of Other Aggrements</h5>
+                            <h4>
+                                <?php
+                                    include '../includes/dbh.inc.php';
+                                    $sql = "SELECT * FROM mou";
+                                    $result = mysqli_query($conn, $sql);
+                                    $rows = mysqli_num_rows($result);
+                                    echo $rows;
+                                ?>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">View all</a>
                     </div>    
                 </div>
                 
