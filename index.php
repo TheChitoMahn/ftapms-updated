@@ -117,7 +117,7 @@
             }
         }
     ?>
-    <div class="fogo_holder">
+    <!-- <div class="fogo_holder">
         <div class="fogo_password">
             <button type="button" class="btn_fogo_password">Create a New Account?</button>
             <form class="fogo_password_content" action="./includes/signup.inc.php" method="POST">
@@ -162,7 +162,7 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
 <script src="../FTA_Partners_System/js/fogo_password_username.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>

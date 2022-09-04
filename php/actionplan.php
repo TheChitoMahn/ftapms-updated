@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../css/dashboard.css">
         <link rel="stylesheet" href="../css/newpartner.css">
         <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/table.css">
+        <!-- <link rel="stylesheet" href="../css/table.css"> -->
         <link rel="stylesheet" href="../css/drop-down-menu.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <body class="motoo">
