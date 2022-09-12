@@ -271,7 +271,7 @@
                                     <td><b>Average%</b></td>
                                     <td>
                                         <button type="submit" class="btn btn-primary" name="avg">Calc</button>
-                                        <span id="val"><b>AVG#DIV000</b></span>
+                                        <span id="valoutput"><b>AVG#DIV000</b></span>
                                 </tr>
                             </tbody>
                         </table>
