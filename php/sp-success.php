@@ -23,13 +23,13 @@
     </div>
     <div class="success-content">
         <h3>Success!</h3>
-        You new account has been successfully created and has been sent for verification and approval. An email verification will be sent by the adminisrator advising you <br>
-        on your account accessibility and any further information or Queries that may arise.
-        You may contact the administrator if the response email takes too long (more than 30 minutes) <br>
+        Account has been successfully created. Email verification is to be sent by the adminisrator advising the user <br>
+        on the account accessibility and any further information or Queries that may arise.
+        <br>
         Thank you.
     </div>
     <div class="success-content">
-    <a href="../index.php" class="ingia_btn">Back to Login</a>
+    <a href="../php/adduser.php" class="ingia_btn">Click here</a>
     </div>
 </body>
 </html>

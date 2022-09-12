@@ -187,6 +187,10 @@
                                     <i class='las la-users fa-lg'></i>
                                     <a href='../php/listusers.php'>List of All Users</a>
                                 </li>
+                                <li>
+                                    <i class='las la-user fa-lg'></i>
+                                    <a href='../php/adduser.php'>Add User</a>
+                                </li>
                             </ul>
                         </div>
                     ";
