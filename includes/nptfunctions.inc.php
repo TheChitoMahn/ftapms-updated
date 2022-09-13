@@ -105,6 +105,8 @@ function successIDs($conn, $RLname, $action, $id) {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/actionplan.php?error=successDelete">';
     }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/SERVICEDelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listSERVICE.php?error=successDelete">';
+    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/OTHERDelete.php?id={$id}") {
+        echo '<meta http-equiv="Refresh" content="0.0; url=../php/listOTHER.php?error=successDelete">';
     }
     exit();
 }

@@ -65,6 +65,21 @@
             $('#name').val(data[1]);
             $('#date').val(data[2]);
         });
+        $('.updateother').on('click', function() {
+            $('#update-other').modal('show');
+
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#update_id').val(data[0]);
+            $('#name').val(data[1]);
+            $('#date').val(data[2]);
+        });
     });
 </script>
 <script>
