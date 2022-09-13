@@ -12,7 +12,7 @@
 <section class="newpartners">
     <div class="main">
         <h3>FTA Partner Assessment Scoresheet</h3>
-        <form class="ftapascore-content" action="#">
+        <form class="ftapascore-content" action="#" method="$_POST" enctype="">
             <!-- Progress Bar -->
             <div class="progressbar">
                 <div class="progress" id="progress"></div>
