@@ -1,6 +1,6 @@
 <?php
     include_once 'sidebar.php';
-    include '../includes/listNDA.inc.php'
+    include '../includes/listOTHER.inc.php'
 ?>
 <link rel="stylesheet" href="../css/dashboard.css">
 <link rel="stylesheet" href="../css/newpartner.css">
@@ -31,8 +31,8 @@
                 }
             }
         ?>
-        <h3>List of All NDAs'</h3>
-        NOTE: This is where you can manage NDA Agreements.
+        <h3>List of All Other Agreements'</h3>
+        NOTE: This is where you can manage Other Agreements.
         <br>
         <br>
         <?php
@@ -44,9 +44,7 @@
                         <th scope="col">No.</th>
                         <th scope="col">Name</th>
                         <th scope="col">Date</th>
-                        <th scope="col">Progress</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Signed NDA</th>
+                        <th scope="col">Signed Service Agreement</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -56,29 +54,15 @@
                             while($rows = mysqli_fetch_assoc($result)){
                                 $i++;
                     ?>
-                    <tr height="50px">
+                    <tr>
                         <th scope="row"><?=$i?></th>
                         <td><?=$rows['name']?></td>
                         <td><?=$rows['date']?></td>
-                        <td><?=$rows['progress']?>/3</td>
-                        <td>
-                            <?php
-                                if ($rows['progress'] === "1") {
-                                    echo "<p class = 'nperror2'>Incomplete <br> Not SIGNED, PRINTED or UPLOADED!</p>";
-                                } elseif ($rows['progress'] === "2") {
-                                    echo "<p class = 'nperror1'>PRINTED! <br> Not SIGNED or UPLOADED!</p>";
-                                } elseif ($rows['progress'] === "3") {
-                                    echo "<p class = 'nperror3'>Complete <br> PRINTED, SIGNED & UPLOADED!</p>";
-                                }else {
-                                    echo "<p>Invalid</p>";
-                                }
-                            ?>
-                        </td>
-                        <td><a target="_blank" href='ndaview.php?id="<?=$rows['id']?>"'><?=$rows['d_name']?></a></td>
+                        <td><a target="_blank" href='serviceview.php?id="<?=$rows['id']?>"'><?=$rows['file_name']?></a></td>
                         <td>
                             <a href="./NDAedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a>
                             <a href="../php/ndaDelete.php?id=<?=$rows['id']?>" class="btn btn-danger"><i class="las la-trash"></i></a>
-                            <a target="blank" href="../includes/print_NDA_single.inc.php?id=<?=$rows['id']?>" class="btn btn-primary"><i class="las la-print"></i></a>
+                            <!-- <a target="blank" href="../includes/print_NDA_single.inc.php?id=<?=$rows['id']?>" class="btn btn-primary"><i class="las la-print"></i></a> -->
                         </td>
                     </tr>
                     <?php } ?>
@@ -86,7 +70,6 @@
             </table>
             <?php } ?>
         </div>
-
     </div>
 </section>
 

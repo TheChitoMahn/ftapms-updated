@@ -27,6 +27,9 @@
                 else if ($_GET["error"] == "successMOUupdated") {
                     echo "<p class='nperror3'> MOU Succesfully Updated</p>";
                 }
+                else if ($_GET["error"] == "errorViewing") {
+                    echo "<p class='nperror2'> There seems to be a problem viewing the document!</p>";
+                }
             }
         ?>
         <h3>List of All MOUs'</h3>
@@ -67,10 +70,12 @@
                                     echo "<p class = 'nperror1'>PRINTED! <br> Not SIGNED or UPLOADED!</p>";
                                 } elseif ($rows['progress'] === "3") {
                                     echo "<p class = 'nperror3'>Complete <br> PRINTED, SIGNED & UPLOADED!</p>";
+                                } else {
+                                    echo "<p>Invalid</p>";
                                 }
                             ?>
                         </td>
-                        <td><a target="_blank" href='view.php?id="<?=$rows['id']?>"'><?=$rows['name']?></a></td>
+                        <td><a target="_blank" href='mouview.php?id="<?=$rows['id']?>"'><?=$rows['name']?></a></td>
                         <td>
                             <a href="./MOUedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a>
                             <!-- <a href="./MOUedit.php?id=<?=$rows['id']?>" class="btn btn-warning">Edit & Update</i></a> <br> -->

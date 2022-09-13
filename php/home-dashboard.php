@@ -211,7 +211,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="#">View all</a>
+                        <a href="../php/listSERVICE.php">View all</a>
                     </div>    
                 </div>
 
@@ -232,7 +232,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <a href="#">View all</a>
+                        <a href="../php/listOTHER.php">View all</a>
                     </div>    
                 </div>
                 

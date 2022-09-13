@@ -12,12 +12,13 @@
         <section class="newpartners">
             <div class="main" id="printablearea">
                 <h3>List of Partners</h3>
-                <!-- <nav class="navbar navbar-light bg-light">
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
-                </nav> -->
+                <?php
+                    if (isset($_GET["error"])) {
+                        if ($_GET["error"] == "errorViewing") {
+                            echo "<p class='nperror2'>There seems to be a problem viewing the document!</p>";
+                        }
+                    }
+                ?>
                 <?php
                     if (mysqli_num_rows($result)) { ?>
                 <div class="table-holder">

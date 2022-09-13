@@ -50,6 +50,21 @@
             document.getElementById('ps').innerHTML = data[15];
             document.getElementById('Implementationdate').innerHTML = data[16];
         });
+        $('.updateservice').on('click', function() {
+            $('#update-service').modal('show');
+
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#update_id').val(data[0]);
+            $('#name').val(data[1]);
+            $('#date').val(data[2]);
+        });
     });
 </script>
 <script>

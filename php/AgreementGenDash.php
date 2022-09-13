@@ -6,12 +6,29 @@
 <link rel="stylesheet" href="../css/drop-down-menu.css">
 <link rel="stylesheet" href="../css/agreementGenDash.css">
 <link rel="stylesheet" href="../css/newpartner.css">
+<link rel="stylesheet" href="../css/index.css">
 
 
 <section class="agreement_Dashboard">
     <div class="main">
         <h3>Agreement Generator</h3>
-        NOTE: Pick an agreement to make
+        NOTE: Pick an agreement to make.
+        <?php
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "stmtFailed") {
+                    echo "<p class='nperror2'>stmtFailed</p>";
+                }
+                else if ($_GET["error"] == "successupload") {
+                    echo "<p class='nperror3'>Signed Service Agreement uploaded successfully!</p>";
+                }
+                else if ($_GET["error"] == "othersuccessupload") {
+                    echo "<p class='nperror3'>Signed (Other) Agreement uploaded successfully!</p>";
+                }
+                else if ($_GET["error"] == "posterror") {
+                    echo "<p class='nperror2'>Something went wrong while posting</p>";
+                }
+            }
+        ?>
         <br>
         <br>
         <div class="main2">
@@ -35,8 +52,7 @@
                 <div class="card" style="width: 28rem;">
                     <img class="card-img-top" src="../images/service.png" alt="Card image cap">
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#assessment">Service Agreement</button>
-                        <p class="nperror2">(Under development)</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#service">Service Agreement</button>
                     </div>
                 </div>
             </div>
@@ -45,7 +61,6 @@
                     <img class="card-img-top" src="../images/other.png" alt="Card image cap">
                     <div class="card-body">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadmodal">Other Agreement</button>
-                        <!-- <a href="./upload.php" class="btn btn-primary">Other Agreement</a> -->
                     </div>
                 </div>
             </div>
@@ -93,33 +108,93 @@
         </div>
 
         <!-- Other Agreement Upload Modal -->
-        <div class="modal fade" id="uploadmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Partner Assessment Check</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        For Other Agreements you can upload directly the signed copy to the inteded Partner Record <br> <br>
-                        <form class="partnercontent" action="" method="POST">
-                            <div class="section1">
-                                Upload Signed Agreement pdf file here:
-                                <div class="input">
-                                    <input type="file" class="txtfields2">
+        <form class="partnercontent" action="../includes/other.inc.php" method="POST" enctype="multipart/form-data">
+            <div class="modal fade" id="uploadmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Other Agreement Quick Upload</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Please fill out the form of the Agreement you want to upload <br> <br>
+                                <div>
+                                    <div class="lbl_name">
+                                        <a>Agreement Name</a>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" class="txtfields2" name="otheragg-name" required>
+                                    </div>
+                                    <div class="lbl_name">
+                                        <a>Date</a>
+                                    </div>
+                                    <div class="input">
+                                        <input type="date" class="txtfields2" name="other-date" required>
+                                    </div>
+                                    Warning! <br>
+                                    Make sure you've uploaded the signed Agreement before clicking the
+                                    upload button. 
+                                    <div class="input">
+                                    <br>
+                                        <input type="file" name="signedOTHER">
+                                    </div>                            
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="./MOU.php" class="btn btn-primary">Upload</a>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" name="s-other-upload">Upload</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
 
+        <!-- Service Agreement Upload Modal -->
+        <form class="partnercontent" action="../includes/service.inc.php" method="POST" enctype="multipart/form-data">
+            <div class="modal fade" id="service" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Service Agreement Quick Upload</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Please fill out the form of the Service Agreement you want to upload <br> <br>
+                                <div>
+                                    <div class="lbl_name">
+                                        <a>Agreement Name</a>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" class="txtfields2" name="serviceagg-name" required>
+                                    </div>
+                                    <div class="lbl_name">
+                                        <a>Date</a>
+                                    </div>
+                                    <div class="input">
+                                        <input type="date" class="txtfields2" name="service-date" required>
+                                    </div>
+                                    Warning! <br>
+                                    Make sure you've uploaded the signed Service Agreement before clicking the
+                                    upload button. 
+                                    <div class="input">
+                                    <br>
+                                        <input type="file" name="signedSERVICE">
+                                    </div>                            
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" name="s-service-upload">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </section>
 

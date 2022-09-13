@@ -46,3 +46,39 @@ if (isset($_POST["mou-print"])) {
         echo '<script> alert("Data not Updated!") </script>';
     }
 }
+
+if(isset($_POST["s-nda-submit"])) {
+    $ndata = file_get_contents($_FILES["signedNDA"]["tmp_name"]);
+    $n_name = $_FILES["signedNDA"]["name"];
+    $nprogress = "3";
+    $n_id = $_POST["n_mouselect"];
+
+    $sql3 = "UPDATE nda SET data=?, d_name=?, progress=? WHERE id=?";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql3)) {
+        header("location: ../php/upload.php?error=nstmtFailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "ssss", $ndata, $n_name, $nprogress, $n_id);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../php/upload.php?error=nsuccessupload");
+    exit();
+}
+
+if (isset($_POST["nda-print"])) {
+    $id3 = $_POST["id"];
+    $n_progress = "2";
+
+    $nsql = "UPDATE nda SET progress='$n_progress' WHERE id = '$id3'";
+    $query_run = mysqli_query($conn, $nsql);
+
+    if($query_run){
+        header("location: ../includes/print_NDA_single.inc.php?id={$id3}");
+        echo '<script> alert("Data Updated!") </script>';
+    } else {
+        header("location: ../includes/print_NDA_single.inc.php?id={$id3}");
+        echo '<script> alert("Data not Updated!") </script>';
+    }
+}

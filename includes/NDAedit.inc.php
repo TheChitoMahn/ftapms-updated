@@ -4,13 +4,6 @@ if (isset($_GET['id'])) {
 
     include "dbh.inc.php";
 
-    // function validate($data){
-    //     $data = trim($data);
-    //     $data = stripslashes($data);
-    //     $data = htmlspecialchars($data);
-    //     return $data;
-    // }
-
     $id = sanitize_input($_GET['id']);
 
     $sql = "SELECT * FROM nda WHERE id = $id";
@@ -21,7 +14,7 @@ if (isset($_GET['id'])) {
     }else {
         header("Location: ../php/userEdit.php?error=goneBack1");
     }
-
+    
 }else if (isset($_POST["btn-NDAedit"])) {
     require_once '../php/sidebar.php';
 
@@ -50,6 +43,5 @@ if (isset($_GET['id'])) {
 
 }else {
     echo '<meta http-equiv="Location" content="5.01; url=../php/NDAEdit.php?id=$id&error=goneBack2">';
-    // header("location: ../php/NDAEdit.php?error=goneBack2");
     exit();
 }

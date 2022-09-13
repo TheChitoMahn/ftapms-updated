@@ -103,6 +103,8 @@ function successIDs($conn, $RLname, $action, $id) {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listMOU.php?error=successDelete">';
     }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/actionplandelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/actionplan.php?error=successDelete">';
+    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/SERVICEDelete.php?id={$id}") {
+        echo '<meta http-equiv="Refresh" content="0.0; url=../php/listSERVICE.php?error=successDelete">';
     }
     exit();
 }
@@ -140,15 +142,15 @@ function updatenpt($conn, $typeofpartner, $orgname, $location, $country, $Addres
     exit();
 }
 
-function createnda($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $RLname, $action){
-    $sql = "INSERT INTO nda (date, name, partner, proposal, delivery, termination, country, time, timelimit, goals, w_name, w_designation, w_address, fta_name) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+function createnda($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $progress, $RLname, $action){
+    $sql = "INSERT INTO nda (date, name, partner, proposal, delivery, termination, country, time, timelimit, goals, w_name, w_designation, w_address, fta_name, progress) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../php/NDA.php?error=stmtfailed");
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssssssssssssss", $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name);
+    mysqli_stmt_bind_param($stmt, "sssssssssssssss", $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $progress);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     successnotify($conn, $RLname, $action);

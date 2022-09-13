@@ -1,6 +1,12 @@
 <?php
     session_start();
     include '../includes/listnotify.inc.php';
+    if ($_SESSION["department"] == "") {
+        header("location: ../php/sp-success.php");
+        session_unset();
+        session_destroy();
+        exit();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,85 +92,157 @@
                 </li>
             </ul>
         </div>
-        <div class="partners_title">
-            <a>Partner Assesment</a>
-        </div>
-        <div class="sidebar_content">
-            <ul>
-                <li>
-                    <i class="las la-passport fa-lg"></i>
-                    <a href="../php/ftapascoresheet.php">FTA PA Scoresheet</a>
-                </li>
-                <li>
-                    <i class="las la-poll-h fa-lg"></i>
-                    <a href="../php/ddchecklist.php">Due diligence Checklist</a>
-                </li>
-                <li>
-                    <i class="las la-id-badge fa-lg"></i>
-                    <a href="../php/ftaprzscorecard.php">Prioritization Score card</a>
-                </li>
-                <li>
-                    <i class="las la-server fa-lg"></i>
-                    <a href="../php/listofass.php">List of Assesments</a>
-                </li>
-            </ul>
-        </div>
-        <div class="partners_title">
-            <a>Agreements</a>
-        </div>
-        <div class="sidebar_content">
-            <ul>
-                <li>
-                    <i class="las la-cogs fa-lg"></i>
-                    <a href="./AgreementGenDash.php">Agreement Generator</a>
-                </li>
-                <li>
-                    <i class="las la-folder-plus fa-lg"></i>
-                    <a href="../php/agreementSCHD.php">PA Scheduler</a>
-                </li>
-                <li>
-                    <i class="las la-server fa-lg"></i>
-                    <a href="../php/listMOU.php">List of MOUs</a>
-                </li>
-                <li>
-                    <i class="las la-server fa-lg"></i>
-                    <a href="../php/listNDA.php">List of NDAs</a>
-                </li>
-                <li>
-                    <i class="las la-server fa-lg"></i>
-                    <a href="#">List of Service Agreements</a>
-                </li>
-                <li>
-                    <i class="las la-server fa-lg"></i>
-                    <a href="#">List of Other Agreements</a>
-                </li>
-                <li>
-                    <i class="las la-file fa-lg"></i>
-                    <a href="../php/upload.php">Upload</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="partners_title">
-            <a>Partners</a>
-        </div>
-        <div class="sidebar_content">
-            <ul>
-                <?php
-                    if (isset($_SESSION["department"])) {
-                        if ($_SESSION["department"] == "admin") {
-                            echo "<li><i class='las la-plus-circle fa-lg'></i><a href='../php/newpartner.php'>New Partner</a></li>";
-                            echo "<li><i class='las la-tasks fa-lg'></i><a href='../php/actionplan.php'>Create Action Plan</a></li>";
-                            echo "<li><i class='las la-pen fa-lg'></i><a href='../php/editpartner.php'>Edit Partner</a></li>";
-                        }
+        <?php
+            if (isset($_SESSION["department"])) {
+                if ($_SESSION["department"] == "admin") {
+                    echo "
+                        <div class='partners_title'>
+                            <a>Partner Assesment</a>
+                        </div>
+                        <div class='sidebar_content'>
+                            <ul>
+                                <li>
+                                    <i class='las la-passport fa-lg'></i>
+                                    <a href='../php/ftapascoresheet.php'>FTA PA Scoresheet</a>
+                                </li>
+                                <li>
+                                    <i class='las la-poll-h fa-lg'></i>
+                                    <a href='../php/ddchecklist.php'>Due diligence Checklist</a>
+                                </li>
+                                <li>
+                                    <i class='las la-id-badge fa-lg'></i>
+                                    <a href='../php/ftaprzscorecard.php'>Prioritization Score card</a>
+                                </li>";
+                }
+                if ($_SESSION["department"] == "admin" or $_SESSION["department"] == "Staff") {
+                    if ($_SESSION["department"] == "admin") {
+                        echo "
+                                <li>
+                                    <i class='las la-server fa-lg'></i>
+                                    <a href='../php/listofass.php'>List of Assesments</a>
+                                </li>
+                            </ul>
+                        </div>";
+                    }elseif($_SESSION["department"] == "Staff") {
+                        echo "
+                        <div class='partners_title'>
+                            <a>Partner Assesment</a>
+                        </div>
+                        <div class='sidebar_content'>
+                            <ul>
+                                <li>
+                                    <i class='las la-server fa-lg'></i>
+                                    <a href='../php/listofass.php'>List of Assesments</a>
+                                </li>
+                            </ul>
+                        </div>";
                     }
-                ?>
-                <li>
-                    <i class="las la-server fa-lg"></i>
-                    <a href="../php/listpartner.php">List of Partners</a>
-                </li>
-            </ul>
-        </div>
+                }
+            }
+        ?>
+        <?php
+            if (isset($_SESSION["department"])) {
+                if ($_SESSION["department"] == "admin") {
+                    echo "
+                        <div class='partners_title'>
+                            <a>Agreements</a>
+                        </div>
+                        <div class='sidebar_content'>
+                            <ul>
+                                <li>
+                                    <i class='las la-cogs fa-lg'></i>
+                                    <a href='./AgreementGenDash.php'>Agreement Generator</a>
+                                </li>";
+                }
+                if ($_SESSION["department"] == "admin" or $_SESSION["department"] == "Staff") {
+                    if ($_SESSION["department"] == "admin") {
+                        echo "
+                                <li>
+                                    <i class='las la-server fa-lg'></i>
+                                    <a href='../php/listMOU.php'>List of MOUs</a>
+                                </li>
+                                <li>
+                                    <i class='las la-server fa-lg'></i>
+                                    <a href='../php/listNDA.php'>List of NDAs</a>
+                                </li>
+                                <li>
+                                    <i class='las la-server fa-lg'></i>
+                                    <a href='../php/listSERVICE.php'>List of Service Agmts</a>
+                                </li>
+                                <li>
+                                    <i class='las la-server fa-lg'></i>
+                                    <a href='../php/listOTHER.php'>List of Other Agmts</a>
+                                </li>";
+                    }elseif($_SESSION["department"] == "Staff") {
+                        echo "
+                            <div class='partners_title'>
+                                <a>Agreements</a>
+                            </div>
+                            <div class='sidebar_content'>
+                                <ul>
+                                    <li>
+                                        <i class='las la-server fa-lg'></i>
+                                        <a href='../php/listMOU.php'>List of MOUs</a>
+                                    </li>
+                                    <li>
+                                        <i class='las la-server fa-lg'></i>
+                                        <a href='../php/listNDA.php'>List of NDAs</a>
+                                    </li>
+                                    <li>
+                                        <i class='las la-server fa-lg'></i>
+                                        <a href='#'>List of Service Agmts</a>
+                                    </li>
+                                    <li>
+                                        <i class='las la-server fa-lg'></i>
+                                        <a href='#'>List of Other Agmts</a>
+                                    </li>
+                                </ul>
+                            </div>";
+                    }
+                    if ($_SESSION["department"] == "admin") {
+                        echo "
+                                <li>
+                                    <i class='las la-file fa-lg'></i>
+                                    <a href='../php/upload.php'>Upload</a>
+                                </li>
+                            </ul>
+                        </div>";
+                    }
+                }
+            }
+        ?>
+        <?php
+            if (isset($_SESSION["department"])) {
+                if ($_SESSION["department"] == "admin") {
+                    echo "<div class='partners_title'>
+                            <a>Partners</a>
+                        </div>
+                        <div class='sidebar_content'>
+                            <ul>
+                                <li><i class='las la-plus-circle fa-lg'></i><a href='../php/newpartner.php'>New Partner</a></li>
+                                <li><i class='las la-folder-plus fa-lg'></i><a href='../php/agreementSCHD.php'>PA Scheduler</a></li>
+                                <li><i class='las la-tasks fa-lg'></i><a href='../php/actionplan.php'>Create Action Plan</a></li>
+                                <li><i class='las la-pen fa-lg'></i><a href='../php/editpartner.php'>Edit Partner</a></li>";
+                }
+                if ($_SESSION["department"] == "admin" or $_SESSION["department"] == "Staff") {
+                    if ($_SESSION["department"] == "admin") {
+                        echo "
+                                <li><i class='las la-list fa-lg'></i><a href='../php/listpartner.php'>List Partner</a></li>
+                            </ul>
+                        </div>";
+                    } elseif($_SESSION["department"] == "Staff") {
+                        echo "<div class='partners_title'>
+                                <a>Partners</a>
+                            </div>
+                            <div class='sidebar_content'>
+                                <ul>
+                                    <li><i class='las la-list fa-lg'></i><a href='../php/listpartner.php'>List Partner</a></li>
+                                </ul>
+                            </div>";
+                    }
+                }
+            }
+        ?>
 
         <?php
             if (isset($_SESSION["department"])) {
@@ -203,7 +281,7 @@
             <div class="name_goes_here">
                 <?php
                     if (isset($_SESSION["fullname"])) {
-                        echo "<a>Welcome, " . $_SESSION["fullname"] . "</a>";
+                        echo "<b><a>Welcome, " . $_SESSION["fullname"] . "</a></b>";
                     }
                 ?>
                 <div class="dropdown">
@@ -212,17 +290,26 @@
                         <a href="../includes/logout.inc.php">Logout</a>
                     </div>
                 </div>
-            <a href="#" class="notification">
-                <span data-toggle="modal" data-target=".bd-example-modal-lg"><i class="las la-bell fa-lg"></i></span>
-                <span class="badge">
-                    <?php
-                        include '../includes/dbh.inc.php';
-                        $sql = "SELECT * FROM notification";
-                        $result = mysqli_query($conn, $sql);
-                        $rows = mysqli_num_rows($result);
-                        echo $rows;
-                    ?>
-                </span>
-            </a>
+                <a href="#" class="notification">
+                    <span data-toggle="modal" data-target=".bd-example-modal-lg"><i class="las la-bell fa-lg"></i></span>
+                    <span class="badge">
+                        <?php
+                            include '../includes/dbh.inc.php';
+                            $sql = "SELECT * FROM notification";
+                            $result = mysqli_query($conn, $sql);
+                            $rows = mysqli_num_rows($result);
+                            if ($rows == 0) {
+                                echo "";
+                            }else {
+                                echo $rows;
+                            }
+                        ?>
+                    </span>
+                </a>
+                <?php
+                    if (isset($_SESSION["department"])) {
+                        echo "<a>...Dep Lvl: <b>" . $_SESSION["department"] . "</b></a>";
+                    }
+                ?>
         </div>
     </div>

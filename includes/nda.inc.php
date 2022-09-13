@@ -17,13 +17,14 @@ if(isset($_POST["nda-submit"])) {
     $w_designation = $_POST["witnessdesignation"];
     $w_address = $_POST["witnessaddress"];
     $fta_name = $_POST["ftaname"];
+    $progress = "1";
     $RLname = $_SESSION["fullname"];
     $action = "added an NDA Agreement at ";
 
     require_once 'dbh.inc.php';
     require_once 'nptfunctions.inc.php';
 
-    createnda($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $RLname, $action);
+    createnda($conn, $date, $name, $partner, $proposal, $delivery, $termination, $country, $time, $timelimit, $goals, $w_name, $w_designation, $w_address, $fta_name, $progress, $RLname, $action);
 
 }else {
     header("location: ../php/NDA.php?error=posterror");
