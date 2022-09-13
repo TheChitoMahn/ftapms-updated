@@ -12,7 +12,6 @@
 <section class="newpartners">
     <div class="main">
         <h3>FTA Partner Assessment Scoresheet</h3>
-        <span class="nperror2">(Under Development)</span>
         <form class="ftapascore-content" action="#">
             <!-- Progress Bar -->
             <div class="progressbar">
@@ -147,7 +146,7 @@
                 <b>Enter Scores for Strategic Fit Criteria</b>
                 <br>
                 <div class="table-holder">
-                    <form method="POST">
+                    <form action="" method="POST" enctype="">
                         <table class="table table-striped" id="strategic_fit">
                             <thead class="thead-dark">
                                 <tr>
@@ -165,7 +164,7 @@
                                         Partnership Strategy.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-1" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-1" id="sf-1" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -176,7 +175,7 @@
                                         performance within their sector.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-2" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-2" id="sf-2" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -186,7 +185,7 @@
                                         The organization's vision is compatible with Fairtrade's vision
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-3" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-3" id="sf-3" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -197,7 +196,7 @@
                                         Fairtrade's Vision.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-4" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-4" id="sf-4" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -208,7 +207,7 @@
                                         or resources we need to achieve our Producer Impact Goals.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-5" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-5" id="sf-5" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -219,7 +218,7 @@
                                         services or resources we need to ahcieve our Producer Impact Goals.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-6" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-6" id="sf-6" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -230,7 +229,7 @@
                                         resources er need to achieve our Producer Impact Goals.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-7" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-7" id="sf-7" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -241,7 +240,7 @@
                                         environmental protection, and safety into its business practices.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-8" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-8" id="sf-8" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -252,7 +251,7 @@
                                         consistent with Fairtrades's way of working.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-9" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-9" id="sf-9" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -262,7 +261,7 @@
                                         The organaization considerd a leading corporate citizen.
                                     </td>
                                     <td>
-                                        <input type="number" class="txtfields2" name="sf-10" placeholder="%">
+                                        <input type="number" class="txtfields2" name="sf-10" id="sf-10" placeholder="%">
                                     </td>
                                 </tr>
 
@@ -270,25 +269,13 @@
                                     <td></td>
                                     <td><b>Average%</b></td>
                                     <td>
-                                        <button type="submit" class="btn btn-primary" name="avg">Calc</button>
+                                        <button type="button" class="btn btn-primary" onclick="submitData('insert');">Calc</button>
                                         <span id="valoutput"><b>AVG#DIV000</b></span>
                                 </tr>
                             </tbody>
                         </table>
                     </form>
-                    <?php
-
-                    if(isset($_POST["avg"])){
-                        require_once '../php/sidebar.php';
-
-                        $n1 = $_POST['sf-1'];
-                        $n2 = $_POST['sf-2'];
-                        $sum = $n1 + $n2;
-                        echo "The Average is: " + $sum;
-                        print $sum;
-                    }
-
-                    ?>
+                    <?php require 'script.php'?>
                 </div>
                 <br>
                 <div class="buttons">
@@ -345,7 +332,7 @@
                                     partnership
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="cp-1" placeholder="%">
+                                    <input type="number" class="txtfields2" name="cp-1" id="cp-1" placeholder="%">
                                 </td>
                             </tr>
 
@@ -357,7 +344,7 @@
                                     intended outcome
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="cp-2" placeholder="%">
+                                    <input type="number" class="txtfields2" name="cp-2" id="cp-2" placeholder="%">
                                 </td>
                             </tr>
 
@@ -367,7 +354,7 @@
                                     There is a clarity that the required skills and competencies will be available.
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="cp-3" placeholder="%">
+                                    <input type="number" class="txtfields2" name="cp-3" id="cp-3" placeholder="%">
                                 </td>
                             </tr>
 
@@ -377,7 +364,7 @@
                                     The organization has access to required financial resources.
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="cp-4" placeholder="%">
+                                    <input type="number" class="txtfields2" name="cp-4" id="cp-4" placeholder="%">
                                 </td>
                             </tr>
 
@@ -387,7 +374,7 @@
                                     The organization has a good track record in resource mobilisation
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="cp-5" placeholder="%">
+                                    <input type="number" class="txtfields2" name="cp-5" id="cp-5" placeholder="%">
                                 </td>
                             </tr>
 
@@ -398,7 +385,7 @@
                                     (completing projects to budget and to time).
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="cp-6" placeholder="%">
+                                    <input type="number" class="txtfields2" name="cp-6" id="cp-6" placeholder="%">
                                 </td>
                             </tr>
 
@@ -408,7 +395,7 @@
                                     The organization is open to sharing lessons learned from previous experiences.
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="cp-7" placeholder="%">
+                                    <input type="number" class="txtfields2" name="cp-7" id="cp-7" placeholder="%">
                                 </td>
                             </tr>
 
@@ -418,7 +405,7 @@
                                     Staff in the organization are reliable and have the required experiences.
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="cp-8" placeholder="%">
+                                    <input type="number" class="txtfields2" name="cp-8" id="cp-8" placeholder="%">
                                 </td>
                             </tr>
 
@@ -426,9 +413,8 @@
                                 <td></td>
                                 <td><b>Average%</b></td>
                                 <td>
-                                    <button type="submit" class="btn btn-primary" >Calc</button>
-                                    <b>AVG#DIV000</b>
-                                    <script></script>
+                                    <button type="button" class="btn btn-primary" onclick="submitCap('capacity');" >Calc</button>
+                                    <span id="capoutput"><b>AVG#DIV000</b></span>
                                 </td>
                             </tr>
                         </tbody>
@@ -487,7 +473,7 @@
                                     The other engagements of this organization do not represent represent a risk to Fairtrade.
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="rk-1" placeholder="%">
+                                    <input type="number" class="txtfields2" name="rk-1" id="rk-1" placeholder="0">
                                 </td>
                             </tr>
 
@@ -497,7 +483,7 @@
                                     The organization has a good track record of financial stability / reliability (credibility with people / within sector they work / worked with / in).						
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="rk-2" placeholder="%">
+                                    <input type="number" class="txtfields2" name="rk-2" id="rk-2" placeholder="0">
                                 </td>
                             </tr>
 
@@ -507,7 +493,7 @@
                                     There is no potential reputational damage associated with this partnership, particularly in cases which focus on sensitive topics.						
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="rk-3" placeholder="%">
+                                    <input type="number" class="txtfields2" name="rk-3" id="rk-3" placeholder="0">
                                 </td>
                             </tr>
 
@@ -517,7 +503,7 @@
                                     The organization has a stable staff group.						
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="rk-4" placeholder="%">
+                                    <input type="number" class="txtfields2" name="rk-4" id="rk-4" placeholder="0">
                                 </td>
                             </tr>
 
@@ -527,7 +513,7 @@
                                     Potential conflicts of interests associated with partnering with this organization have been made explicit?						
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="rk-5" placeholder="%">
+                                    <input type="number" class="txtfields2" name="rk-5" id="rk-5" placeholder="0">
                                 </td>
                             </tr>
 
@@ -537,7 +523,7 @@
                                     A clear exit strategy can be envisioned.						
                                 </td>
                                 <td>
-                                    <input type="number" class="txtfields2" name="rk-6" placeholder="%">
+                                    <input type="number" class="txtfields2" name="rk-6" id="rk-6" placeholder="0">
                                 </td>
                             </tr>
 
@@ -545,9 +531,8 @@
                                 <td></td>
                                 <td><b>Average%</b></td>
                                 <td>
-                                    <button type="submit" class="btn btn-primary" >Calc</button>
-                                    <b>AVG#DIV000</b>
-                                    <script></script>
+                                    <button type="submit" class="btn btn-primary" onclick="submitRisk('risk');" >Calc</button>
+                                    <span id="riskoutput"><b>AVG#DIV000</b></span>
                                 </td>
                             </tr>
                         </tbody>
@@ -573,21 +558,27 @@
 
                             <tr>
                                 <td>1.0 Strategic Fit</td>
-                                <td>AVG#DIV000</td>
+                                <td id="fn-1">
+                                    <span id="valoutputFNL"><b>AVG#DIV000</b></span>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2.0 Capacity</td>
-                                <td>AVG#DIV000</td>
+                                <td id="fn-2">
+                                    <span id="capoutputFNL"><b>AVG#DIV000</b></span>
+                                </td>
                             </tr>
                             <tr>
-                                <td>2.0 Risk</td>
-                                <td>AVG#DIV000</td>
+                                <td>3.0 Risk</td>
+                                <td id="fn-3">
+                                    <span id="riskoutputFNL"><b>AVG#DIV000</b></span>
+                                </td>
                             </tr>
                             <tr>
                                 <td><b><i>Total</i></b></td>
                                 <td>
-                                    <button type="submit" class="btn btn-primary" >Calc</button>
-                                    <b>SUM#DIV000</b>
+                                    <button type="submit" class="btn btn-primary" onclick="submitFNL('fnl');" >Calc</button>
+                                    <span id="allFNL"><b>Total#DIV000</b></span>
                                 </td>
                             </tr>
                         </thead>

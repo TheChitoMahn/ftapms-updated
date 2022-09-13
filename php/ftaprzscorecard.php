@@ -12,7 +12,6 @@
 <section class="newpartners">
     <div class="main">
         <h3>FTA Partnership Prioritization Tool</h3>
-        <span class="nperror2">(Under Development)</span>
         <form class="ftapascore-content" action="#">
             <!-- Progress Bar -->
             <div class="progressbar">
@@ -25,102 +24,112 @@
             <div class="form-step form-step-active">
                 <h4 class="text-center">Partnership Prioritization Tool</h4>
                 <div class="table-holder">
-                    <table class="table table-striped table-bordered">
-                        <thead class="thead-dark">
-                                <tr>
-                                    <th>Priority Type</th>
-                                    <th>Priority Factor</th>
-                                    <th>Score</th>
-                                </tr>
-                            <tbody>
-                                <tr>
-                                    <td>Development value</td>
-                                    <td>
-                                        Increased scale <br>
-                                        Innovative Approach <br>
-                                        Increased sustainability <br>
-                                        Systemic change <br>
-                                        Catalyzing increased/improved Public Sector Engagement in FTA core areas <br>
-                                        <br>
-                                        <br>
-                                        <b>Aggregated Value:</b>
-                                    </td>
-                                    <td>
-                                        <input type="number" class="txtfields" name="pr-1" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-2" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-3" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-4" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-5" placeholder="%"> <br>
-                                        <br>
-                                        <b>#TOTAL</b>
-                                    </td>
-                                </tr>
+                    <form action="" method="POST" enctype="">
+                        <table class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                    <tr>
+                                        <th>Priority Type</th>
+                                        <th>Priority Factor</th>
+                                        <th>Score</th>
+                                    </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>Development value</td>
+                                        <td>
+                                            Increased scale <br>
+                                            Innovative Approach <br>
+                                            Increased sustainability <br>
+                                            Systemic change <br>
+                                            Catalyzing increased/improved Public Sector Engagement in FTA core areas <br>
+                                            <br>
+                                            <br>
+                                            <b>Aggregated Value:</b>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="txtfields" name="pr-1" id="pr-1" placeholder="%" value="0">> <br>
+                                            <input type="number" class="txtfields" name="pr-2" id="pr-2" placeholder="%" value="0">> <br>
+                                            <input type="number" class="txtfields" name="pr-3" id="pr-3" placeholder="%" value="0">> <br>
+                                            <input type="number" class="txtfields" name="pr-4" id="pr-4" placeholder="%" value="0">> <br>
+                                            <input type="number" class="txtfields" name="pr-5" id="pr-5" placeholder="%" value="0">> <br>
+                                            <br>
+                                            <button type="button" class="btn btn-primary" onclick="PRZdevData('devtotal');">Calc</button>
+                                            <span id="devtotal"><b>#Total</b></span>
+                                        </td>
+                                    </tr>
 
-                                <tr>
-                                    <td>Business value</td>
-                                    <td>
-                                        Business Goals <br>
-                                        Partner Champion <br>
-                                        Reputational & Brand Image <br>
-                                        <br>
-                                        <b>Aggregated Value:</b>
-                                    </td>
-                                    <td>
-                                        <input type="number" class="txtfields" name="pr-1" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-2" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-3" placeholder="%"> <br>
-                                        <br>
-                                        <b>#TOTAL</b>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>Business value</td>
+                                        <td>
+                                            Business Goals <br>
+                                            Partner Champion <br>
+                                            Reputational & Brand Image <br>
+                                            <br>
+                                            <b>Aggregated Value:</b>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="txtfields" name="pr-6" id="pr-6" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-7" id="pr-7" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-8" id="pr-8" placeholder="%" value="0"> <br>
+                                            <br>
+                                            <button type="button" class="btn btn-primary" onclick="PRZbizData('biztotal');">Calc</button>
+                                            <span id="biztotal"><b>#Total</b></span>
+                                        </td>
+                                    </tr>
 
-                                <tr>
-                                    <td>Government value</td>
-                                    <td>
-                                        Supports government priorities <br>
-                                        Increased government capacity to address issues faced by producers in trade <br>
-                                        <br>
-                                        <b>Aggregated Value:</b>
-                                    </td>
-                                    <td>
-                                        <input type="number" class="txtfields" name="pr-1" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-2" placeholder="%"> <br>
-                                        <br>
-                                        <b>#TOTAL</b>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>Government value</td>
+                                        <td>
+                                            Supports government priorities <br>
+                                            Increased government capacity to address issues faced by producers in trade <br>
+                                            <br>
+                                            <b>Aggregated Value:</b>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="txtfields" name="pr-9" id="pr-9" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-10" id="pr-10" placeholder="%" value="0"> <br>
+                                            <br>
+                                            <button type="button" class="btn btn-primary" onclick="PRZgovData('govtotal');">Calc</button>
+                                            <span id="govtotal"><b>#Total</b></span>
+                                        </td>
+                                    </tr>
 
-                                <tr>
-                                    <td>Risks and Transaction Costs</td>
-                                    <td>
-                                        Complexity <br>
-                                        Risks <br>
-                                        Staff Intensity <br>
-                                        Additional Resources <br>
-                                        Time Horizon <br>
-                                        <br>
-                                        <br>
-                                        <b>Aggregated Value:</b>
-                                    </td>
-                                    <td>
-                                        <input type="number" class="txtfields" name="pr-1" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-2" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-2" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-2" placeholder="%"> <br>
-                                        <input type="number" class="txtfields" name="pr-2" placeholder="%"> <br>
-                                        <br>
-                                        <b>#TOTAL</b>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>Risks and Transaction Costs</td>
+                                        <td>
+                                            Complexity <br>
+                                            Risks <br>
+                                            Staff Intensity <br>
+                                            Additional Resources <br>
+                                            Time Horizon <br>
+                                            <br>
+                                            <br>
+                                            <b>Aggregated Value:</b>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="txtfields" name="pr-11" id="pr-11" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-12" id="pr-12" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-13" id="pr-13" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-14" id="pr-14" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-15" id="pr-15" placeholder="%" value="0"> <br>
+                                            <br>
+                                            <button type="button" class="btn btn-primary" onclick="PRZrskData('rsktotal');">Calc</button>
+                                            <span id="rsktotal"><b>#Total</b></span>
+                                        </td>
+                                    </tr>
 
-                                <tr>
-                                    <td></td>
-                                    <td><b>Total Score</b></td>
-                                    <td><b>Average</b></td>
-                                </tr>
-                            </tbody>
-                        </thead>
-                    </table>
+                                    <tr>
+                                        <td></td>
+                                        <td><b>Total Score</b></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary" onclick="PRZavgData('avgtotal');">Calc</button>
+                                            <span id="avgtotal"><b>#Average of Totals></b></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </thead>
+                        </table>
+                    </form>
+                    <?php require 'script.php'?>
                 </div>
                 <p>
                     <b>Goal of Partnership Prioritization:</b> To Identify partnership opportunities that are most realistic, impactful and sustainable to be pursued.
