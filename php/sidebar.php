@@ -2,7 +2,7 @@
     session_start();
     include '../includes/listnotify.inc.php';
     if ($_SESSION["department"] == "") {
-        header("location: ../php/sp-success.php");
+        header("location: ../php/sp-loggedout.php");
         session_unset();
         session_destroy();
         exit();

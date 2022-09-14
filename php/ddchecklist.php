@@ -58,9 +58,20 @@
                                     (a) Background:</b> Organization profile, Reference check with partners and/or donors, 
                                     Verification of physical address, Organization website, Postal and mail addresses.
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="1a" id="bginfo">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <textarea class="txtfields2" name="1a_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="txtfields2" name="1a_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
@@ -69,90 +80,200 @@
                                     (financial & Narrative), Tax Registration & Compliance, Internal Controls, 
                                     Bank Accounts)
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="1b" id="financialSTD">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <textarea class="txtfields2" name="1b_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="txtfields2" name="1b_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     <b>(c) Governance:</b> Organization structure, Proof of board, Company Registration status, Copies of applicable policies & procedures (Financial, Human Resource and Procurement)
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="1c" id="Governance">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <textarea class="txtfields2" name="1c_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                    <textarea class="txtfields2" name="1c_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     2. Partnership fits with organisational mandate and it's strategic <b>(Review organisational mandate & strategy, current programs etc)</b>
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="2" id="2">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="2_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="2_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     3. Partnership provides significant value/ impact <b>(Refer to the mission value & Organizational value in the next spreadsheet)</b>
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="3" id="3">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="3_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="3_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     4. Costs acceptable in relation to value gained <b>( Analysis of transaction, implementation and possible over-run cost)</b>
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="4" id="4">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="4_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="4_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     5. Implications are acceptable. <b>(Obligations/commitments being made and Accountability)</b>
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="5" id="5">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="5_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="5_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     6. Risks are sufficiently low or well mitigated <b>(Refer to the next spreadsheet)</b>
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="6" id="6">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="6_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="6_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     7a. Sufficient financial resources to implement i.e. <b>Funding sources for implementation.</b>
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="7a" id="funding">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="7a_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="7a_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     7b. Sufficient internal resources/capacities available i.e.<b> Management systems and staff capacity.</b>
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="7b" id="management">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="7b_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="7b_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
 
                             <tr>
                                 <td> 
                                     8. Clear measure of success for the organisation from Fairtrade Africa's perspective.
                                 </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>
+                                    <select name="8" id="8">
+                                        <option value="Not Acceptable">Not Acceptable</option>
+                                        <option value="May become Acceptable">Maybe</option>
+                                        <option value="Acceptable">Acceptable</option>
+                                        <option value="Insufficient Info">Insufficient Info</option>
+                                    </select>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="8_req" rows="5" cols="5" required></textarea>
+                                </td>
+                                <td>
+                                <textarea class="txtfields2" name="8_notes" rows="5" cols="5" required></textarea>
+                                </td>
                             </tr>
                         </thead>
                     </table>

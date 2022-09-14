@@ -22,7 +22,7 @@
                     echo "<p class='nperror3'>New NDA successfully created!</p>";
                 }
                 else if ($_GET["error"] == "posterror") {
-                    echo "<p class='nperror2'>Something went wrong whikle posting</p>";
+                    echo "<p class='nperror2'>Something went wrong while posting</p>";
                 }
             }
         ?>

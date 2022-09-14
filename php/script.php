@@ -35,7 +35,9 @@
                 success: function(response1){
                    alert(response1);
                    a = response1;
-                   document.getElementById('valoutput').innerHTML = response1.toString();
+                   var ans = document.getElementById("valoutput");
+                   ans.value = response1.toString();
+                   document.getElementById('valoutput1').innerHTML = response1.toString();
                    document.getElementById('valoutputFNL').innerHTML = response1.toString();
                 }
             });
@@ -62,7 +64,9 @@
                 success: function(response2){
                     alert(response2);
                     b = response2;
-                    document.getElementById('capoutput').innerHTML = response2.toString();
+                    var ans = document.getElementById("capoutput");
+                    ans.value = response2.toString();
+                     document.getElementById('capoutput1').innerHTML = response2.toString();
                     document.getElementById('capoutputFNL').innerHTML = response2.toString();
                 }
             });
@@ -87,7 +91,9 @@
                 success: function(response3){
                     alert(response3);
                     c = response3;
-                    document.getElementById('riskoutput').innerHTML = response3.toString();
+                    var ans = document.getElementById("riskoutput");
+                    ans.value = response3.toString();
+                    document.getElementById('riskoutput1').innerHTML = response3.toString();
                     document.getElementById('riskoutputFNL').innerHTML = response3.toString();
                 }
             });
@@ -108,7 +114,9 @@
                 data: data,
                 success: function(response4){
                     alert(response4);
-                    document.getElementById('allFNL').innerHTML = response4.toString();
+                    var ans = document.getElementById("allFNL");
+                    ans.value = response4.toString();
+                    document.getElementById('allFNL1').innerHTML = response4.toString();
                 }
             });
         });

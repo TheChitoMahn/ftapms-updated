@@ -46,11 +46,11 @@
                                             <b>Aggregated Value:</b>
                                         </td>
                                         <td>
-                                            <input type="number" class="txtfields" name="pr-1" id="pr-1" placeholder="%" value="0">> <br>
-                                            <input type="number" class="txtfields" name="pr-2" id="pr-2" placeholder="%" value="0">> <br>
-                                            <input type="number" class="txtfields" name="pr-3" id="pr-3" placeholder="%" value="0">> <br>
-                                            <input type="number" class="txtfields" name="pr-4" id="pr-4" placeholder="%" value="0">> <br>
-                                            <input type="number" class="txtfields" name="pr-5" id="pr-5" placeholder="%" value="0">> <br>
+                                            <input type="number" class="txtfields" name="pr-1" id="pr-1" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-2" id="pr-2" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-3" id="pr-3" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-4" id="pr-4" placeholder="%" value="0"> <br>
+                                            <input type="number" class="txtfields" name="pr-5" id="pr-5" placeholder="%" value="0"> <br>
                                             <br>
                                             <button type="button" class="btn btn-primary" onclick="PRZdevData('devtotal');">Calc</button>
                                             <span id="devtotal"><b>#Total</b></span>

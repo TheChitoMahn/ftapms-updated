@@ -12,7 +12,6 @@
 <section class="newpartners">
     <div class="main">
         <h3>Add a New User Account</h3>
-        <span class="nperror2">(Under Development)</span>
         <?php
             if (isset($_GET["error"])) {
                 if ($_GET["error"] == "emptyInputSI") {
