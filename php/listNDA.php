@@ -1,6 +1,6 @@
 <?php
     include_once 'sidebar.php';
-    include '../includes/listNDA.inc.php'
+    include '../includes/listNDA.inc.php';
 ?>
 <link rel="stylesheet" href="../css/dashboard.css">
 <link rel="stylesheet" href="../css/newpartner.css">

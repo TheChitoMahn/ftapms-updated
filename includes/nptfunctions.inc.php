@@ -113,6 +113,12 @@ function successIDs($conn, $RLname, $action, $id) {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listSERVICE.php?error=successDelete">';
     }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/OTHERDelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listOTHER.php?error=successDelete">';
+    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/scoresheetDELETE.php?id={$id}") {
+        echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successDelete">';
+    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/ddDELETE.php?id={$id}") {
+        echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successddDelete">';
+    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/scorecardDELETE.php?id={$id}") {
+        echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successprzDelete">';
     }
     exit();
 }

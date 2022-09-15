@@ -78,10 +78,10 @@
                                 <td hidden><?=$rows['Implementationdate']?></td>
                                 <td><a target="_blank" href='view.php?id="<?=$rows['id']?>"'><?=$rows['filename']?></a></td>
                                 <td><a href="../includes/printptSINGLE.inc.php?id=<?=$rows['id']?>" class="btn btn-primary" target="blank"><i class="las la-print"></i></a>
-                                    <button type="button" class="btn btn-primary yeye" data-toggle="modal" data-target="#exampleModalLong"> +. </button>
+                                    <button type="button" class="btn btn-primary yeye" data-toggle="modal" data-target="#partnerMore"> +. </button>
 
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                    <!-- Partner .+ button Modal -->
+                                    <div class="modal fade" id="partnerMore" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
