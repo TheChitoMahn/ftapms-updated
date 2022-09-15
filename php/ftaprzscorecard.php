@@ -1,5 +1,6 @@
 <?php
     include_once 'sidebar.php';
+    include_once '../includes/upload.inc.php';
 ?>
 
 <link rel="stylesheet" href="../css/dashboard.css">
@@ -12,7 +13,20 @@
 <section class="newpartners">
     <div class="main">
         <h3>FTA Partnership Prioritization Tool</h3>
-        <form class="ftapascore-content" action="#" method="$_POST" enctype="">
+        <?php
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "stmtfailed") {
+                    echo "<p class='nperror2'>stmtFailed</p>";
+                }
+                else if ($_GET["error"] == "NewscorecardAdded") {
+                    echo "<p class='nperror3'>New Prioritization Scorecard Assessment, Added!</p>";
+                }
+                else if ($_GET["error"] == "posterror") {
+                    echo "<p class='nperror2'>Something went wrong while posting</p>";
+                }
+            }
+        ?>
+        <form class="ftapascore-content" action="../includes/ftaprzscorecard.inc.php" method="POST">
             <!-- Progress Bar -->
             <div class="progressbar">
                 <div class="progress" id="progress"></div>
@@ -24,7 +38,7 @@
             <div class="form-step form-step-active">
                 <h4 class="text-center">Partnership Prioritization Tool</h4>
                 <div class="table-holder">
-                    <form action="" method="POST" enctype="">
+                    <!-- <form action="../includes/ftaprzscorecard.inc.php" method="POST"> -->
                         <table class="table table-striped table-bordered">
                             <thead class="thead-dark">
                                     <tr>
@@ -33,6 +47,17 @@
                                         <th>Score</th>
                                     </tr>
                                 <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            Name of Organization <br>
+                                            <select name="org" id="orgname">
+                                                <?php while($row = mysqli_fetch_array($scr_result)):;?>
+                                                <option value="<?php echo $row[1]; ?>"><?php echo $row[1]; ?></option>
+                                                <?php endwhile;?> 
+                                            </select>
+                                        </td>
+                                    </tr>
                                     <tr>
                                         <td>Development value</td>
                                         <td>
@@ -53,7 +78,8 @@
                                             <input type="number" class="txtfields" name="pr-5" id="pr-5" placeholder="%" value="0"> <br>
                                             <br>
                                             <button type="button" class="btn btn-primary" onclick="PRZdevData('devtotal');">Calc</button>
-                                            <span id="devtotal"><b>#Total</b></span>
+                                            <input type="text" class="txtfields" name="devtotal" id="devtotal" readonly> <br>
+                                            <!-- <span id="devtotal"><b>#Total</b></span> -->
                                         </td>
                                     </tr>
 
@@ -72,7 +98,8 @@
                                             <input type="number" class="txtfields" name="pr-8" id="pr-8" placeholder="%" value="0"> <br>
                                             <br>
                                             <button type="button" class="btn btn-primary" onclick="PRZbizData('biztotal');">Calc</button>
-                                            <span id="biztotal"><b>#Total</b></span>
+                                            <input type="text" class="txtfields" name="biztotal" id="biztotal" readonly> <br>
+                                            <!-- <span id="biztotal"><b>#Total</b></span> -->
                                         </td>
                                     </tr>
 
@@ -89,7 +116,8 @@
                                             <input type="number" class="txtfields" name="pr-10" id="pr-10" placeholder="%" value="0"> <br>
                                             <br>
                                             <button type="button" class="btn btn-primary" onclick="PRZgovData('govtotal');">Calc</button>
-                                            <span id="govtotal"><b>#Total</b></span>
+                                            <input type="text" class="txtfields" name="govtotal" id="govtotal" readonly> <br>
+                                            <!-- <span id="govtotal"><b>#Total</b></span> -->
                                         </td>
                                     </tr>
 
@@ -113,7 +141,8 @@
                                             <input type="number" class="txtfields" name="pr-15" id="pr-15" placeholder="%" value="0"> <br>
                                             <br>
                                             <button type="button" class="btn btn-primary" onclick="PRZrskData('rsktotal');">Calc</button>
-                                            <span id="rsktotal"><b>#Total</b></span>
+                                            <input type="text" class="txtfields" name="rsktotal" id="rsktotal" readonly> <br>
+                                            <!-- <span id="rsktotal"><b>#Total</b></span> -->
                                         </td>
                                     </tr>
 
@@ -122,13 +151,14 @@
                                         <td><b>Total Score</b></td>
                                         <td>
                                             <button type="button" class="btn btn-primary" onclick="PRZavgData('avgtotal');">Calc</button>
-                                            <span id="avgtotal"><b>#Average of Totals></b></span>
+                                            <input type="text" class="txtfields" name="avgtotal" id="avgtotal" readonly> <br>
+                                            <!-- <span id="avgtotal"><b>#Average of Totals></b></span> -->
                                         </td>
                                     </tr>
                                 </tbody>
                             </thead>
                         </table>
-                    </form>
+                    <!-- </form> -->
                     <?php require 'script.php'?>
                 </div>
                 <p>
@@ -142,7 +172,7 @@
                 </p>
                 <div class="buttons">
                     <a href="#" class="ingia_btn_next">Score Criteria</a>
-                    <button type="button" class="ingia_btn" name="scoresheet-submit">Save</button>
+                    <button type="submit" class="ingia_btn" name="scorecard-submit">Save</button>
                 </div>
                 <br>
                 <br>

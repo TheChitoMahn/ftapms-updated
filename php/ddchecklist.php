@@ -1,5 +1,6 @@
 <?php
     include_once 'sidebar.php';
+    include_once '../includes/upload.inc.php';
 ?>
 
 <link rel="stylesheet" href="../css/dashboard.css">
@@ -12,8 +13,20 @@
 <section class="newpartners">
     <div class="main">
         <h3>Due Diligence Checklist</h3>
-        <span class="nperror2">(Under Development)</span>
-        <form class="ftapascore-content" action="#">
+        <?php
+            if (isset($_GET["error"])) {
+                if ($_GET["error"] == "stmtfailed") {
+                    echo "<p class='nperror2'>stmtFailed</p>";
+                }
+                else if ($_GET["error"] == "NewchecklistAdded") {
+                    echo "<p class='nperror3'>New Due Diligence Checklist Assessment, Added!</p>";
+                }
+                else if ($_GET["error"] == "posterror") {
+                    echo "<p class='nperror2'>Something went wrong while posting</p>";
+                }
+            }
+        ?>
+        <form class="ftapascore-content" action="../includes/ddchecklist.inc.php" method="POST">
             <!-- Progress Bar -->
             <div class="progressbar">
                 <div class="progress" id="progress"></div>
@@ -51,6 +64,16 @@
                                 <th>Outstanding Issues/ Further Information Required</th>
                                 <th>Recommendations/Notes</th>
                             </tr>
+                            <tr>
+                                <td>
+                                    Name of Organization <br>
+                                    <select class="txtfields2" name="org" id="orgname">
+                                        <?php while($row = mysqli_fetch_array($scr_result)):;?>
+                                        <option value="<?php echo $row[1]; ?>"><?php echo $row[1]; ?></option>
+                                        <?php endwhile;?>
+                                    </select>
+                                </td>
+                            </tr>
 
                             <tr>
                                 <td>
@@ -67,10 +90,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <textarea class="txtfields2" name="1a_req" rows="5" cols="5" required></textarea>
+                                    <textarea class="txtfields2" name="1a_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                    <textarea class="txtfields2" name="1a_notes" rows="5" cols="5" required></textarea>
+                                    <textarea class="txtfields2" name="1a_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -89,10 +112,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <textarea class="txtfields2" name="1b_req" rows="5" cols="5" required></textarea>
+                                    <textarea class="txtfields2" name="1b_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                    <textarea class="txtfields2" name="1b_notes" rows="5" cols="5" required></textarea>
+                                    <textarea class="txtfields2" name="1b_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -109,10 +132,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <textarea class="txtfields2" name="1c_req" rows="5" cols="5" required></textarea>
+                                    <textarea class="txtfields2" name="1c_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                    <textarea class="txtfields2" name="1c_notes" rows="5" cols="5" required></textarea>
+                                    <textarea class="txtfields2" name="1c_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -129,10 +152,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="2_req" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="2_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="2_notes" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="2_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -149,10 +172,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="3_req" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="3_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="3_notes" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="3_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -169,10 +192,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="4_req" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="4_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="4_notes" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="4_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -189,10 +212,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="5_req" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="5_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="5_notes" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="5_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -209,10 +232,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="6_req" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="6_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="6_notes" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="6_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -229,10 +252,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="7a_req" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="7a_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="7a_notes" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="7a_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -249,10 +272,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="7b_req" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="7b_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="7b_notes" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="7b_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
 
@@ -269,10 +292,10 @@
                                     </select>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="8_req" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="8_req" rows="5" cols="5" ></textarea>
                                 </td>
                                 <td>
-                                <textarea class="txtfields2" name="8_notes" rows="5" cols="5" required></textarea>
+                                <textarea class="txtfields2" name="8_notes" rows="5" cols="5" ></textarea>
                                 </td>
                             </tr>
                         </thead>
@@ -283,7 +306,7 @@
                 </p>
                 <div class="buttons">
                     <a href="#" class="ingia_btn_next">More Info.</a>
-                    <button type="button" class="ingia_btn" name="scoresheet-submit">Save</button>
+                    <button type="submit" class="ingia_btn" name="ddchecklist-submit">Save</button>
                 </div>
                 <br>
                 <br>
@@ -401,9 +424,6 @@
                     </table>
                 </div>
                 <br>
-                <div class="buttons">
-                    <a href="#" class="ingia_btn_prev">Previous</a>
-                </div>
                 <br>
             </div>
         </form>

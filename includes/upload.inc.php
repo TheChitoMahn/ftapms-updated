@@ -11,6 +11,9 @@ $ndaresult = mysqli_query($conn, $ndasql);
 $ptnsql = "SELECT * FROM newpartner";
 $ptnresult = mysqli_query($conn, $ptnsql);
 
+$scrsql = "SELECT * FROM scoresheet";
+$scr_result = mysqli_query($conn, $scrsql);
+
 if(isset($_POST["s-mou-submit"])) {
     $data = file_get_contents($_FILES["signedMOU"]["tmp_name"]);
     $name = $_FILES["signedMOU"]["name"];

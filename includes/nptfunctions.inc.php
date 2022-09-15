@@ -75,6 +75,10 @@ function successnotify($conn, $RLname, $action) {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/actionplan.php?error=NewapAdded">';
     }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/ftapascoresheet.inc.php') {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/ftapascoresheet.php?error=NewscoresheetAdded">';
+    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/ddchecklist.inc.php') {
+        echo '<meta http-equiv="Refresh" content="0.01; url=../php/ddchecklist.php?error=NewchecklistAdded">';
+    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/ftaprzscorecard.inc.php') {
+        echo '<meta http-equiv="Refresh" content="0.01; url=../php/ftaprzscorecard.php?error=NewscorecardAdded">';
     }
     exit();
 }

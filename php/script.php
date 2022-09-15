@@ -141,7 +141,9 @@
                 success: function(response5){
                     alert(response5);
                     d = response5;
-                    document.getElementById('devtotal').innerHTML = response5.toString();
+                    var ans = document.getElementById("devtotal");
+                    ans.value = response5.toString();
+                    // document.getElementById('devtotal').innerHTML = response5.toString();
                 }
             });
         });
@@ -162,7 +164,9 @@
                 success: function(response6){
                     alert(response6);
                     e = response6;
-                    document.getElementById('biztotal').innerHTML = response6.toString();
+                    var ans = document.getElementById("biztotal");
+                    ans.value = response6.toString();
+                    // document.getElementById('biztotal').innerHTML = response6.toString();
                 }
             });
         });
@@ -182,7 +186,9 @@
                 success: function(response7){
                     alert(response7);
                     f = response7;
-                    document.getElementById('govtotal').innerHTML = response7.toString();
+                    var ans = document.getElementById("govtotal");
+                    ans.value = response7.toString();
+                    // document.getElementById('govtotal').innerHTML = response7.toString();
                 }
             });
         });
@@ -205,7 +211,9 @@
                 success: function(response8){
                     alert(response8);
                     g = response8;
-                    document.getElementById('rsktotal').innerHTML = response8.toString();
+                    var ans = document.getElementById("rsktotal");
+                    ans.value = response8.toString();
+                    // document.getElementById('rsktotal').innerHTML = response8.toString();
                 }
             });
         });
@@ -226,7 +234,9 @@
                 data: data,
                 success: function(response9){
                     alert(response9);
-                    document.getElementById('avgtotal').innerHTML = response9.toString();
+                    var ans = document.getElementById("avgtotal");
+                    ans.value = response9.toString();
+                    // document.getElementById('avgtotal').innerHTML = response9.toString();
                 }
             });
         });

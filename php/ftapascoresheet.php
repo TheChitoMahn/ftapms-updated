@@ -18,7 +18,7 @@
                     echo "<p class='nperror2'>stmtFailed</p>";
                 }
                 else if ($_GET["error"] == "NewscoresheetAdded") {
-                    echo "<p class='nperror3'>New FTA PA Scoresheet Assessment Added!</p>";
+                    echo "<p class='nperror3'>New FTA PA Scoresheet Assessment, Added!</p>";
                 }
                 else if ($_GET["error"] == "posterror") {
                     echo "<p class='nperror2'>Something went wrong while posting</p>";
