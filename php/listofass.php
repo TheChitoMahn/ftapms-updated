@@ -30,11 +30,14 @@
                 else if ($_GET["error"] == "successprzDelete") {
                     echo "<p class='nperror3'>A Prioritization Scorecard record has been Succesfully Deleted</p>";
                 }
-                else if ($_GET["error"] == "successMOUupdated") {
-                    echo "<p class='nperror3'> MOU Succesfully Updated</p>";
+                else if ($_GET["error"] == "successDDupdate") {
+                    echo "<p class='nperror3'> Due Diligence Checklist Succesfully Updated</p>";
                 }
                 else if ($_GET["error"] == "successSCRupdate") {
                     echo "<p class='nperror3'> FTA PA Scoresheet Succesfully Updated</p>";
+                }
+                else if ($_GET["error"] == "successPRZZupdate") {
+                    echo "<p class='nperror3'> Prioritization Scorecard Succesfully Updated</p>";
                 }
             }
         ?>
@@ -140,13 +143,13 @@
                                                                         <a>Partner Phone No.</a>
                                                                     </div>
                                                                     <div class="input">
-                                                                        <input type="text" class="txtfields2" name="scr-phone" id="u-phone" required>
+                                                                        <input type="number" class="txtfields2" name="scr-phone" id="u-phone" required>
                                                                     </div>
                                                                     <div class="lbl_name">
                                                                         <a>Date of Assessement</a>
                                                                     </div>
                                                                     <div class="input">
-                                                                        <input type="text" class="txtfields2" name="scr-das" id="u-das" required>
+                                                                        <input type="date" class="txtfields2" name="scr-das" id="u-das" required>
                                                                     </div>
                                                                     <div class="lbl_name">
                                                                         <a>Carried out By</a>
@@ -158,31 +161,31 @@
                                                                         <a>Strategic</a>
                                                                     </div>
                                                                     <div class="input">
-                                                                        <input type="text" class="txtfields2" name="scr-str" id="u-str" required>
+                                                                        <input type="number" class="txtfields2" name="scr-str" id="u-str" required>
                                                                     </div>
                                                                     <div class="lbl_name">
                                                                         <a>Capacity</a>
                                                                     </div>
                                                                     <div class="input">
-                                                                        <input type="text" class="txtfields2" name="scr-cap" id="u-cap" required>
+                                                                        <input type="number" class="txtfields2" name="scr-cap" id="u-cap" required>
                                                                     </div>
                                                                     <div class="lbl_name">
                                                                         <a>Risk</a>
                                                                     </div>
                                                                     <div class="input">
-                                                                        <input type="text" class="txtfields2" name="scr-rsk" id="u-rsk" required>
+                                                                        <input type="number" class="txtfields2" name="scr-rsk" id="u-rsk" required>
                                                                     </div>
                                                                     <div class="lbl_name">
                                                                         <a>Summary</a>
                                                                     </div>
                                                                     <div class="input">
-                                                                        <input type="text" class="txtfields2" name="scr-smry" id="u-smry" required>
+                                                                        <input type="number" class="txtfields2" name="scr-smry" id="u-smry" required>
                                                                     </div>                         
                                                                 </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary" name="scoresheet-edit">Update24</button>
+                                                            <button type="submit" class="btn btn-primary" name="scoresheet-edit">Update</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -191,7 +194,7 @@
 
                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmscoresheet"><i class="las la-trash"></i></button>
 
-                                        <!-- SCORESHEET Confirmation Pop up Box -->
+                                        <!-- Scoresheet Delete Confirmation Pop up Box -->
                                         <div class="modal fade" id="confirmscoresheet" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
@@ -290,7 +293,7 @@
         <div class="fogo_holder">
             <div class="fogo_password">
                 <button type="button" class="btn_fogo_password">Due Diligence Checklist</button>
-                <form class="fogo_password_content" action="../FTA_Partners_System/includes/fogo.inc.php" method="POST">
+                <div class="fogo_password_content">
                     <p>This is table with records of Due Diligence Checklist.</p>
                     <br>
                     <?php
@@ -300,6 +303,7 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">No.</th>
+                                    <th hidden scope="col">ID</th>
                                     <th scope="col">Organization Name</th>
                                     <th scope="col">Background</th>
                                     <th scope="col">Financial Standing</th>
@@ -323,6 +327,7 @@
                                 ?>
                                 <tr>
                                     <th scope="row"><?=$i?></th>
+                                    <td hidden><?=$rows['id']?></td>
                                     <td><?=$rows['orgname']?></td>
                                     <td><?=$rows['bginfo']?></td>
                                     <td><?=$rows['financeSTD']?></td>
@@ -336,7 +341,171 @@
                                     <td hidden><?=$rows['management']?></td>
                                     <td hidden><?=$rows['eight']?></td>
                                     <td>
-                                        <!-- <a href="./NDAedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a> -->
+                                        <button type="button" class="btn btn-warning updatedd"><i class="las la-edit"></i></button>
+                                        
+                                        <!-- DD Checklist Update Modal -->
+                                        <form class="partnercontent" action="../includes/ddEDIT.inc.php" method="POST">
+                                            <div class="modal fade" id="update-dd" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">Due Diligence Checklist Assessement Update</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Please fill out the update form below. <br> <br>
+                                                                <div>
+                                                                    <input type="text" class="txtfields2" name="id" id="update_id3" hidden>
+                                                                    <div class="lbl_name">
+                                                                        <a>Organization Name</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="chk-orgname" id="orgname3" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Background</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk-bg" id="address3" required> -->
+                                                                        <select class="txtfields2" name="chk-bg" id="address3" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Financial Standing</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk-fstand" id="u-contact1" required> -->
+                                                                        <select class="txtfields2" name="chk-fstand" id="u-contact1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Governance</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk-governace" id="u-email1" required> -->
+                                                                        <select class="txtfields2" name="chk-governace" id="u-email1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Strategy & Programs</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="scr-snp" id="u-phone1" required> -->
+                                                                        <select class="txtfields2" name="chk-snp" id="u-phone1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Company/Organization Value</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk-cov" id="u-das1" required> -->
+                                                                        <select class="txtfields2" name="chk-cov" id="u-das1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Analysis of Transaction</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="scr-aot" id="u-cob1" required> -->
+                                                                        <select class="txtfields2" name="chk-aot" id="u-cob1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Obligations/commitments being made</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk-obligation" id="u-str1" required> -->
+                                                                        <select class="txtfields2" name="chk-obligation" id="u-str1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Risks are sufficiently low</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk-lowrisk" id="u-cap1" required> -->
+                                                                        <select class="txtfields2" name="chk-lowrisk" id="u-cap1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Sufficient financial resources</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk_sufficient" id="u-rsk1" required> -->
+                                                                        <select class="txtfields2" name="chk_sufficient" id="u-rsk1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Management systems and staff capacity.</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk-management" id="u-smry1" required> -->
+                                                                        <select class="txtfields2" name="chk-management" id="u-smry1" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Clear measure of success for the organisation from Fairtrade Africa's perspective.</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <!-- <input type="text" class="txtfields2" name="chk-ftapers" id="chk-ftapers" required> -->
+                                                                        <select class="txtfields2" name="chk-ftapers" id="chk-ftapers" required>
+                                                                            <option value="Not Acceptable">Not Acceptable</option>
+                                                                            <option value="May become Acceptable">Maybe</option>
+                                                                            <option value="Acceptable">Acceptable</option>
+                                                                            <option value="Insufficient Info">Insufficient Info</option>
+                                                                        </select>
+                                                                    </div>                          
+                                                                </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary" name="checklist-edit">Update</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
 
                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmdd"><i class="las la-trash"></i></button>
 
@@ -432,7 +601,7 @@
                         </table>
                         <?php } ?>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
 
@@ -440,8 +609,8 @@
         <div class="fogo_holder">
             <div class="fogo_password">
                 <button type="button" class="btn_fogo_password">Fairtrade Africa Prioritization Scorecard</button>
-                <form class="fogo_password_content" action="../FTA_Partners_System/includes/fogo.inc.php" method="POST">
-                    <p>This is table with records of Due Diligence Checklist.</p>
+                <div class="fogo_password_content">
+                    <p>This is table with records of Prioritization Scorecard.</p>
                     <br>
                     <?php
                         if (mysqli_num_rows($result2)) { ?>
@@ -450,6 +619,7 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">No.</th>
+                                    <th hidden scope="col">ID</th>
                                     <th scope="col">Organization Name</th>
 
                                     <th  scope="col">Increased scale</th>
@@ -487,6 +657,7 @@
                                 ?>
                                 <tr>
                                     <th scope="row"><?=$i?></th>
+                                    <td hidden><?=$rows['id']?></td>
                                     <td><?=$rows['orgname']?></td>
 
                                     <td ><?=$rows['dev1']?></td>
@@ -514,11 +685,182 @@
 
                                     <td><?=$rows['total']?></td>
                                     <td>
-                                        <!-- <a href="./NDAedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a> -->
+                                        <button type="button" class="btn btn-warning updateprzz"><i class="las la-edit"></i></button>
+                                        
+                                        <!-- Scoresheet Update Modal -->
+                                        <form class="partnercontent" action="../includes/przzEDIT.inc.php" method="POST">
+                                            <div class="modal fade" id="update-przz" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">FTA Prioritization Scorecard Update</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Please fill out the update form below. <br> <br>
+                                                                <div>
+                                                                    <input type="number" class="txtfields2" name="id" id="update_id4" hidden>
+                                                                    <div class="lbl_name">
+                                                                        <a>Organization Name</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="orgname4" id="orgname4" required>
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <b><a>Development Value</a></b>
+                                                                    <div class="lbl_name">
+                                                                        <a>Increased Sale</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="address4" id="address4" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Innovative Approach</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-contact2" id="u-contact2" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Increased sustainability</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-email2" id="u-email2" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Systemic change.</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-phone2" id="u-phone2" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Catalyzing increased/improved Public Sector Engagement in FTA core areas</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-das2" id="u-das2" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <b><a>SUM</a></b>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-cob2" id="u-cob2" required>
+                                                                    </div>
+
+                                                                    <br>
+                                                                    <br>
+                                                                    <b><a>Business Value</a></b>
+                                                                    <div class="lbl_name">
+                                                                        <a>Business Goals</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-str2" id="u-str2" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Partner Champion</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-cap2" id="u-cap2" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Reputational & Brand Image</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-rsk2" id="u-rsk2" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <b><a>SUM</a></b>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="u-smry2" id="u-smry2" required>
+                                                                    </div>
+
+                                                                    <br>
+                                                                    <br>
+                                                                    <b><a>Government value</a></b>
+                                                                    <div class="lbl_name">
+                                                                        <a>Supports government priorities</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="chk-ftapers1" id="chk-ftapers1" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Increased government capacity to address issues faced by producers in trade</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz1" id="przz1" required>
+                                                                    </div>                   
+                                                                    <div class="lbl_name">
+                                                                        <b><a>SUM</a></b>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz2" id="przz2" required>
+                                                                    </div>
+
+                                                                    <br>
+                                                                    <br>
+                                                                    <b><a>Risks and Transaction Costs</a></b>
+                                                                    <div class="lbl_name">
+                                                                        <a>Complexity</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz3" id="przz3" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Risks</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz4" id="przz4" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Staff Intensity</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz5" id="przz5" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Additional Resources</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz6" id="przz6" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Time Horizon</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz7" id="przz7" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <b><a>SUM</a></b>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz8" id="przz8" required>
+                                                                    </div>
+
+                                                                    <br>
+                                                                    <br>
+
+                                                                    <div class="lbl_name">
+                                                                        <b><a>Total Score:</a></b>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="number" class="txtfields2" name="przz9" id="przz9" required>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary" name="przz-edit">Update</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
 
                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmprz"><i class="las la-trash"></i></button>
 
-                                        <!-- SCORESHEET Confirmation Pop up Box -->
+                                        <!-- Prioritization Scorecard Pop up Box -->
                                         <div class="modal fade" id="confirmprz" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
@@ -538,7 +880,6 @@
                                             </div>
                                         </div>
 
-                                        <!-- <a target="blank" href="../includes/print_NDA_single.inc.php?id=<?=$rows['id']?>" class="btn btn-primary">.+</a> -->
                                         <button type="button" class="btn btn-primary przzmore" data-toggle="modal" data-target="#przzmore">.+</i></button>
 
                                         <!-- FTA Due Diligence Checklist .+ button Modal -->
@@ -642,7 +983,7 @@
                         </table>
                         <?php } ?>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

@@ -50,6 +50,8 @@
             document.getElementById('ps').innerHTML = data[15];
             document.getElementById('Implementationdate').innerHTML = data[16];
         });
+
+// Assessments View More (.+)
         $('.scoresheetmore').on('click', function() {
             $tr = $(this).closest('tr');
 
@@ -81,18 +83,18 @@
 
             console.log(data);
 
-            document.getElementById('Title1').innerHTML = data[0];
-            document.getElementById('address1').innerHTML = data[1];
-            document.getElementById('contact1').innerHTML = data[2];
-            document.getElementById('email1').innerHTML = data[3];
-            document.getElementById('phone1').innerHTML = data[4];
-            document.getElementById('das1').innerHTML = data[5];
-            document.getElementById('coby1').innerHTML = data[6];
-            document.getElementById('str1').innerHTML = data[7];
-            document.getElementById('cap1').innerHTML = data[8];
-            document.getElementById('rsk1').innerHTML = data[9];
-            document.getElementById('smr1').innerHTML = data[10];
-            document.getElementById('uid1').innerHTML = data[11];
+            document.getElementById('Title1').innerHTML = data[1];
+            document.getElementById('address1').innerHTML = data[2];
+            document.getElementById('contact1').innerHTML = data[3];
+            document.getElementById('email1').innerHTML = data[4];
+            document.getElementById('phone1').innerHTML = data[5];
+            document.getElementById('das1').innerHTML = data[6];
+            document.getElementById('coby1').innerHTML = data[7];
+            document.getElementById('str1').innerHTML = data[8];
+            document.getElementById('cap1').innerHTML = data[9];
+            document.getElementById('rsk1').innerHTML = data[10];
+            document.getElementById('smr1').innerHTML = data[11];
+            document.getElementById('uid1').innerHTML = data[12];
         });
         $('.przzmore').on('click', function() {
             $tr = $(this).closest('tr');
@@ -125,7 +127,7 @@
             document.getElementById('Score').innerHTML = data[19];
         });
 
-
+// Agreements Update
         $('.updateservice').on('click', function() {
             $('#update-service').modal('show');
 
@@ -156,6 +158,8 @@
             $('#name').val(data[1]);
             $('#date').val(data[2]);
         });
+
+//Assessments Update
         $('.updatescoresheet').on('click', function() {
             $('#update-scoresheet').modal('show');
 
@@ -179,6 +183,65 @@
             $('#u-cap').val(data[9]);
             $('#u-rsk').val(data[10]);
             $('#u-smry').val(data[11]);
+        });
+        $('.updatedd').on('click', function() {
+            $('#update-dd').modal('show');
+
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#update_id3').val(data[0]);
+            $('#orgname3').val(data[1]);
+            $('#address3').val(data[2]);
+            $('#u-contact1').val(data[3]);
+            $('#u-email1').val(data[4]);
+            $('#u-phone1').val(data[5]);
+            $('#u-das1').val(data[6]);
+            $('#u-cob1').val(data[7]);
+            $('#u-str1').val(data[8]);
+            $('#u-cap1').val(data[9]);
+            $('#u-rsk1').val(data[10]);
+            $('#u-smry1').val(data[11]);
+            $('#chk-ftapers').val(data[12]);
+        });
+        $('.updateprzz').on('click', function() {
+            $('#update-przz').modal('show');
+
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#update_id4').val(data[0]);
+            $('#orgname4').val(data[1]);
+            $('#address4').val(data[2]);
+            $('#u-contact2').val(data[3]);
+            $('#u-email2').val(data[4]);
+            $('#u-phone2').val(data[5]);
+            $('#u-das2').val(data[6]);
+            $('#u-cob2').val(data[7]);
+            $('#u-str2').val(data[8]);
+            $('#u-cap2').val(data[9]);
+            $('#u-rsk2').val(data[10]);
+            $('#u-smry2').val(data[11]);
+            $('#chk-ftapers1').val(data[12]);
+            $('#przz1').val(data[13]);
+            $('#przz2').val(data[14]);
+            $('#przz3').val(data[15]);
+            $('#przz4').val(data[16]);
+            $('#przz5').val(data[17]);
+            $('#przz6').val(data[18]);
+            $('#przz7').val(data[19]);
+            $('#przz8').val(data[20]);
+            $('#przz9').val(data[21]);
         });
     });
 </script>
