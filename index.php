@@ -20,7 +20,7 @@
 <body>
     <div class="title">
         <div class="title_content">
-            <img src="../FTA_Partners_System/images/FTA.PNG" alt="FTA Logo">
+            <img src="./images/FTA.PNG" alt="FTA Logo">
             <br>
             <a>FTA PARTNERS MANAGEMENT SYSTEM</a>
         </div>

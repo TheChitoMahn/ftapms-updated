@@ -74,7 +74,7 @@
         <br> <br>
 
         <p>
-            <h4>Non-Disclosure Aggrements</h4>
+            <h4>Non-Disclosure Agreements</h4>
             Select the appropriate NDA Agreement you want to upload the signed document to.
             Be carefull not to upload the signed NDA to a different partner!
         </p>

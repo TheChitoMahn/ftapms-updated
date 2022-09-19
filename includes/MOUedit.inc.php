@@ -4,13 +4,6 @@ if (isset($_GET['id'])) {
 
     include "dbh.inc.php";
 
-    // function validate($data){
-    //     $data = trim($data);
-    //     $data = stripslashes($data);
-    //     $data = htmlspecialchars($data);
-    //     return $data;
-    // }
-
     $id = sanitize_input($_GET['id']);
 
     $sql = "SELECT * FROM mou WHERE id = $id";
@@ -58,7 +51,7 @@ if (isset($_GET['id'])) {
     updateMOU($conn, $orgname, $moudate, $preamble, $whereas, $whereas2, $article1, $article2, $article3, $article31, $article32, $article4, $article5, $article6, $article7, $article8, $contacts, $article9, $article10, $article11, $article12, $article13, $article14, $sign, $id, $RLname, $action);
 
 }else {
-    echo '<meta http-equiv="Location" content="5.01; url=../php/MOUEdit.php?id=$id&error=goneBack2">';
+    echo '<meta http-equiv="Location" content="0.01; url=../php/MOUEdit.php?id=$id&error=goneBack2">';
     // header("location: ../php/NDAEdit.php?error=goneBack2");
     exit();
 }

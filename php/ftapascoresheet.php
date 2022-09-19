@@ -30,7 +30,7 @@
             <div class="progressbar">
                 <div class="progress" id="progress"></div>
                 <div class="progress-step progress-step-active" data-title="Instructions"></div>
-                <div class="progress-step" data-title="Organaization Details"></div>
+                <div class="progress-step" data-title="Organization Details"></div>
                 <div class="progress-step" data-title="Strategic Fit"></div>
                 <div class="progress-step" data-title="Capacity"></div>
                 <div class="progress-step" data-title="Risk"></div>
@@ -49,12 +49,11 @@
                 </p>
                 <p>
                     NOTE: Each critereon includes guidance in the form of a comment for 0% and 100% scores. This is designed to help you understand
-                    how to score the question. To view the comment, move your cursor aover the cell with a  red triangle. Additional guidance is provided
-                    at the top of each sheet.
+                    how to score the question. Additional guidance is provided at the top of each sheet.
                 </p>
                 <b>Your Input</b>
                 <p>
-                    This assessment template is designed to provide a quantitative score for a qulitative assessment of a potential partner organaization.
+                    This assessment template is designed to provide a quantitative score for a qulitative assessment of a potential partner organization.
                     This approach relies very much on subjective input from the user. It is anticipated that it will be difficult to give informed input for each
                     critereon. In such cases, users should use their own judgement based on experience, correspondance and even gut feeling. The end
                     result will be and informed assessment on which we can base descision-making.
@@ -62,13 +61,13 @@
                 <b>Scoring</b>
                 <p>
                     The "Summary Analysis" sheet uses a color scoring system to categoris the results: <br>
-                    <span class="greenbg">Green =  </span> good score that means the organaization is probably an appropriate partner for Fairtade. <br>
-                    <span class="amberbg">Amber =  </span> mid-range score that the organaization may be an appropriate partner ofr Fairtrade (may need further consideration) <br>
-                    <span class="redbg">Red =    </span> poor score that means the organaization is unlikely to be an appropriate for Fairtrade.
+                    <span class="greenbg">Green =  </span> good score that means the organization is probably an appropriate partner for Fairtade. <br>
+                    <span class="amberbg">Amber =  </span> mid-range score that the organization may be an appropriate partner ofr Fairtrade (may need further consideration) <br>
+                    <span class="redbg">Red =    </span> poor score that means the organization is unlikely to be an appropriate for Fairtrade.
                 </p>
                 <p>
                     Results for each category are not wieghted, i.e. all categories have the same value in the final result.
-                    improvement, the scope of improvement is wide, the improvement is permament and
+                    improvement, the scope of improvement is wide and permament.
                 </p>
                 <br>
                 <div class="buttons">
@@ -76,11 +75,11 @@
                 </div>
                 <br>
             </div>
-            <!-- Details of Organaization -->
+            <!-- Details of Organization -->
             <div class="form-step">
-                <h4 class="text-center">Details of Organaization</h4>
+                <h4 class="text-center">Details of Organization</h4>
                 <div class="lbl_name">
-                    <a>Name of Organaization</a>
+                    <a>Name of Organization</a>
                 </div>
                 <div class="input">
                     <input type="text" class="txtfields2" name="orgname" placeholder="" required>
@@ -122,7 +121,8 @@
                     <input type="text" class="txtfields2" name="carriedoutby" placeholder="" required>
                 </div>
                 <div class="lbl_name">
-                    <a>Summary Analsysis</a>
+                    <a>Summary Analsysis</a> <br>
+                    <span>This values here are automatically inserted! Come back to this STEP after completing the other assessment STEPS to save!</span>
                 </div>
                 <div class="input">
                     Strategic Fit: 
@@ -153,28 +153,28 @@
                 <h4 class="text-center">Category 1: Strategic Fit</h4>
                 <b>Guidance</b>
                 <p>
-                    The strategic fit assessment evaluated the organaization with whom a partnership is under coosideration. Its use is
+                    The strategic fit assessment evaluated the organization with whom a partnership is under coosideration. Its use is
                     mandatory as a formal starting point for exploring any partnership we have.
                 </p>
                 <u>80% to 100% range:</u>
                 <p>
-                    The organaziation a vision and works in a way that isclearly compatible to Fairtrade.
+                    The organization a vision and works in a way that isclearly compatible to Fairtrade.
                 </p>
                 <u>60% to 80% range:</u>
                 <p>
-                    The organaization's work and approach is compatible to Fairtrade
+                    The organization's work and approach is compatible to Fairtrade
                 </p>
                 <u>40% to 60% range:</u>
                 <p>
-                    Some of the organaization's work has relevance to Fairtrade and there is scope for increased compatibility.
+                    Some of the organization's work has relevance to Fairtrade and there is scope for increased compatibility.
                 </p>
                 <u>20% to 40% range:</u>
                 <p>
-                    The organaization has an ambition to work more in a way that is compatible to Fairtrade.
+                    The organization has an ambition to work more in a way that is compatible to Fairtrade.
                 </p>
                 <u>0% to 20% range:</u>
                 <p>
-                    The organaization's work is not currently compatible with Faitrade and there are no explicit ambitions to improve compatability.
+                    The organization's work is not currently compatible with Faitrade and there are no explicit ambitions to improve compatability.
                 </p>
                 <b>Enter Scores for Strategic Fit Criteria</b>
                 <br>
@@ -291,7 +291,7 @@
                                 <tr>
                                     <td>1.10</td>
                                     <td>
-                                        The organaization considerd a leading corporate citizen.
+                                        The organization considerd a leading corporate citizen.
                                     </td>
                                     <td>
                                         <input type="number" class="txtfields2" name="sf-10" id="sf-10" placeholder="%" value="0">
@@ -328,11 +328,11 @@
                 </p>
                 <u>80% to 100% range:</u>
                 <p>
-                    The organaziation has the required resources and skills, and has a track record of quality performance.
+                    The organization has the required resources and skills, and has a track record of quality performance.
                 </p>
                 <u>60% to 80% range:</u>
                 <p>
-                    The organaization can access the required resources and skills, and is committed to the aims of the proposed partnerhsip.
+                    The organization can access the required resources and skills, and is committed to the aims of the proposed partnerhsip.
                 </p>
                 <u>40% to 60% range:</u>
                 <p>
@@ -340,11 +340,11 @@
                 </p>
                 <u>20% to 40% range:</u>
                 <p>
-                    The organaization is committed to the aims of the partnership but resource mobilisation may be a challenge.
+                    The organization is committed to the aims of the partnership but resource mobilisation may be a challenge.
                 </p>
                 <u>0% to 20% range:</u>
                 <p>
-                    The organaization does not have the required skills and resources, and there is no explicit committment to the aims of the partnership.
+                    The organization does not have the required skills and resources, and there is no explicit committment to the aims of the partnership.
                 </p>
                 <b>Enter Scores for Capacity Criteria</b>
                 <br>

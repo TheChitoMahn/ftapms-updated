@@ -1,5 +1,4 @@
 <?php
-// require '../includes/dbh.inc.php';
 
 if (isset($_POST["action"])) {
     if ($_POST["action"] == "insert") {
@@ -20,9 +19,46 @@ if (isset($_POST["action"])) {
         rsktotal();
     }else if ($_POST["action"] == "avgtotal") {
         avgtotal();
+    }else if ($_POST["action"] == "id") {
+        id();
+    }else if ($_POST["action"] == "nda_id") {
+        nda_id();
     }
     else {
         echo "Invalid. No function found.";
+    }
+}
+// MOU ID Checker
+function id()
+{
+    include '../includes/dbh.inc.php';
+
+    $id = $_POST["id"];
+
+    $sql = "SELECT * FROM scoresheet WHERE UID = $id";
+    $result = mysqli_query($conn, $sql);
+
+    if (!mysqli_num_rows($result) > 0) {
+        echo "Record not Found!";
+    }else {
+        echo "Record Found!";
+    }
+}
+
+// NDA ID Checker
+function nda_id()
+{
+    include '../includes/dbh.inc.php';
+
+    $id = $_POST["id"];
+
+    $sql = "SELECT * FROM scoresheet WHERE UID = $id";
+    $result = mysqli_query($conn, $sql);
+
+    if (!mysqli_num_rows($result) > 0) {
+        echo "Record not Found!";
+    }else {
+        echo "Record Found!";
     }
 }
 

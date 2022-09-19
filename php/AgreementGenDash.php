@@ -1,5 +1,6 @@
 <?php
     include_once 'sidebar.php';
+    require 'script.php';
 ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -36,7 +37,7 @@
                 <div class="card" style="width: 28rem;">
                     <img class="card-img-top" src="../images/mou.png" alt="Card image cap">
                     <div class="card-body" >
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#assessment">MOU</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#MOUassessment">MOU</button>
                     </div>
                 </div>
             </div>
@@ -44,7 +45,7 @@
                 <div class="card" style="width: 28rem;">
                     <img class="card-img-top" src="../images/nda.png" alt="Card image cap">
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#assessment">NDA</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NDAassessment">NDA</button>
                     </div>
                 </div>
             </div>
@@ -66,43 +67,84 @@
             </div>
         </div>
 
-        <!-- Assessment Confirmation Modal -->
-        <div class="modal fade" id="assessment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <!-- MOU Assessment Confirmation Modal -->
+        <div class="modal fade" id="MOUassessment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Partner Assessment Check</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Partner MOU Assessment Check</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                        In order to proceed and create an Agreement the system has to check if the user has passed the Partner Assessment Procedure. <br> <br>
-                        Please enter your Company Name and Assessment ID. <br> <br>
-                        <form class="partnercontent" action="" method="POST">
-                            <div class="section1">
-                                <div class="lbl_name">
-                                    <a>Company Name</a>
+                    <form class="" action="../php/MOU.php" method="POST">
+                        <div class="modal-body">
+                            In order to proceed and create an Agreement the system has to check if the user has passed the Partner Assessment Procedure. <br> <br>
+                            Please enter your Company Name and Assessment ID. <br> <br>
+                                <div class="section1">
+                                    <div class="lbl_name">
+                                        <a>Company Name</a>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" class="txtfields2" name="compname" id="compname" required>
+                                    </div>
+                                    <div class="lbl_name">
+                                        <a>Assesment ID:</a>
+                                    </div>
+                                    <div class="input">
+                                        <input type="number" class="txtfields2" name="assID" id="assID" required>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" onclick="check('id');" >Check</button>                              
                                 </div>
-                                <div class="input">
-                                    <input type="text" class="txtfields2" name="compname" required>
-                                </div>
-                                <div class="lbl_name">
-                                    <a>Assesment ID:</a>
-                                </div>
-                                <div class="input">
-                                    <input type="number" class="txtfields2" name="assID" required>
-                                </div>
-                                <button type="submit" class="btn btn-primary" name="btn-check">Check</button>                              
-                            </div>
-                        </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!-- <a href="./NDA.php" class="btn btn-warning">NDA</a> -->
+                            <button type="submit" class="btn btn-warning" id="checkbtn" name="check-btn" disabled>MOU</button>
+                            <!-- <a href="#" class="btn btn-warning">Service</a> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- NDA Assessment Confirmation Modal -->
+        <div class="modal fade" id="NDAassessment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Partner NDA Assessment Check</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <a href="./NDA.php" class="btn btn-warning">NDA</a>
-                        <a href="./MOU.php" class="btn btn-warning">MOU</a>
-                        <a href="#" class="btn btn-warning">Service</a>
-                    </div>
+                    <form class="" action="../php/NDA.php" method="POST">
+                        <div class="modal-body">
+                            In order to proceed and create an Agreement the system has to check if the user has passed the Partner Assessment Procedure. <br> <br>
+                            Please enter your Company Name and Assessment ID. <br> <br>
+                                <div class="section1">
+                                    <div class="lbl_name">
+                                        <a>Company Name</a>
+                                    </div>
+                                    <div class="input">
+                                        <input type="text" class="txtfields2" name="NDAcompname" id="NDAcompname" required>
+                                    </div>
+                                    <div class="lbl_name">
+                                        <a>Assesment ID:</a>
+                                    </div>
+                                    <div class="input">
+                                        <input type="number" class="txtfields2" name="NDAassID" id="NDAassID" required>
+                                    </div>
+                                    <button type="button" class="btn btn-primary" onclick="checkNDA('nda_id');" >Check</button>                              
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!-- <a href="./NDA.php" class="btn btn-warning">NDA</a> -->
+                            <button type="submit" class="btn btn-warning" id="NDAcheckbtn" name="nda-check-btn" disabled>NDA</button>
+                            <!-- <a href="#" class="btn btn-warning">Service</a> -->
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

@@ -121,6 +121,55 @@
             });
         });
     }
+// Assessment ID Checker (MOU)
+    function check(action){
+        $(document).ready(function(){
+            var data = {
+                action: action,
+                id: $("#assID").val(),
+            };
+
+            $.ajax({
+                url: 'functionAVG.php',
+                type: 'post',
+                data: data,
+                success: function(response10){
+                    alert(response10);
+                    var ans = response10;
+                    if (ans == "Record Found!") {
+                        document.getElementById('checkbtn').disabled = false;
+                    }else if(ans == "Record not Found!"){
+                        document.getElementById('checkbtn').disabled = true;
+                    }
+                }
+            });
+        });
+    }
+    
+// Assessment ID Checker (NDA)
+    function checkNDA(action){
+        $(document).ready(function(){
+            var data = {
+                action: action,
+                id: $("#NDAassID").val(),
+            };
+
+            $.ajax({
+                url: 'functionAVG.php',
+                type: 'post',
+                data: data,
+                success: function(response10){
+                    alert(response10);
+                    var ans = response10;
+                    if (ans == "Record Found!") {
+                        document.getElementById('NDAcheckbtn').disabled = false;
+                    }else if(ans == "Record not Found!"){
+                        document.getElementById('NDAcheckbtn').disabled = true;
+                    }
+                }
+            });
+        });
+    } 
 
 // Partnership Prioritization Tool ------------------------------------------------------
     function PRZdevData(action){

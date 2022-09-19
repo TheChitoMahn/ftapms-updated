@@ -43,10 +43,10 @@
                             <input type="text" class="txtfields2" name="TypeofPartner" placeholder="Type of Partner" required>
                         </div> 
                         <div class="lbl_name">
-                            <a>Organaization Name</a>
+                            <a>Organization Name</a>
                         </div>
                         <div class="input">
-                            <input type="text" class="txtfields2" name="OrganaizatoinName" placeholder="Organaizatoin Name" required>
+                            <input type="text" class="txtfields2" name="OrganaizatoinName" placeholder="Organizatoin Name" required>
                         </div> 
                         <div class="lbl_name">
                             <a>Region</a>

@@ -251,7 +251,7 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">No.</th>
-                            <th scope="col">Organaization Name</th>
+                            <th scope="col">Organization Name</th>
                             <th scope="col">End Date (Deadline)</th>
                             <th scope="col">Countdown Timer</th>
                         </tr>

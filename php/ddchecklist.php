@@ -423,6 +423,9 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="buttons">
+                    <a href="#" class="ingia_btn_prev">Previous</a>
+                </div>
                 <br>
                 <br>
             </div>
