@@ -118,7 +118,7 @@
                     if ($_SESSION["department"] == "admin") {
                         echo "
                                 <li>
-                                    <i class='las la-server fa-lg'></i>
+                                    <i class='las la-list fa-lg'></i>
                                     <a href='../php/listofass.php'>List of Assesments</a>
                                 </li>
                             </ul>
@@ -131,7 +131,7 @@
                         <div class='sidebar_content'>
                             <ul>
                                 <li>
-                                    <i class='las la-server fa-lg'></i>
+                                    <i class='las la-list fa-lg'></i>
                                     <a href='../php/listofass.php'>List of Assesments</a>
                                 </li>
                             </ul>
@@ -158,19 +158,19 @@
                     if ($_SESSION["department"] == "admin") {
                         echo "
                                 <li>
-                                    <i class='las la-server fa-lg'></i>
+                                    <i class='las la-list fa-lg'></i>
                                     <a href='../php/listMOU.php'>List of MOUs</a>
                                 </li>
                                 <li>
-                                    <i class='las la-server fa-lg'></i>
+                                    <i class='las la-list fa-lg'></i>
                                     <a href='../php/listNDA.php'>List of NDAs</a>
                                 </li>
                                 <li>
-                                    <i class='las la-server fa-lg'></i>
+                                    <i class='las la-list fa-lg'></i>
                                     <a href='../php/listSERVICE.php'>List of Service Agmts</a>
                                 </li>
                                 <li>
-                                    <i class='las la-server fa-lg'></i>
+                                    <i class='las la-list fa-lg'></i>
                                     <a href='../php/listOTHER.php'>List of Other Agmts</a>
                                 </li>";
                     }elseif($_SESSION["department"] == "Staff") {
@@ -181,20 +181,20 @@
                             <div class='sidebar_content'>
                                 <ul>
                                     <li>
-                                        <i class='las la-server fa-lg'></i>
+                                        <i class='las la-list fa-lg'></i>
                                         <a href='../php/listMOU.php'>List of MOUs</a>
                                     </li>
                                     <li>
-                                        <i class='las la-server fa-lg'></i>
+                                        <i class='las la-list fa-lg'></i>
                                         <a href='../php/listNDA.php'>List of NDAs</a>
                                     </li>
                                     <li>
-                                        <i class='las la-server fa-lg'></i>
-                                        <a href='#'>List of Service Agmts</a>
+                                        <i class='las la-list fa-lg'></i>
+                                        <a href='../php/listSERVICE.php'>List of Service Agmts</a>
                                     </li>
                                     <li>
-                                        <i class='las la-server fa-lg'></i>
-                                        <a href='#'>List of Other Agmts</a>
+                                        <i class='las la-list fa-lg'></i>
+                                        <a href='../php/listOTHER.php'>List of Other Agmts</a>
                                     </li>
                                 </ul>
                             </div>";
@@ -268,6 +268,21 @@
                                 <li>
                                     <i class='las la-user fa-lg'></i>
                                     <a href='../php/adduser.php'>Add User</a>
+                                </li>
+                            </ul>
+                        </div>
+                    ";
+                }
+                if ($_SESSION["department"] == "Staff") {
+                    echo "  
+                        <div class='partners_title'>
+                        <a>My Account</a>
+                        </div>
+                        <div class='sidebar_content'>
+                            <ul>
+                                <li>
+                                    <i class='las la-user fa-lg'></i>
+                                    <a href='../php/contactADMIN.php'>Change Password</a>
                                 </li>
                             </ul>
                         </div>
