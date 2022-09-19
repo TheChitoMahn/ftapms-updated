@@ -59,18 +59,18 @@
 
             console.log(data);
 
-            document.getElementById('Title').innerHTML = data[0];
-            document.getElementById('address').innerHTML = data[1];
-            document.getElementById('contact').innerHTML = data[2];
-            document.getElementById('email').innerHTML = data[3];
-            document.getElementById('phone').innerHTML = data[4];
-            document.getElementById('das').innerHTML = data[5];
-            document.getElementById('coby').innerHTML = data[6];
-            document.getElementById('str').innerHTML = data[7];
-            document.getElementById('cap').innerHTML = data[8];
-            document.getElementById('rsk').innerHTML = data[9];
-            document.getElementById('smr').innerHTML = data[10];
-            document.getElementById('uid').innerHTML = data[11];
+            document.getElementById('Title').innerHTML = data[1];
+            document.getElementById('addressM').innerHTML = data[2];
+            document.getElementById('contact').innerHTML = data[3];
+            document.getElementById('email').innerHTML = data[4];
+            document.getElementById('phone').innerHTML = data[5];
+            document.getElementById('das').innerHTML = data[6];
+            document.getElementById('coby').innerHTML = data[7];
+            document.getElementById('str').innerHTML = data[8];
+            document.getElementById('cap').innerHTML = data[9];
+            document.getElementById('rsk').innerHTML = data[10];
+            document.getElementById('smr').innerHTML = data[11];
+            document.getElementById('uid').innerHTML = data[12];
         });
         $('.ddmore').on('click', function() {
             $tr = $(this).closest('tr');
@@ -155,6 +155,30 @@
             $('#update_id').val(data[0]);
             $('#name').val(data[1]);
             $('#date').val(data[2]);
+        });
+        $('.updatescoresheet').on('click', function() {
+            $('#update-scoresheet').modal('show');
+
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#update_id').val(data[0]);
+            $('#orgname').val(data[1]);
+            $('#address').val(data[2]);
+            $('#u-contact').val(data[3]);
+            $('#u-email').val(data[4]);
+            $('#u-phone').val(data[5]);
+            $('#u-das').val(data[6]);
+            $('#u-cob').val(data[7]);
+            $('#u-str').val(data[8]);
+            $('#u-cap').val(data[9]);
+            $('#u-rsk').val(data[10]);
+            $('#u-smry').val(data[11]);
         });
     });
 </script>

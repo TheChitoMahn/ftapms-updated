@@ -101,7 +101,6 @@
                         <td><a target="_blank" href='serviceview.php?id="<?=$rows['id']?>"'><?=$rows['file_name']?></a></td>
                         <td>
                             <button type="button" class="btn btn-warning updateother"><i class="las la-edit"></i></button>
-                            <!-- <a href="./NDAedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a> -->
                             <a href="../php/OTHERDelete.php?id=<?=$rows['id']?>" class="btn btn-danger"><i class="las la-trash"></i></a>
                         </td>
                     </tr>

@@ -33,6 +33,9 @@
                 else if ($_GET["error"] == "successMOUupdated") {
                     echo "<p class='nperror3'> MOU Succesfully Updated</p>";
                 }
+                else if ($_GET["error"] == "successSCRupdate") {
+                    echo "<p class='nperror3'> FTA PA Scoresheet Succesfully Updated</p>";
+                }
             }
         ?>
         <h3>List of All Partner Assessements</h3>
@@ -44,7 +47,7 @@
         <div class="fogo_holder">
             <div class="fogo_password">
                 <button type="button" class="btn_fogo_password">Fairtrade Africa Partnership Assessement Scoresheet</button>
-                <form class="fogo_password_content" action="../FTA_Partners_System/includes/fogo.inc.php" method="POST">
+                <div class="fogo_password_content">
                     <p>This is table with records of FTA PA Scoresheets.</p>
                     <br>
                     <?php
@@ -54,6 +57,7 @@
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">No.</th>
+                                    <th hidden scope="col">ID</th>
                                     <th scope="col">Organization Name</th>
                                     <th scope="col">Address</th>
                                     <th hidden scope="col">Contact</th>
@@ -77,6 +81,7 @@
                                 ?>
                                 <tr>
                                     <th scope="row"><?=$i?></th>
+                                    <td hidden><?=$rows['id']?></td>
                                     <td><?=$rows['orgname']?></td>
                                     <td><?=$rows['address']?></td>
                                     <td hidden><?=$rows['p_contact']?></td>
@@ -90,7 +95,99 @@
                                     <td><?=$rows['summary']?></td>
                                     <td hidden><?=$rows['UID']?></td>
                                     <td>
-                                        <!-- <a href="./NDAedit.php?id=<?=$rows['id']?>" class="btn btn-warning"><i class="las la-edit"></i></a> -->
+                                        <button type="button" class="btn btn-warning updatescoresheet"><i class="las la-edit"></i></button>
+                                        
+                                        <!-- Scoresheet Update Modal -->
+                                        <form class="partnercontent" action="../includes/scoresheetEDIT.inc.php" method="POST">
+                                            <div class="modal fade" id="update-scoresheet" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">FTA Partner Assessment Scoresheet Update</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Please fill out the update form below. <br> <br>
+                                                                <div>
+                                                                    <input type="text" class="txtfields2" name="id" id="update_id" hidden>
+                                                                    <div class="lbl_name">
+                                                                        <a>Organization Name</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-orgname" id="orgname" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Address</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-address" id="address" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Partner Contact</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-contact" id="u-contact" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Partner Email</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-email" id="u-email" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Partner Phone No.</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-phone" id="u-phone" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Date of Assessement</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-das" id="u-das" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Carried out By</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-cob" id="u-cob" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Strategic</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-str" id="u-str" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Capacity</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-cap" id="u-cap" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Risk</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-rsk" id="u-rsk" required>
+                                                                    </div>
+                                                                    <div class="lbl_name">
+                                                                        <a>Summary</a>
+                                                                    </div>
+                                                                    <div class="input">
+                                                                        <input type="text" class="txtfields2" name="scr-smry" id="u-smry" required>
+                                                                    </div>                         
+                                                                </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary" name="scoresheet-edit">Update24</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
 
                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmscoresheet"><i class="las la-trash"></i></button>
 
@@ -129,7 +226,7 @@
                                                     <div class="modal-body" id="rowprint">
                                                         <div class="rowhodler">
                                                             <b><label>Address: </label></b>
-                                                            <label id="address">error</label>
+                                                            <label id="addressM">error</label>
                                                         </div>
                                                         <div class="rowhodler">
                                                             <b><label>Partner Contact: </label></b>
@@ -185,7 +282,7 @@
                         </table>
                         <?php } ?>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
 
@@ -553,5 +650,5 @@
 
 <script src="../js/fogo_password_username.js"></script>
 <?php
-    include 'footer.php';
+    include_once 'footer.php';
 ?>
