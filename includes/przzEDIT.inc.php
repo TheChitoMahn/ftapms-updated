@@ -41,7 +41,7 @@ if(isset($_POST["przz-edit"])) {
             WHERE id =?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/przzEDIT.inc.php") {
+        if ($_SERVER['REQUEST_URI'] === "/includes/przzEDIT.inc.php") {
             echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=goneBack2">';
             exit();
         }
@@ -55,13 +55,13 @@ if(isset($_POST["przz-edit"])) {
                             $przz_id);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/przzEDIT.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/przzEDIT.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successPRZZupdate">';
         exit();
     }
 
 }else {
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/przzEDIT.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/przzEDIT.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=goneBack1">';
         exit();
     }

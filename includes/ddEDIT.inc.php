@@ -24,7 +24,7 @@ if(isset($_POST["checklist-edit"])) {
             WHERE id =?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/ddEDIT.inc.php") {
+        if ($_SERVER['REQUEST_URI'] === "/includes/ddEDIT.inc.php") {
             echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=goneBack2">';
             exit();
         }
@@ -33,13 +33,13 @@ if(isset($_POST["checklist-edit"])) {
     mysqli_stmt_bind_param($stmt, "sssssssssssss", $chk_orgname, $chk_bg, $chk_fstand, $chk_governace, $chk_snp, $chk_cov, $chk_aot, $chk_obligation, $chk_lowrisk, $chk_sufficient, $chk_management, $chk_ftapers, $chk_id);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/ddEDIT.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/ddEDIT.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successDDupdate">';
         exit();
     }
 
 }else {
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/ddEDIT.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/ddEDIT.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=goneBack1">';
         exit();
     }

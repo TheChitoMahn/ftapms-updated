@@ -20,12 +20,12 @@ if(isset($_POST["s-other-upload"])) {
     mysqli_stmt_bind_param($stmt, "ssss", $other_name, $other_date, $other_data, $other_file_name);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/other.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/other.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/AgreementGenDash.php?error=othersuccessupload">';
     }
 
 }else {
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/other.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/other.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/AgreementGenDash.php?error=posterror">';
     }
 }

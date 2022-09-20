@@ -105,26 +105,27 @@
 
             console.log(data);
 
-            document.getElementById('Title2').innerHTML = data[0];
-            document.getElementById('address2').innerHTML = data[1];
-            document.getElementById('contact2').innerHTML = data[2];
-            document.getElementById('email2').innerHTML = data[3];
-            document.getElementById('phone2').innerHTML = data[4];
-            document.getElementById('das2').innerHTML = data[5];
-            document.getElementById('coby2').innerHTML = data[6];
-            document.getElementById('str2').innerHTML = data[7];
-            document.getElementById('cap2').innerHTML = data[8];
-            document.getElementById('rsk2').innerHTML = data[9];
-            document.getElementById('smr2').innerHTML = data[10];
-            document.getElementById('uid2').innerHTML = data[11];
-            document.getElementById('time').innerHTML = data[12];
-            document.getElementById('total').innerHTML = data[13];
-            document.getElementById('grandtotal').innerHTML = data[14];
-            document.getElementById('Staff').innerHTML = data[15];
-            document.getElementById('Additional').innerHTML = data[16];
-            document.getElementById('Horizon').innerHTML = data[17];
-            document.getElementById('Value').innerHTML = data[18];
-            document.getElementById('Score').innerHTML = data[19];
+            document.getElementById('Title2').innerHTML = data[1];
+            document.getElementById('address2').innerHTML = data[2];
+            document.getElementById('contact2').innerHTML = data[3];
+            document.getElementById('email2').innerHTML = data[4];
+            document.getElementById('phone2').innerHTML = data[5];
+            document.getElementById('das2').innerHTML = data[6];
+            document.getElementById('coby2').innerHTML = data[7];
+            document.getElementById('str2').innerHTML = data[8];
+            document.getElementById('cap2').innerHTML = data[9];
+            document.getElementById('rsk2').innerHTML = data[10];
+            document.getElementById('smr2').innerHTML = data[11];
+            document.getElementById('uid2').innerHTML = data[12];
+            document.getElementById('time').innerHTML = data[13];
+            document.getElementById('total').innerHTML = data[14];
+            document.getElementById('grandtotal').innerHTML = data[15];
+            document.getElementById('Staff').innerHTML = data[16];
+            document.getElementById('Additional').innerHTML = data[17];
+            document.getElementById('Horizon').innerHTML = data[18];
+            document.getElementById('Value').innerHTML = data[19];
+            document.getElementById('Score').innerHTML = data[20];
+            document.getElementById('gScore').innerHTML = data[21];
         });
 
 // Agreements Update

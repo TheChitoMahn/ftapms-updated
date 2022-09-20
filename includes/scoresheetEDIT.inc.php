@@ -23,7 +23,7 @@ if(isset($_POST["scoresheet-edit"])) {
             WHERE id =?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/scoresheetEDIT.inc.php") {
+        if ($_SERVER['REQUEST_URI'] === "/includes/scoresheetEDIT.inc.php") {
             echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=goneBack2">';
             exit();
         }
@@ -32,13 +32,13 @@ if(isset($_POST["scoresheet-edit"])) {
     mysqli_stmt_bind_param($stmt, "ssssssssssss", $scr_orgname, $scr_address, $scr_contact, $scr_email, $scr_phone, $scr_das, $scr_cob, $scr_str, $scr_cap, $scr_rsk, $scr_smry, $scr_id);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/scoresheetEDIT.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/scoresheetEDIT.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successSCRupdate">';
         exit();
     }
 
 }else {
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/scoresheetEDIT.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/scoresheetEDIT.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=goneBack1">';
         exit();
     }

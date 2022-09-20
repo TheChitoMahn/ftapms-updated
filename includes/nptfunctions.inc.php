@@ -63,21 +63,21 @@ function successnotify($conn, $RLname, $action) {
     mysqli_stmt_bind_param($stmt, "ss", $RLname, $action);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    if ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/agreement.inc.php') {
+    if ($_SERVER['REQUEST_URI'] === '/includes/agreement.inc.php') {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/agreementSCHD.php?error=successAdded">';
-    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/newpartner.inc.php') {
+    }elseif ($_SERVER['REQUEST_URI'] === '/includes/newpartner.inc.php') {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/agreementSCHD.php?error=NewPartnerAdded">';
-    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/nda.inc.php') {
-        echo '<meta http-equiv="Refresh" content="0.01; url=../php/NDA.php?error=successnewnda">';
-    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/MOU.inc.php') {
-        echo '<meta http-equiv="Refresh" content="0.01; url=../php/MOU.php?error=successnewmou">';
-    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/actionplan.inc.php') {
+    }elseif ($_SERVER['REQUEST_URI'] === '/includes/nda.inc.php') {
+        echo '<meta http-equiv="Refresh" content="0.0; url=../php/listNDA.php?error=successnewnda">';
+    }elseif ($_SERVER['REQUEST_URI'] === '/includes/MOU.inc.php') {
+        echo '<meta http-equiv="Refresh" content="0.0; url=../php/listMOU.php?error=successnewmou">';
+    }elseif ($_SERVER['REQUEST_URI'] === '/includes/actionplan.inc.php') {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/actionplan.php?error=NewapAdded">';
-    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/ftapascoresheet.inc.php') {
+    }elseif ($_SERVER['REQUEST_URI'] === '/includes/ftapascoresheet.inc.php') {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/ftapascoresheet.php?error=NewscoresheetAdded">';
-    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/ddchecklist.inc.php') {
+    }elseif ($_SERVER['REQUEST_URI'] === '/includes/ddchecklist.inc.php') {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/ddchecklist.php?error=NewchecklistAdded">';
-    }elseif ($_SERVER['REQUEST_URI'] === '/FTA_Partners_System/includes/ftaprzscorecard.inc.php') {
+    }elseif ($_SERVER['REQUEST_URI'] === '/includes/ftaprzscorecard.inc.php') {
         echo '<meta http-equiv="Refresh" content="0.01; url=../php/ftaprzscorecard.php?error=NewscorecardAdded">';
     }
     exit();
@@ -93,31 +93,31 @@ function successIDs($conn, $RLname, $action, $id) {
     mysqli_stmt_bind_param($stmt, "ss", $RLname, $action);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/agreementDelete.php?id={$id}") {
+    if ($_SERVER['REQUEST_URI'] === "/php/agreementDelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/agreementSCHD.php?error=successDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/update.inc.php") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/includes/update.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/editpartner.php?error=successupdate">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/delete.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/delete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/editpartner.php?error=successDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/NDAedit.inc.php") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/includes/NDAedit.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listNDA.php?error=successNDAedit">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/MOUedit.inc.php") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/includes/MOUedit.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listMOU.php?error=successMOUupdated">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/ndaDelete.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/ndaDelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listNDA.php?error=successDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/mouDelete.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/mouDelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listMOU.php?error=successDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/actionplandelete.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/actionplandelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/actionplan.php?error=successDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/SERVICEDelete.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/SERVICEDelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listSERVICE.php?error=successDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/OTHERDelete.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/OTHERDelete.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listOTHER.php?error=successDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/scoresheetDELETE.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/scoresheetDELETE.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/ddDELETE.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/ddDELETE.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successddDelete">';
-    }elseif ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/php/scorecardDELETE.php?id={$id}") {
+    }elseif ($_SERVER['REQUEST_URI'] === "/php/scorecardDELETE.php?id={$id}") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listofass.php?error=successprzDelete">';
     }
     exit();

@@ -36,6 +36,7 @@ if (isset($_POST["scorecard-submit"])) {
     $rsk5 = $_POST["pr-15"];
 
     $rsktotal = $_POST["rsktotal"];
+    $total = $_POST["avgtotal"];
 
     $RLname = $_SESSION["fullname"];
     $action = "has completed a FTA Partner Scoresheet Assessment ";
@@ -45,17 +46,17 @@ if (isset($_POST["scorecard-submit"])) {
     $sql = "INSERT into scorecard (orgname, dev1, dev2, dev3, dev4, dev5, devTotal,
                                             biz1, biz2, biz3, biztotal,
                                             gov1, gov2, govtotal,
-                                            rsk1, rsk2, rsk3, rsk4, rsk5, rskTotal) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+                                            rsk1, rsk2, rsk3, rsk4, rsk5, rskTotal, total) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../php/ftaprzscorecard.php?error=stmtfailed");
         exit();
     }
 
-    mysqli_stmt_bind_param($stmt, "ssssssssssssssssssss", $orgname, $dev1, $dev2, $dev3, $dev4, $dev5, $devTotal,
+    mysqli_stmt_bind_param($stmt, "sssssssssssssssssssss", $orgname, $dev1, $dev2, $dev3, $dev4, $dev5, $devTotal,
                                                                     $biz1, $biz2, $biz3, $biztotal,
                                                                     $gov1, $gov2, $govtotal,
-                                                                    $rsk1, $rsk2, $rsk3, $rsk4, $rsk5, $rsktotal);
+                                                                    $rsk1, $rsk2, $rsk3, $rsk4, $rsk5, $rsktotal, $total);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     successnotify($conn, $RLname, $action);

@@ -4,13 +4,6 @@ if (isset($_GET['id'])) {
 
     include "dbh.inc.php";
 
-    // function validate($data){
-    //     $data = trim($data);
-    //     $data = stripslashes($data);
-    //     $data = htmlspecialchars($data);
-    //     return $data;
-    // }
-
     $id = sanitize_input($_GET['id']);
 
     $sql = "SELECT * FROM users_approved WHERE id = $id";

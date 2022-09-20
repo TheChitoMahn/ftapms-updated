@@ -13,7 +13,7 @@ if(isset($_POST["s-other-update"])) {
     $sql = "UPDATE other SET name=?, date=? WHERE id =?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/OTHERedit.inc.php") {
+        if ($_SERVER['REQUEST_URI'] === "/includes/OTHERedit.inc.php") {
             echo '<meta http-equiv="Refresh" content="0.0; url=../php/listOTHER.php?error=goneBack2">';
             exit();
         }
@@ -22,13 +22,13 @@ if(isset($_POST["s-other-update"])) {
     mysqli_stmt_bind_param($stmt, "sss", $service_u_name, $service_u_date, $service_id);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/OTHERedit.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/OTHERedit.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listOTHER.php?error=successupdate">';
         exit();
     }
 
 }else {
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/OTHERedit.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/OTHERedit.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/listOTHER.php?error=posterror">';
         exit();
     }

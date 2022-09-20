@@ -27,6 +27,9 @@
                 else if ($_GET["error"] == "successMOUupdated") {
                     echo "<p class='nperror3'> MOU Succesfully Updated</p>";
                 }
+                else if ($_GET["error"] == "successnewmou") {
+                    echo "<p class='nperror3'>New MOU successfully created!</p>";
+                }
                 else if ($_GET["error"] == "errorViewing") {
                     echo "<p class='nperror2'> There seems to be a problem viewing the document!</p>";
                 }

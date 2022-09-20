@@ -918,56 +918,60 @@
                                                             <label id="coby2">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Partner Champion: </label></b>
+                                                            <b><label>Business Goals: </label></b>
                                                             <label id="str2">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Reputational & Brand Image: </label></b>
+                                                            <b><label>Partner Champion: </label></b>
                                                             <label id="cap2">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Aggregated Value: </label></b>
+                                                            <b><label>Reputational & Brand Image: </label></b>
                                                             <label id="rsk2">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Supports government priorities: </label></b>
+                                                            <b><label>Aggregated Value: </label></b>
                                                             <label id="smr2">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Increased government capacity to address issues: </label></b>
+                                                            <b><label>Supports government priorities: </label></b>
                                                             <label id="uid2">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Aggregated Value: </label></b>
+                                                            <b><label>Increased government capacity to address issues: </label></b>
                                                             <label id="time">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Complexity: </label></b>
+                                                            <b><label>Aggregated Value: </label></b>
                                                             <label id="total">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Risks: </label></b>
+                                                            <b><label>Complexity: </label></b>
                                                             <label id="grandtotal">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Staff Intensity: </label></b>
+                                                            <b><label>Risks: </label></b>
                                                             <label id="Staff">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Additional Resources: </label></b>
+                                                            <b><label>Staff Intensity: </label></b>
                                                             <label id="Additional">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Time Horizon: </label></b>
+                                                            <b><label>Additional Resources: </label></b>
                                                             <label id="Horizon">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Aggregated Value: </label></b>
+                                                            <b><label>Time Horizon: </label></b>
                                                             <label id="Value">error</label>
                                                         </div>
                                                         <div class="rowhodler">
-                                                            <b><label>Total Score: </label></b>
+                                                            <b><label>Aggregated Value: </label></b>
                                                             <label id="Score">error</label>
+                                                        </div>
+                                                        <div class="rowhodler">
+                                                            <b><label>Total Score: </label></b>
+                                                            <label id="gScore">error</label>
                                                         </div>
                                                     </div>
                                                     <div class="modal-footer">

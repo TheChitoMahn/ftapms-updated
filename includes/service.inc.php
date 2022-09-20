@@ -20,13 +20,13 @@ if(isset($_POST["s-service-upload"])) {
     mysqli_stmt_bind_param($stmt, "ssss", $service_name, $service_date, $service_data, $service_file_name);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/service.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/service.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/AgreementGenDash.php?error=successupload">';
         exit();
     }
 
 }else {
-    if ($_SERVER['REQUEST_URI'] === "/FTA_Partners_System/includes/service.inc.php") {
+    if ($_SERVER['REQUEST_URI'] === "/includes/service.inc.php") {
         echo '<meta http-equiv="Refresh" content="0.0; url=../php/AgreementGenDash.php?error=posterror">';
         exit();
     }

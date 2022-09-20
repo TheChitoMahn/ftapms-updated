@@ -23,6 +23,9 @@
                 else if ($_GET["error"] == "successDelete") {
                     echo "<p class='nperror3'>A record has been Succesfully Deleted</p>";
                 }
+                else if ($_GET["error"] == "successnewnda") {
+                    echo "<p class='nperror3'>New NDA successfully created!</p>";
+                }
                 else if ($_GET["error"] == "successNDAedit") {
                     echo "<p class='nperror3'>Update of NDA Successfull!</p>";
                 }
