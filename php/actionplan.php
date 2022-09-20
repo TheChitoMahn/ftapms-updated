@@ -38,13 +38,13 @@
                     Create and schedule an Action Plan to a Specific Partner.
                     <br>
                     <div class="lbl_name">
-                        <a>Organaization Name</a>
+                        <a>Organization Name</a>
                     </div>
                     <div class="input">
                         <!-- <input type="text" class="txtfields2" name="OrganaizatoinName" placeholder="Organaization Name" required> -->
                         <select name="OrganaizatoinName" id="orgselect" class="txtfields2">
                             <?php while($row3 = mysqli_fetch_array($ptnresult)):;?>
-                            <option value="<?php echo $row3[0]; ?>"><?php echo $row3[2]; ?></option>
+                            <option value="<?php echo $row3[2]; ?>"><?php echo $row3[2]; ?></option>
                             <?php endwhile;?>
                         </select>
                     </div>
@@ -133,7 +133,6 @@
                                         }, 1000);
                                     </script>
                                 <td>
-                                    <!-- <button type="button" class="btn btn-primary yeye2">Start</button> -->
                                     <a href="../php/actionplandelete.php?id=<?=$rows['id']?>" class="btn btn-danger">Delete</a>    
                                 </td>
                             </tr>

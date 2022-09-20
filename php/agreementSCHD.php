@@ -125,7 +125,6 @@
                                         }, 1000);
                                     </script>
                                 <td>
-                                    <!-- <button type="button" class="btn btn-primary yeye2">Start</button> -->
                                     <a href="../php/agreementDelete.php?id=<?=$rows['id']?>" class="btn btn-danger">Delete</a>    
                                 </td>
                             </tr>

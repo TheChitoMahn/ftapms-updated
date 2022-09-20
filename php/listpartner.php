@@ -17,6 +17,12 @@
                         if ($_GET["error"] == "errorViewing") {
                             echo "<p class='nperror2'>There seems to be a problem viewing the document!</p>";
                         }
+                        // else if($_GET["error"] == "goneback3") {
+                        //     echo "<p class='nperror2'>Problem fetching data from ActionPlan table!</p>";
+                        // }
+                        else if($_GET["error"] == "goneback1") {
+                            echo "<p class='nperror2'>Problem fetching data from Partners table! Check SQL Query</p>";
+                        }
                     }
                 ?>
                 <?php
@@ -32,7 +38,7 @@
                                 <th scope="col">Country</th>
                                 <th hidden scope="col">Address</th>
                                 <th scope="col">Focal FTA Staff</th>
-                                <th scope="col">Activity</th>
+                                <th hidden scope="col">Activity</th>
                                 <th scope="col">Telephone</th>
                                 <th hidden scope="col">Email</th>
                                 <th hidden scope="col">Alt Email</th>
@@ -61,7 +67,7 @@
                                 <td><?=$rows['country']?></td>
                                 <td hidden><?=$rows['Address']?></td>
                                 <td><?=$rows['focalftastaff']?></td>
-                                <td>
+                                <td hidden>
                                     <?php
                                         
                                     ?>

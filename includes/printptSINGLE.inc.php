@@ -3,13 +3,6 @@
     
         include "dbh.inc.php";
     
-        // function validate($data){
-        //     $data = trim($data);
-        //     $data = stripslashes($data);
-        //     $data = htmlspecialchars($data);
-        //     return $data;
-        // }
-    
         $id = sanitize_input($_GET['id']);
     
         $sql = "SELECT * FROM newpartner WHERE id = $id";
@@ -20,9 +13,20 @@
         }else {
             header("Location: ../php/listpartner.php?error=goneBack1");
         }
+
+        $sql1 = "SELECT * FROM actionplan INNER JOIN newpartner WHERE actionplan.org_id = newpartner.orgname";
+        // $sql1 = "SELECT * FROM actionplan";
+        $result1 = mysqli_query($conn, $sql1);
+
+        if (mysqli_num_rows($result1) > 0) {
+            $row2 = mysqli_fetch_assoc($result1);
+        }else {
+            header("Location: ../php/listpartner.php?error=goneBack1");
+        }
+
     }
 ?>
-<title><?=$row['orgname']?></title>
+<title><?=$row["orgname"]?></title>
 <link rel="icon" type="image/gif" href="../images/FTA no cap.PNG" />
 <link rel="stylesheet" href="../css/printALL.css">
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
@@ -82,12 +86,20 @@
         <p class="title"><?=$row['Interests']?></p>
         <label><b>Indicate Orpotunities:</b></label>
         <p class="title"><?=$row['IndicateOrpotunities']?></p>
-        <!-- <p class="title"><b>Indicate Partnership:</b> <?=$row['IndicatePartnership']?></p> -->
-        <label><b>AREA OF ACTIVITIES</b></label>
-        <!-- <p class="title"><b>DONE:</b> <?=$row['specify']?></p>
-        <p class="title"><b>NOT DONE:</b> <?=$row['specify2']?></p> -->
+        <label>
+            <b>AREA OF ACTIVITIES</b>
+            <br>
+            <?php
+                $orgname = $row["orgname"];
+
+                if ($orgname == $row2["org_id"]) {
+                    echo $row2["activity"];
+                }else {
+                    echo "No record! <br>";
+                }
+            ?>
+        </label>
         <p id="ps" class="title"><b>Overall Progress:</b> <?=$row['progress']?>%</p>
-        <!-- <p class="title"><b>Key Challenges:</b> <?=$row['listkeychallenges']?></p> -->
         <p class="title"><b>Implementation Date:</b> <?=$row['Implementationdate']?></p>
     </div>
 </div>
